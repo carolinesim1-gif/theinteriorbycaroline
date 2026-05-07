@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acheter — The Interior by Caroline</title>
+<meta name="description" content="Recevez en avant-première les biens qui correspondent à votre projet — y compris ceux qui ne paraissent jamais." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --ink:        #1a1612;
+  --ink-soft:   #3a342d;
+  --paper:      #f5f0e8;
+  --paper-warm: #ece4d6;
+  --muted:      #6f6659;
+  --rule:       rgba(26,22,18,0.13);
+  --accent:     #c47b6c;
+  --accent-soft:#e8c9bf;
+  --accent-deep:#6d3a32;
+  --dark:       #2c2720;
+  --green-soft: #d4ddd0;
+  --serif:   'Cormorant Garamond', serif;
+  --display: 'Fraunces', serif;
+  --sans:    'Inter', sans-serif;
+  --mono:    'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--sans); -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(rgba(26,22,18,.02) 1px, transparent 1px),
+    radial-gradient(rgba(26,22,18,.015) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 58px;
+  background: rgba(245,240,232,.94); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-logo { font-family: var(--display); font-weight: 300; font-size: 17px;
+  font-variation-settings:'opsz' 144; color: var(--ink); text-decoration: none; }
+.nav-logo em { font-style: italic; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+.nav-lang { display: flex; gap: 4px; }
+.lang-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  padding: 4px 11px; border: 1px solid transparent; background: none;
+  cursor: pointer; color: var(--muted); border-radius: 20px; transition: all .2s; }
+.lang-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* HERO */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+  padding: 58px 48px 48px; position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 55% at 22% 42%, rgba(196,123,108,.16) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 80% 55%, rgba(196,164,108,.14) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 38% at 52% 82%, rgba(180,190,170,.12) 0%, transparent 45%);
+}
+.hero-eyebrow {
+  font-family: var(--serif); font-style: italic; font-size: 13px;
+  color: var(--muted); margin-bottom: 18px; position: relative;
+}
+.hero h1 {
+  font-family: var(--display); font-weight: 300;
+  font-size: clamp(52px, 7vw, 96px); line-height: .92;
+  letter-spacing: -.025em; font-variation-settings: 'opsz' 144;
+  margin-bottom: 20px; position: relative;
+}
+.hero h1 em { font-style: italic; }
+.hero-sub {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px); color: var(--ink-soft);
+  max-width: 500px; line-height: 1.55; position: relative;
+}
+
+/* TROIS RAISONS */
+.raisons {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+}
+.raison {
+  padding: 44px;
+  border-right: 1px solid var(--rule);
+  background: var(--paper-warm);
+}
+.raison:last-child { border-right: none; }
+.raison-num {
+  font-family: var(--serif); font-style: italic; font-size: 13px;
+  color: var(--muted); margin-bottom: 14px;
+}
+.raison-title {
+  font-family: var(--display); font-weight: 300; font-size: 24px;
+  line-height: 1.1; letter-spacing: -.01em; font-variation-settings: 'opsz' 144;
+  margin-bottom: 12px;
+}
+.raison-title em { font-style: italic; }
+.raison-body {
+  font-family: var(--serif); font-style: italic;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.6;
+}
+
+/* FORMULAIRE */
+.form-section {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  border-top: 1px solid var(--rule);
+}
+.form-lhs {
+  padding: 52px 48px;
+  background: linear-gradient(140deg,
+    rgba(196,123,108,.15) 0%, rgba(196,164,108,.10) 50%, rgba(180,190,170,.10) 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--rule);
+}
+.section-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--display); font-weight: 300;
+  font-size: clamp(28px, 3.2vw, 42px); line-height: 1.0;
+  letter-spacing: -.02em; font-variation-settings: 'opsz' 144;
+}
+.section-title em { font-style: italic; }
+.form-note {
+  font-family: var(--serif); font-style: italic; font-size: 14px;
+  color: var(--ink-soft); line-height: 1.6; margin-top: 14px;
+}
+.form-sig {
+  font-family: var(--serif); font-style: italic; font-size: 13px;
+  color: var(--muted); margin-top: 8px;
+}
+.form-card { padding: 52px 48px; }
+
+/* CHAMPS */
+.field { margin-bottom: 22px; }
+.field label {
+  display: block; font-family: var(--mono); font-size: 10px;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px;
+}
+.field input, .field select, .field textarea {
+  width: 100%; background: none; border: none;
+  border-bottom: 1px solid var(--ink); padding: 7px 0;
+  font-family: var(--serif); font-style: italic; font-size: 17px;
+  color: var(--ink); outline: none; transition: border-color .2s;
+  appearance: none; resize: none;
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+.field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: var(--accent); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* ARRONDISSEMENTS PILLS */
+.arr-grid {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;
+}
+.arr-pill {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+  padding: 6px 14px; border-radius: 40px; border: 1px solid var(--rule);
+  background: none; cursor: pointer; color: var(--ink-soft); transition: all .18s;
+}
+.arr-pill:hover { border-color: var(--ink); color: var(--ink); }
+.arr-pill.selected { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.btn-accent {
+  display: inline-flex; align-items: center; gap: 10px; width: 100%;
+  justify-content: center; font-family: var(--mono); font-size: 11px;
+  letter-spacing: .16em; text-transform: lowercase; padding: 14px 26px;
+  border-radius: 40px; border: none; background: var(--accent); color: var(--paper);
+  cursor: pointer; transition: all .22s; margin-top: 8px;
+}
+.btn-accent:hover { background: var(--accent-deep); }
+
+.form-legal {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+  color: var(--muted); margin-top: 14px; line-height: 1.5;
+}
+
+/* FOOTER */
+footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
+.footer-top {
+  display: grid; grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
+  gap: 40px; margin-bottom: 32px;
+}
+.f-logo { font-family: var(--display); font-weight: 300; font-size: 22px;
+  font-variation-settings: 'opsz' 144; margin-bottom: 8px; }
+.f-logo em { font-style: italic; }
+.f-tagline { font-family: var(--serif); font-style: italic; font-size: 13px;
+  color: var(--muted); line-height: 1.5; margin-bottom: 16px; }
+.gp-badge { display: inline-flex; align-items: center; gap: 10px;
+  padding: 9px 16px; background: var(--green-soft); border-radius: 40px; }
+.gp-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b8c6b; flex-shrink: 0; }
+.gp-text { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft); }
+.f-col h4 { font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.f-col a { font-size: 14px; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
+.f-col a:hover { color: var(--ink); }
+.f-col a em { font-family: var(--serif); font-style: italic; color: var(--accent-deep); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center;
+  padding-top: 18px; border-top: 1px solid var(--rule); }
+.f-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); }
+.f-made { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 80px 24px 40px; }
+  .raisons { grid-template-columns: 1fr; }
+  .raison { border-right: none; border-bottom: 1px solid var(--rule); }
+  .form-section { grid-template-columns: 1fr; }
+  .form-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 24px; }
+  .form-card { padding: 40px 24px; }
+  footer { padding: 40px 24px 20px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links">
+    <li><a href="/vendre">vendre</a></li>
+    <li><a href="/acheter" class="active">acheter</a></li>
+    <li><a href="/le-journal">le journal</a></li>
+    <li><a href="/a-propos">à propos</a></li>
+    <li><a href="/contact">contact</a></li>
+  </ul>
+  <div class="nav-lang">
+    <button class="lang-btn active">fr</button>
+    <button class="lang-btn">en</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <p class="hero-eyebrow">— pour vous, acquéreur —</p>
+  <h1>les biens <em>avant</em><br/>qu'ils ne paraissent</h1>
+  <p class="hero-sub">une partie des biens que je vends ne sera jamais publiée. inscrivez-vous — je vous écris quand l'un d'eux correspond à votre projet.</p>
+</section>
+
+<!-- TROIS RAISONS -->
+<div class="raisons">
+  <div class="raison">
+    <h2 class="raison-title">une <em>sélection</em> signée</h2>
+    <p class="raison-body">je ne travaille qu'avec un nombre restreint de mandats — ce qui me permet de connaître chaque bien en profondeur avant de vous en parler.</p>
+  </div>
+  <div class="raison">
+    <h2 class="raison-title">des biens <em>hors-marché</em></h2>
+    <p class="raison-body">certains vendeurs ne souhaitent pas de diffusion publique. vous y avez accès en avant-première, avant toute annonce.</p>
+  </div>
+  <div class="raison">
+    <h2 class="raison-title">un accompagnement <em>personnel</em></h2>
+    <p class="raison-body">je vous écris en personne quand un bien correspond. pas d'alerte automatique — une proposition réfléchie.</p>
+  </div>
+</div>
+
+<!-- FORMULAIRE -->
+<div class="form-section">
+  <div class="form-lhs">
+    <p class="section-eyebrow">— votre projet —</p>
+    <h2 class="section-title">parlez-moi de <em>votre projet</em></h2>
+    <p class="form-note">plus vous m'en dites, mieux je peux écouter. tout reste strictement confidentiel.</p>
+    <p class="form-sig">— vous recevrez un mot de bienvenue signé, puis seulement quand un bien correspond.</p>
+  </div>
+  <div class="form-card">
+    <div class="field-row">
+      <div class="field">
+        <label>Budget — de</label>
+        <input type="text" placeholder="1 500 000 €" />
+      </div>
+      <div class="field">
+        <label>Budget — à</label>
+        <input type="text" placeholder="2 500 000 €" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Arrondissements de prédilection</label>
+      <div class="arr-grid">
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">1er</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">3e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">4e</button>
+        <button class="arr-pill selected" onclick="this.classList.toggle('selected')">5e</button>
+        <button class="arr-pill selected" onclick="this.classList.toggle('selected')">6e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">7e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">8e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">13e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">14e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">16e</button>
+        <button class="arr-pill" onclick="this.classList.toggle('selected')">autre</button>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Type de bien</label>
+        <select>
+          <option>appartement</option>
+          <option>maison</option>
+          <option>hôtel particulier</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Surface minimum</label>
+        <input type="text" placeholder="100 m²" />
+      </div>
+    </div>
+    <div class="field">
+      <label>Quelques mots sur votre projet</label>
+      <textarea rows="3" placeholder="ce qui compte vraiment, l'horizon, votre histoire…"></textarea>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Votre prénom</label>
+        <input type="text" placeholder="Caroline" />
+      </div>
+      <div class="field">
+        <label>Téléphone</label>
+        <input type="tel" placeholder="06 …" />
+      </div>
+    </div>
+    <button class="btn-accent">rejoindre le cercle →</button>
+    <p class="form-legal">confidentiel · consentement RGPD · je vous écris en personne</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <div class="gp-badge">
+        <span class="gp-dot"></span>
+        <span class="gp-text">membre greenpartners immobilier</span>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>le site</h4>
+      <ul>
+        <li><a href="/">accueil</a></li>
+        <li><a href="/vendre">vendre</a></li>
+        <li><a href="/acheter">acheter</a></li>
+        <li><a href="/le-journal">le journal</a></li>
+        <li><a href="/a-propos">à propos</a></li>
+        <li><a href="/contact">contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>caroline</h4>
+      <ul>
+        <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
+        <li><a href="https://wa.me/33602106754">whatsapp</a></li>
+        <li><a href="/contact">calendly · 30 min</a></li>
+        <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
+        <li><a href="/conception"><em>conception d'intérieurs →</em></a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>légal</h4>
+      <ul>
+        <li><a href="/mentions-legales">mentions légales</a></li>
+        <li><a href="/confidentialite">confidentialité</a></li>
+        <li><a href="/cookies">cookies</a></li>
+        <li><a href="/honoraires">honoraires</a></li>
+        <li><a href="/plan-du-site">plan du site</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — paris</p>
+    <p class="f-made">fait avec attention</p>
+  </div>
+</footer>
+
+<script>
+// Arrondissements pills — sélection multiple
+document.querySelectorAll('.arr-pill').forEach(pill => {
+  pill.addEventListener('click', () => pill.classList.toggle('selected'));
+});
+</script>
+</body>
+</html>

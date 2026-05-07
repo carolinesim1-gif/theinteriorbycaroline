@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cookies — The Interior by Caroline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+.legal-header { padding: 100px 48px 48px; border-bottom: 1px solid var(--rule); }
+.legal-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.legal-title { font-family: var(--display); font-weight: 300; font-size: clamp(32px,4vw,52px); line-height: .93; letter-spacing: -.022em; font-variation-settings: 'opsz' 144; }
+.legal-title em { font-style: italic; }
+.legal-body { max-width: 720px; padding: 52px 48px; }
+.legal-body h2 { font-family: var(--display); font-weight: 300; font-size: 22px; font-variation-settings: 'opsz' 144; margin: 36px 0 12px; letter-spacing: -.01em; }
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body h2 em { font-style: italic; }
+.legal-body p { font-family: var(--serif); font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 10px; }
+.legal-body a { color: var(--ink); }
+.legal-nav { display: flex; gap: 24px; padding: 24px 48px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
+.legal-nav a { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+.legal-nav a:hover, .legal-nav a.active { color: var(--ink); }
+@media (max-width: 768px) {
+  .legal-header { padding: 80px 24px 36px; }
+  .legal-body { padding: 36px 24px; }
+  .legal-nav { padding: 20px 24px; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links">
+    <li><a href="/vendre">vendre</a></li>
+    <li><a href="/acheter">acheter</a></li>
+    <li><a href="/le-journal">le journal</a></li>
+    <li><a href="/a-propos">à propos</a></li>
+    <li><a href="/contact">contact</a></li>
+  </ul>
+  <div class="nav-lang">
+    <button class="lang-btn active">fr</button>
+    <button class="lang-btn">en</button>
+  </div>
+</nav>
+
+<div class="legal-header">
+  <p class="legal-eyebrow">— légal —</p>
+  <h1 class="legal-title">gestion des <em>cookies</em></h1>
+</div>
+
+<div class="legal-nav">
+  <a href="mentions-legales.html">mentions légales</a>
+  <a href="confidentialite.html">confidentialité</a>
+  <a href="cookies.html" class="active">cookies</a>
+  <a href="honoraires.html">honoraires</a>
+</div>
+
+<div class="legal-body">
+
+  <h2>Ce site <em>n'utilise pas</em> de cookies</h2>
+  <p>Ce site ne dépose aucun cookie publicitaire, aucun cookie de tracking, aucun cookie tiers.</p>
+
+  <h2>Mesure d'audience</h2>
+  <p>Ce site utilise <strong>Plausible Analytics</strong> pour mesurer son audience. Plausible est un outil conçu dans le respect de la vie privée : il ne dépose aucun cookie, ne collecte aucune donnée personnelle, et est conforme au RGPD sans nécessiter de bandeau de consentement.</p>
+  <p>Les données collectées par Plausible sont agrégées et anonymes : nombre de visites, pages consultées, source du trafic. Aucune donnée ne permet d'identifier un visiteur. <a href="https://plausible.io/data-policy" target="_blank">En savoir plus sur la politique de données de Plausible →</a></p>
+
+  <h2>Formulaires de contact</h2>
+  <p>Les données saisies dans les formulaires (estimation, inscription acquéreur) ne sont pas stockées dans des cookies. Elles sont transmises directement et traitées conformément à notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <div class="gp-badge"><span class="gp-dot"></span><span class="gp-text">membre greenpartners immobilier</span></div>
+    </div>
+    <div class="f-col">
+      <h4>le site</h4>
+      <ul>
+        <li><a href="/">accueil</a></li>
+        <li><a href="/vendre">vendre</a></li>
+        <li><a href="/acheter">acheter</a></li>
+        <li><a href="/le-journal">le journal</a></li>
+        <li><a href="/a-propos">à propos</a></li>
+        <li><a href="/contact">contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>caroline</h4>
+      <ul>
+        <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
+        <li><a href="https://wa.me/33602106754">whatsapp</a></li>
+        <li><a href="/contact">calendly · 30 min</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>légal</h4>
+      <ul>
+        <li><a href="/mentions-legales">mentions légales</a></li>
+        <li><a href="/confidentialite">confidentialité</a></li>
+        <li><a href="/cookies">cookies</a></li>
+        <li><a href="/honoraires">honoraires</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — paris</p>
+    <p class="f-made">fait avec attention</p>
+  </div>
+</footer>
+</body>
+</html>
