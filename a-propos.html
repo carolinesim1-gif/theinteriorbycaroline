@@ -1,372 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>À propos — The Interior by Caroline</title>
-<meta name="description" content="Caroline — agent immobilier indépendante à Paris, diplômée grande école, formée à l'architecture d'intérieur." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-:root {
-  --ink:        #1a1612;
-  --ink-soft:   #3a342d;
-  --paper:      #f5f0e8;
-  --paper-warm: #ece4d6;
-  --muted:      #6f6659;
-  --rule:       rgba(26,22,18,0.13);
-  --accent:     #c47b6c;
-  --accent-soft:#e8c9bf;
-  --accent-deep:#6d3a32;
-  --green-soft: #d4ddd0;
-  --serif:   'Cormorant Garamond', serif;
-  --display: 'Fraunces', serif;
-  --sans:    'Inter', sans-serif;
-  --mono:    'DM Mono', monospace;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--paper); color: var(--ink);
-  font-family: var(--sans); -webkit-font-smoothing: antialiased;
-  background-image:
-    radial-gradient(rgba(26,22,18,.02) 1px, transparent 1px),
-    radial-gradient(rgba(26,22,18,.015) 1px, transparent 1px);
-  background-size: 3px 3px, 7px 7px;
-  background-position: 0 0, 1px 2px;
-}
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 58px;
-  background: rgba(245,240,232,.94); backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--rule);
-}
-.nav-logo { font-family: var(--display); font-weight: 300; font-size: 17px;
-  font-variation-settings:'opsz' 144; color: var(--ink); text-decoration: none; }
-.nav-logo em { font-style: italic; }
-.nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a { font-size: 13px; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
-.nav-links a:hover { color: var(--ink); }
-.nav-links a.active { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
-.nav-lang { display: flex; gap: 4px; }
-.lang-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
-  padding: 4px 11px; border: 1px solid transparent; background: none;
-  cursor: pointer; color: var(--muted); border-radius: 20px; transition: all .2s; }
-.lang-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-
-/* INTRO — portrait + texte */
-.intro {
-  display: grid; grid-template-columns: 1fr 1.4fr;
-  min-height: calc(100vh - 58px);
-  margin-top: 58px;
-  border-bottom: 1px solid var(--rule);
-}
-.portrait-col {
-  position: relative; overflow: hidden;
-  border-right: 1px solid var(--rule);
-}
-.portrait-col img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
-  display: block;
-}
-.portrait-caption {
-  position: absolute; bottom: 24px; left: 24px;
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: rgba(245,240,232,.7);
-}
-.intro-rhs {
-  padding: 64px 56px;
-  display: flex; flex-direction: column; justify-content: center;
-}
-.intro-eyebrow {
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); margin-bottom: 16px;
-}
-.intro-title {
-  font-family: var(--display); font-weight: 300;
-  font-size: clamp(36px, 4vw, 56px); line-height: .93;
-  letter-spacing: -.022em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 28px;
-}
-.intro-title em { font-style: italic; }
-.intro-body {
-  font-family: var(--serif); font-size: 17px;
-  line-height: 1.7; color: var(--ink-soft);
-  max-width: 480px;
-}
-.intro-body em { font-style: italic; }
-
-/* PARCOURS */
-.parcours { border-bottom: 1px solid var(--rule); }
-.parcours-item {
-  display: grid; grid-template-columns: 180px 1fr;
-  gap: 0; border-bottom: 1px solid var(--rule);
-  align-items: stretch;
-}
-.parcours-item:last-child { border-bottom: none; }
-.p-date {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .16em;
-  color: var(--accent); padding: 32px 48px;
-  border-right: 1px solid var(--rule);
-  display: flex; align-items: center;
-}
-.p-content { padding: 32px 48px; }
-.p-title {
-  font-family: var(--display); font-weight: 300; font-size: 22px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 8px; line-height: 1.1;
-}
-.p-title em { font-style: italic; }
-.p-body { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-
-/* CE QUI ME GUIDE */
-.convictions {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid var(--rule);
-  background: var(--paper-warm);
-}
-.conviction {
-  padding: 44px 40px;
-  border-right: 1px solid var(--rule);
-}
-.conviction:last-child { border-right: none; }
-.conviction-title {
-  font-family: var(--display); font-style: italic; font-weight: 300;
-  font-size: 22px; font-variation-settings: 'opsz' 144;
-  margin-bottom: 12px; line-height: 1.1; color: var(--ink-soft);
-}
-.conviction-body {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14px; color: var(--ink-soft); line-height: 1.65;
-}
-
-/* GREENPARTNERS */
-.gp-section {
-  display: grid; grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--rule);
-  background: var(--green-soft);
-}
-.gp-lhs {
-  padding: 44px 48px;
-  border-right: 1px solid rgba(26,22,18,.1);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.gp-eyebrow {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
-  text-transform: uppercase; color: #6b8c6b; margin-bottom: 10px;
-}
-.gp-title {
-  font-family: var(--display); font-weight: 300; font-size: 28px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 0;
-}
-.gp-title em { font-style: italic; }
-.gp-rhs {
-  padding: 44px 48px;
-  display: flex; align-items: center;
-}
-.gp-body {
-  font-family: var(--serif); font-style: italic;
-  font-size: 15px; color: var(--ink-soft); line-height: 1.65;
-}
-
-/* CTA BAND */
-.cta-band {
-  padding: 52px 48px;
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
-}
-.cta-text {
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted);
-}
-.cta-btns { display: flex; gap: 12px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .16em;
-  text-transform: lowercase; padding: 13px 26px; border-radius: 40px;
-  border: 1px solid transparent; cursor: pointer;
-  text-decoration: none; transition: all .22s ease;
-}
-.btn-dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.btn-dark:hover { background: var(--ink-soft); }
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: var(--paper); }
-
-/* LIEN CONCEPTION */
-.conception-link {
-  padding: 28px 48px;
-  border-bottom: 1px solid var(--rule);
-  text-align: center;
-}
-.conception-link a {
-  font-family: var(--serif); font-style: italic; font-size: 14px;
-  color: var(--accent-deep); text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* FOOTER */
-footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
-.footer-top {
-  display: grid; grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
-  gap: 40px; margin-bottom: 32px;
-}
-.f-logo { font-family: var(--display); font-weight: 300; font-size: 22px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 8px; }
-.f-logo em { font-style: italic; }
-.f-tagline { font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); line-height: 1.5; margin-bottom: 16px; }
-.gp-badge { display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 16px; background: var(--green-soft); border-radius: 40px; }
-.gp-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b8c6b; flex-shrink: 0; }
-.gp-text { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft); }
-.f-col h4 { font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-.f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.f-col a { font-size: 14px; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
-.f-col a:hover { color: var(--ink); }
-.f-col a em { font-family: var(--serif); font-style: italic; color: var(--accent-deep); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center;
-  padding-top: 18px; border-top: 1px solid var(--rule); }
-.f-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); }
-.f-made { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); }
-
-/* MOBILE */
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .intro { grid-template-columns: 1fr; min-height: auto; }
-  .portrait-col { height: 60vw; border-right: none; border-bottom: 1px solid var(--rule); }
-  .intro-rhs { padding: 40px 24px; }
-  .parcours-item { grid-template-columns: 1fr; }
-  .p-date { padding: 20px 24px 0; border-right: none; }
-  .p-content { padding: 12px 24px 28px; }
-  .convictions { grid-template-columns: 1fr; }
-  .conviction { border-right: none; border-bottom: 1px solid var(--rule); }
-  .gp-section { grid-template-columns: 1fr; }
-  .gp-lhs { border-right: none; border-bottom: 1px solid rgba(26,22,18,.1); padding: 36px 24px; }
-  .gp-rhs { padding: 36px 24px; }
-  .cta-band { flex-direction: column; gap: 24px; align-items: flex-start; padding: 36px 24px; }
-  .conception-link { padding: 20px 24px; }
-  footer { padding: 40px 24px 20px; }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — The Interior by Caroline</title>
+  <meta name="description" content="Caroline — agent immobilier indépendante à Paris, diplômée grande école, formée au design d'intérieur et à la décoration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">the <em>interior</em> by caroline</a>
-  <ul class="nav-links">
-    <li><a href="vendre.html">vendre</a></li>
-    <li><a href="acheter.html">acheter</a></li>
-    <li><a href="le-journal.html">le journal</a></li>
-    <li><a href="a-propos.html" class="active">à propos</a></li>
-    <li><a href="contact.html">contact</a></li>
-  </ul>
-  <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">the <em>interior</em> by caroline</a>
+    <button class="nav__burger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="vendre.html">vendre</a></li>
+      <li><a href="acheter.html">acheter</a></li>
+      <li><a href="le-journal.html">le journal</a></li>
+      <li><a href="a-propos.html" class="active">à propos</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <div class="nav__lang">
+      <a href="a-propos.html" class="active">fr</a>
+      <a href="en/a-propos.html">en</a>
+    </div>
   </div>
 </nav>
 
-<!-- INTRO -->
-<div class="intro">
-  <div class="portrait-col">
-    <img src="caroline.png" alt="Caroline — agent immobilier Paris rive gauche" />
-    <span class="portrait-caption">— caroline · paris</span>
-  </div>
-  <div class="intro-rhs">
-    <p class="intro-eyebrow">— à propos —</p>
-    <h1 class="intro-title">un parcours <em>singulier</em></h1>
-    <p class="intro-body">
-      diplômée d'une grande école de commerce, quinze ans à piloter des projets complexes pour des clients haut de gamme. puis une formation à l'architecture d'intérieur — <em>l'œil affûté, le sens des matières, la lecture des espaces</em>. aujourd'hui, l'immobilier résidentiel haut de gamme à paris, en confidence.
-    </p>
-  </div>
-</div>
+<main>
+  <div class="wrap">
 
-<!-- PARCOURS -->
-<div class="parcours">
-  <div class="parcours-item">
-    <span class="p-date">2008 → 2020</span>
-    <div class="p-content">
-      <p class="p-title">grande école & <em>projets exigeants</em></p>
-      <p class="p-body">la rigueur, le sens du détail, et l'art d'écouter avant de proposer.</p>
-    </div>
-  </div>
-  <div class="parcours-item">
-    <span class="p-date">2021 → 2023</span>
-    <div class="p-content">
-      <p class="p-title">architecture <em>d'intérieur</em></p>
-      <p class="p-body">formation à la décoration et à la conception. qui change la façon dont on présente un bien.</p>
-    </div>
-  </div>
-  <div class="parcours-item">
-    <span class="p-date">2024 → aujourd'hui</span>
-    <div class="p-content">
-      <p class="p-title">immobilier <em>résidentiel</em> haut de gamme</p>
-      <p class="p-body">paris & île-de-france. une sélection restreinte de mandats, un accompagnement signé.</p>
-    </div>
-  </div>
-</div>
+    <!-- HERO -->
+    <section class="hero">
+      <span class="label">— à propos —</span>
+      <div style="overflow:hidden;">
+        <img src="caroline.png" alt="Caroline — agent immobilier Paris rive gauche" class="about-photo">
+        <h1>un parcours <em>singulier</em></h1>
+        <p>diplômée d'une grande école de commerce, quinze ans à piloter des projets complexes pour des clients haut de gamme. puis une formation au design d'intérieur et à la décoration — <em>l'œil affûté, le sens des matières, la lecture des espaces</em>.</p>
+        <p>aujourd'hui, l'immobilier résidentiel haut de gamme à paris — et l'accompagnement qui va au-delà de la transaction : imaginer ce que le bien peut devenir, trouver les artisans qui le feront, suivre le projet jusqu'à son terme. c'est cette double compétence, rare, que je mets au service de mes clients.</p>
+        <p>j'ai choisi de rejoindre un réseau d'agents indépendants qui me ressemblent : des professionnels partageant les mêmes valeurs de rigueur, de discrétion et de transparence. cette appartenance me donne accès à des outils, une visibilité et une force de diffusion qu'un agent totalement isolé ne peut offrir — sans jamais renoncer à l'autonomie qui fait la qualité de mon travail.</p>
+      </div>
+    </section>
 
-<!-- CE QUI ME GUIDE -->
-<div class="convictions">
-  <div class="conviction">
-    <p class="conviction-title">— l'écoute d'abord</p>
-    <p class="conviction-body">chaque bien a une histoire, chaque acquéreur un projet. je préfère poser quelques questions de plus avant de proposer.</p>
-  </div>
-  <div class="conviction">
-    <p class="conviction-title">— le détail change tout</p>
-    <p class="conviction-body">un mur, une lumière, un meuble déplacé. mon œil d'architecte d'intérieur sert d'abord vos biens.</p>
-  </div>
-  <div class="conviction">
-    <p class="conviction-title">— la confidentialité, toujours</p>
-    <p class="conviction-body">vos chiffres, votre adresse, votre histoire — strictement entre nous, et le réseau que je choisis.</p>
-  </div>
-</div>
+    <!-- VALEURS -->
+    <section class="section">
+      <span class="label">— ce qui guide mon travail —</span>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar__title">L'écoute d'abord</div>
+          <p class="pillar__text">chaque bien a une histoire, chaque acquéreur un projet. je préfère poser quelques questions de plus avant de proposer.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__title">Le détail change tout</div>
+          <p class="pillar__text">un mur, une lumière, un meuble déplacé. mon œil de designer d'intérieur sert d'abord vos biens.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__title">La discrétion, toujours</div>
+          <p class="pillar__text">vos chiffres, votre adresse, votre histoire — strictement entre nous, et le réseau que je choisis.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__title">L'accompagnement jusqu'au bout</div>
+          <p class="pillar__text">vendre ou acheter, c'est un moment de vie. mon rôle ne s'arrête pas à la signature — il commence souvent après.</p>
+        </div>
+      </div>
+    </section>
 
-<!-- GREENPARTNERS -->
-<div class="gp-section">
-  <div class="gp-lhs">
-    <p class="gp-eyebrow">— le réseau —</p>
-    <img src="logo_greenpartners.png" alt="Membre greenpartners" style="height:32px;opacity:0.9;" />
-  </div>
-  <div class="gp-rhs">
-    <p class="gp-body">un réseau d'agents indépendants engagés sur une charte de qualité, de transparence et de confiance — partagée par tous ses membres.</p>
-  </div>
-</div>
+    <!-- CTA -->
+    <section class="section">
+      <span class="label">— parlons de votre projet —</span>
+      <div class="btn-group" style="max-width:400px;">
+        <a href="contact.html" class="btn">prendre rdv →</a>
+        <a href="contact.html" class="btn">m'écrire</a>
+      </div>
+      <p style="margin-top:1.5rem;">
+        <a href="conception.html" class="mono text-mid" style="border-bottom:1px solid var(--rule); padding-bottom:.1rem;">— à côté de l'immobilier, je conçois aussi des intérieurs. découvrir →</a>
+      </p>
+    </section>
 
-<!-- CTA -->
-<div class="cta-band">
-  <p class="cta-text">— parlons de votre projet</p>
-  <div class="cta-btns">
-    <a href="contact.html" class="btn btn-dark">prendre rdv →</a>
-    <a href="contact.html" class="btn btn-ghost">m'écrire</a>
   </div>
-</div>
-
-<!-- LIEN CONCEPTION -->
-<div class="conception-link">
-  <a href="conception.html">— à côté de l'immobilier, je conçois aussi des intérieurs. découvrir →</a>
-</div>
+</main>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
-      <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
-      </a>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__brand-logo">the <em>interior</em> by caroline</div>
+      <p class="footer__brand-tag">une signature, un regard, des intérieurs — tout paris.</p>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>le site</h4>
       <ul>
         <li><a href="index.html">accueil</a></li>
@@ -377,7 +104,7 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
         <li><a href="contact.html">contact</a></li>
       </ul>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>caroline</h4>
       <ul>
         <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
@@ -387,20 +114,17 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
         <li><a href="conception.html"><em>conception d'intérieurs →</em></a></li>
       </ul>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>légal</h4>
       <ul>
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
-        <li><a href="honoraires.html">honoraires</a></li>
-        <li><a href="#">plan du site</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p class="f-copy">© caroline · 2026 — paris</p>
-    <p class="f-made">fait avec attention</p>
+  <div class="footer__bottom">
+    <span class="footer__copy">© caroline · 2026 — paris · fait avec attention</span>
   </div>
 </footer>
 

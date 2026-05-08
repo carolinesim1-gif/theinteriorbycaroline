@@ -1,263 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Conception d'intérieurs — The Interior by Caroline</title>
-<meta name="description" content="Conception et architecture d'intérieur à Paris — conseil couleurs, mise en valeur avant vente, conception complète." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-
-/* HERO */
-.hero {
-  padding: 120px 48px 64px;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: end;
-  border-bottom: 1px solid var(--rule);
-}
-.hero-eyebrow {
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); margin-bottom: 16px;
-}
-.hero h1 {
-  font-family: var(--display); font-weight: 300;
-  font-size: clamp(40px, 5.5vw, 76px); line-height: .92;
-  letter-spacing: -.025em; font-variation-settings: 'opsz' 144;
-}
-.hero h1 em { font-style: italic; }
-.hero-rhs {
-  display: flex; flex-direction: column; gap: 20px;
-  justify-content: flex-end; padding-bottom: 4px;
-}
-.hero-body {
-  font-family: var(--serif); font-style: italic;
-  font-size: 16px; color: var(--ink-soft); line-height: 1.65;
-}
-.hero-note {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--muted);
-}
-
-/* SERVICES */
-.services {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid var(--rule);
-}
-.service {
-  padding: 44px 40px;
-  border-right: 1px solid var(--rule);
-}
-.service:last-child { border-right: none; }
-.service-title {
-  font-family: var(--display); font-weight: 300; font-size: 24px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 12px; line-height: 1.1;
-}
-.service-title em { font-style: italic; }
-.service-body {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14px; color: var(--ink-soft); line-height: 1.65;
-}
-.service-detail {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .16em;
-  color: var(--muted); margin-top: 16px; line-height: 1.7;
-}
-
-/* PORTFOLIO */
-.portfolio-header {
-  padding: 52px 48px 32px;
-  display: flex; justify-content: space-between; align-items: baseline;
-  border-bottom: 1px solid var(--rule);
-}
-.portfolio-title {
-  font-family: var(--display); font-weight: 300;
-  font-size: clamp(28px, 3vw, 40px); line-height: 1;
-  font-variation-settings: 'opsz' 144;
-}
-.portfolio-title em { font-style: italic; }
-.portfolio-note {
-  font-family: var(--serif); font-style: italic;
-  font-size: 13px; color: var(--muted);
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 1px; background: var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-.portfolio-item {
-  background: var(--paper-warm);
-  aspect-ratio: 4/3;
-  display: flex; align-items: flex-end;
-  padding: 24px; position: relative; overflow: hidden;
-}
-.portfolio-item-tall {
-  grid-row: span 2;
-  aspect-ratio: auto;
-}
-.portfolio-placeholder {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-}
-.placeholder-icon {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
-  text-transform: uppercase; color: rgba(26,22,18,.2);
-}
-.p-img-1 { background: linear-gradient(160deg, rgba(196,123,108,.25), rgba(236,228,214,.6)); }
-.p-img-2 { background: linear-gradient(140deg, rgba(180,190,170,.35), rgba(236,228,214,.5)); }
-.p-img-3 { background: linear-gradient(150deg, rgba(196,164,108,.2), rgba(196,123,108,.25)); }
-.p-img-4 { background: linear-gradient(135deg, rgba(236,228,214,.8), rgba(180,190,170,.3)); }
-.p-img-5 { background: linear-gradient(145deg, rgba(196,123,108,.2), rgba(236,201,191,.4)); }
-
-.portfolio-caption {
-  position: relative; z-index: 1;
-  font-family: var(--serif); font-style: italic;
-  font-size: 13px; color: var(--ink-soft);
-}
-
-/* CTA */
-.cta-band {
-  padding: 52px 48px;
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
-}
-.cta-lhs {}
-.cta-title {
-  font-family: var(--display); font-weight: 300;
-  font-size: clamp(24px, 2.8vw, 36px); line-height: 1;
-  font-variation-settings: 'opsz' 144; margin-bottom: 8px;
-}
-.cta-title em { font-style: italic; }
-.cta-sub {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14px; color: var(--ink-soft);
-}
-
-/* RETOUR IMMO */
-.retour {
-  padding: 24px 48px;
-  text-align: center;
-  border-bottom: 1px solid var(--rule);
-}
-.retour a {
-  font-family: var(--serif); font-style: italic; font-size: 14px;
-  color: var(--muted); text-decoration: none; transition: color .2s;
-}
-.retour a:hover { color: var(--ink); }
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; padding: 90px 24px 48px; gap: 32px; }
-  .services { grid-template-columns: 1fr; }
-  .service { border-right: none; border-bottom: 1px solid var(--rule); }
-  .service:last-child { border-bottom: none; }
-  .portfolio-header { padding: 40px 24px 24px; flex-direction: column; gap: 8px; }
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .portfolio-item-tall { grid-row: span 1; aspect-ratio: 4/3; }
-  .cta-band { flex-direction: column; gap: 24px; align-items: flex-start; padding: 40px 24px; }
-  .retour { padding: 20px 24px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception d'intérieurs — The Interior by Caroline</title>
+  <meta name="description" content="Design d'intérieur et décoration à Paris — conseil couleurs, mise en valeur avant vente, conception complète.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">the <em>interior</em> by caroline</a>
-  <ul class="nav-links">
-    <li><a href="vendre.html">vendre</a></li>
-    <li><a href="acheter.html">acheter</a></li>
-    <li><a href="le-journal.html">le journal</a></li>
-    <li><a href="a-propos.html">à propos</a></li>
-    <li><a href="contact.html">contact</a></li>
-  </ul>
-  <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">the <em>interior</em> by caroline</a>
+    <button class="nav__burger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="vendre.html">vendre</a></li>
+      <li><a href="acheter.html">acheter</a></li>
+      <li><a href="le-journal.html">le journal</a></li>
+      <li><a href="a-propos.html">à propos</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <div class="nav__lang">
+      <a href="conception.html" class="active">fr</a>
+      <a href="en/conception.html">en</a>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <p class="hero-eyebrow">— conception · architecture d'intérieur —</p>
-    <h1>un œil <em>différent</em></h1>
-  </div>
-  <div class="hero-rhs">
-    <p class="hero-body">formée à l'architecture d'intérieur après quinze ans dans des environnements d'excellence — je lis un espace autrement. ce regard sert d'abord mes mandats. il peut aussi servir votre intérieur.</p>
-    <p class="hero-note">page confidentielle · accès par lien direct</p>
-  </div>
-</div>
+<main>
+  <div class="wrap">
 
-<!-- SERVICES -->
-<div class="services">
-  <div class="service">
-    <h2 class="service-title">conseil <em>couleurs & matières</em></h2>
-    <p class="service-body">une demi-journée chez vous. palette, revêtements, mobilier — ce qui transforme sans tout changer.</p>
-    <p class="service-detail">visite · moodboard · préconisations écrites</p>
-  </div>
-  <div class="service">
-    <h2 class="service-title">mise en valeur <em>avant vente</em></h2>
-    <p class="service-body">home staging signé — pour que les photos et les visites jouent en votre faveur dès le premier jour.</p>
-    <p class="service-detail">audit · scénographie · suivi photographe</p>
-  </div>
-  <div class="service">
-    <h2 class="service-title">conception <em>complète</em></h2>
-    <p class="service-body">de la première esquisse à la réception du chantier. pour une rénovation partielle ou un projet complet.</p>
-    <p class="service-detail">plans · sélection artisans · suivi de chantier</p>
-  </div>
-</div>
+    <!-- HERO -->
+    <section class="hero">
+      <span class="label">— design d'intérieur · décoration —</span>
+      <h1>un œil <em>différent</em></h1>
+      <p class="hero__sub">formée au design d'intérieur et à la décoration après quinze ans dans des environnements d'excellence — je lis un espace autrement. ce regard sert d'abord mes mandats. il peut aussi servir votre intérieur.</p>
+      <p class="mono text-mid" style="font-size:.72rem; letter-spacing:.1em;">page confidentielle · accès par lien direct</p>
+    </section>
 
-<!-- PORTFOLIO -->
-<div class="portfolio-header">
-  <h2 class="portfolio-title">quelques <em>réalisations</em></h2>
-  <p class="portfolio-note">— portfolio en construction · à venir</p>
-</div>
+    <!-- PRESTATIONS -->
+    <section class="section">
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar__title">Conseil couleurs &amp; matières</div>
+          <p class="pillar__text">une demi-journée chez vous. palette, revêtements, mobilier — ce qui transforme sans tout changer.</p>
+          <p class="mono text-mid" style="font-size:.62rem; margin-top:.5rem;">visite · moodboard · préconisations écrites</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__title">Mise en valeur avant vente</div>
+          <p class="pillar__text">home staging signé — pour que les photos et les visites jouent en votre faveur dès le premier jour.</p>
+          <p class="mono text-mid" style="font-size:.62rem; margin-top:.5rem;">audit · scénographie · suivi photographe</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__title">Conception complète</div>
+          <p class="pillar__text">de la première esquisse à la réception du chantier. pour une rénovation partielle ou un projet complet.</p>
+          <p class="mono text-mid" style="font-size:.62rem; margin-top:.5rem;">plans · sélection artisans · suivi de chantier</p>
+        </div>
+      </div>
+    </section>
 
-<div class="portfolio-grid">
-  <div class="portfolio-item portfolio-item-tall p-img-1">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">appartement · Paris 6<sup>e</sup></p>
-  </div>
-  <div class="portfolio-item p-img-2">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">mise en valeur avant vente · Paris 7<sup>e</sup></p>
-  </div>
-  <div class="portfolio-item p-img-3">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">conseil couleurs · Paris 5<sup>e</sup></p>
-  </div>
-</div>
+    <!-- INSTAGRAM -->
+    <section class="insta-band section">
+      <span class="label">— découvrir mon univers —</span>
+      <h2 class="insta-band__title">le portfolio <em>arrive</em></h2>
+      <p class="insta-band__sub">en attendant, retrouvez mes inspirations, références et réalisations sur Instagram.</p>
+      <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-band__link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @theinteriorbycaroline
+      </a>
+    </section>
 
-<!-- CTA -->
-<div class="cta-band">
-  <div class="cta-lhs">
-    <h2 class="cta-title">un projet <em>en tête ?</em></h2>
-    <p class="cta-sub">parlez-moi de votre espace — je vous réponds en personne.</p>
-  </div>
-  <a href="contact.html" class="btn btn-dark">parler de mon projet →</a>
-</div>
+    <!-- CTA -->
+    <section class="section">
+      <span class="label">— un projet en tête ? —</span>
+      <h2>parlez-moi de <em>votre espace</em></h2>
+      <p class="text-mid" style="margin-bottom:1.2rem;">je vous réponds en personne, sous 24 heures.</p>
+      <a href="contact.html" class="btn">parler de mon projet →</a>
+      <p style="margin-top:1.5rem;">
+        <a href="index.html" class="mono text-mid" style="font-size:.68rem; letter-spacing:.1em;">← revenir à l'immobilier</a>
+      </p>
+    </section>
 
-<!-- RETOUR IMMO -->
-<div class="retour">
-  <a href="index.html">← revenir à l'immobilier</a>
-</div>
+  </div>
+</main>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
-      <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
-      </a>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__brand-logo">the <em>interior</em> by caroline</div>
+      <p class="footer__brand-tag">une signature, un regard, des intérieurs — tout paris.</p>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>le site</h4>
       <ul>
         <li><a href="index.html">accueil</a></li>
@@ -268,7 +108,7 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>caroline</h4>
       <ul>
         <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
@@ -277,18 +117,17 @@
         <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
       </ul>
     </div>
-    <div class="f-col">
+    <div class="footer__col">
       <h4>légal</h4>
       <ul>
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
-        <li><a href="honoraires.html">honoraires</a></li>
+        <li><a href="cookies.html">cookies</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p class="f-copy">© caroline · 2026 — paris</p>
-    <p class="f-made">fait avec attention</p>
+  <div class="footer__bottom">
+    <span class="footer__copy">© caroline · 2026 — paris · fait avec attention</span>
   </div>
 </footer>
 
