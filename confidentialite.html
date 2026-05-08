@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confidentialité — The Interior by Caroline</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Confidentialité — The Interior by Caroline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+.legal-header { padding: 100px 48px 48px; border-bottom: 1px solid var(--rule); }
+.legal-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.legal-title { font-family: var(--display); font-weight: 300; font-size: clamp(32px,4vw,52px); line-height: .93; letter-spacing: -.022em; font-variation-settings: 'opsz' 144; }
+.legal-title em { font-style: italic; }
+.legal-body { max-width: 720px; padding: 52px 48px; }
+.legal-body h2 { font-family: var(--display); font-weight: 300; font-size: 22px; font-variation-settings: 'opsz' 144; margin: 36px 0 12px; letter-spacing: -.01em; }
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body h2 em { font-style: italic; }
+.legal-body p { font-family: var(--serif); font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 10px; }
+.legal-body ul { font-family: var(--serif); font-size: 16px; color: var(--ink-soft); line-height: 1.75; padding-left: 20px; margin-bottom: 10px; }
+.legal-body a { color: var(--ink); }
+.placeholder { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; background: var(--accent-soft); color: var(--accent-deep); padding: 2px 8px; border-radius: 3px; }
+.legal-nav { display: flex; gap: 24px; padding: 24px 48px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
+.legal-nav a { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+.legal-nav a:hover, .legal-nav a.active { color: var(--ink); }
+@media (max-width: 768px) {
+  .legal-header { padding: 80px 24px 36px; }
+  .legal-body { padding: 36px 24px; }
+  .legal-nav { padding: 20px 24px; gap: 16px; }
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__logo">the <em>interior</em> by caroline</a>
-    <button class="nav__burger" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="vendre.html">vendre</a></li>
-      <li><a href="acheter.html">acheter</a></li>
-      <li><a href="le-journal.html">le journal</a></li>
-      <li><a href="a-propos.html">à propos</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
+<nav>
+  <a href="index.html" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links">
+    <li><a href="vendre.html">vendre</a></li>
+    <li><a href="acheter.html">acheter</a></li>
+    <li><a href="le-journal.html">le journal</a></li>
+    <li><a href="a-propos.html">à propos</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-lang">
+    <button class="lang-btn active">fr</button>
+    <button class="lang-btn">en</button>
   </div>
 </nav>
 
-<main>
-  <div class="wrap">
+<div class="legal-header">
+  <p class="legal-eyebrow">— légal —</p>
+  <h1 class="legal-title">politique de <em>confidentialité</em></h1>
+</div>
 
-    <section class="hero">
-      <span class="label">— légal —</span>
-      <h1>politique de <em>confidentialité</em></h1>
-    </section>
+<div class="legal-nav">
+  <a href="mentions-legales.html">mentions légales</a>
+  <a href="confidentialite.html" class="active">confidentialité</a>
+  <a href="cookies.html">cookies</a>
+  <a href="honoraires.html">honoraires</a>
+</div>
 
-    <div class="legal-tabs section" style="border-top:none; padding-top:0;">
-      <a href="mentions-legales.html">mentions légales</a>
-      <a href="confidentialite.html" class="active">confidentialité</a>
-      <a href="cookies.html">cookies</a>
+<div class="legal-body">
+
+  <h2>Responsable du traitement</h2>
+  <p>Caroline <span class="placeholder">[NOM]</span>, auto-entrepreneur — <span class="placeholder">[adresse]</span>, Paris.</p>
+
+  <h2>Données <em>collectées</em></h2>
+  <p>Ce site collecte uniquement les données que vous nous transmettez volontairement via les formulaires :</p>
+  <ul>
+    <li>Formulaire vendeur : prénom, téléphone, adresse du bien, surface, pièces, étage, ascenseur, exposition.</li>
+    <li>Formulaire acquéreur : prénom, téléphone, budget, arrondissements, type de bien, surface, projet libre.</li>
+  </ul>
+  <p>Aucune donnée n'est collectée sans votre consentement explicite. Aucune donnée n'est vendue à des tiers.</p>
+
+  <h2>Finalité du traitement</h2>
+  <p>Les données collectées sont utilisées exclusivement pour :</p>
+  <ul>
+    <li>Vous recontacter dans le cadre de votre projet immobilier.</li>
+    <li>Vous proposer des biens correspondant à vos critères (acquéreurs).</li>
+  </ul>
+
+  <h2>Durée de conservation</h2>
+  <p>Vos données sont conservées pendant la durée nécessaire au traitement de votre demande, et au maximum 3 ans à compter du dernier contact.</p>
+
+  <h2>Vos droits</h2>
+  <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits : <span class="placeholder">[canal de contact — téléphone ou WhatsApp]</span>.</p>
+  <p>Vous pouvez également introduire une réclamation auprès de la CNIL : <a href="https://www.cnil.fr" target="_blank">cnil.fr</a>.</p>
+
+  <h2>Hébergement & sécurité</h2>
+  <p>Le site est hébergé par Vercel Inc. Les données de formulaires sont transmises de manière sécurisée (HTTPS). Aucune donnée sensible n'est stockée sur le serveur du site.</p>
+
+  <h2>Cookies & mesure d'audience</h2>
+  <p>Ce site utilise Plausible Analytics, outil de mesure d'audience respectueux de la vie privée — sans cookies, sans données personnelles. <a href="cookies.html">En savoir plus →</a></p>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <div class="gp-badge"><span class="gp-dot"></span><span class="gp-text"></span></div>
     </div>
-
-    <div class="legal-content section" style="border-top:none;">
-
-      <h2>Responsable du traitement</h2>
-      <p>Caroline, auto-entrepreneur — Paris.<br>
-      Contact : +33 6 02 10 67 54</p>
-
-      <h2>Données collectées</h2>
-      <p>Ce site collecte uniquement les données que vous transmettez volontairement via les formulaires :</p>
-      <ul>
-        <li>Formulaire vendeur : prénom, téléphone, adresse du bien, surface, pièces, étage, ascenseur, exposition.</li>
-        <li>Formulaire acquéreur : prénom, téléphone, budget, arrondissements, type de bien, surface, projet libre.</li>
-      </ul>
-      <p>Aucune donnée n'est collectée sans votre consentement explicite. Aucune donnée n'est vendue à des tiers.</p>
-
-      <h2>Finalité du traitement</h2>
-      <p>Les données collectées sont utilisées exclusivement pour vous recontacter dans le cadre de votre projet immobilier, et pour vous proposer des biens correspondant à vos critères (acquéreurs).</p>
-
-      <h2>Durée de conservation</h2>
-      <p>Vos données sont conservées pendant la durée nécessaire au traitement de votre demande, et au maximum 3 ans à compter du dernier contact.</p>
-
-      <h2>Vos droits</h2>
-      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits, contactez-moi par téléphone au +33 6 02 10 67 54.</p>
-      <p>Vous pouvez également introduire une réclamation auprès de la CNIL : <a href="https://www.cnil.fr" style="text-decoration:underline; color:var(--mid);">cnil.fr</a></p>
-
-      <h2>Hébergement &amp; sécurité</h2>
-      <p>Le site est hébergé par Vercel Inc. Les données de formulaires sont transmises de manière sécurisée (HTTPS). Aucune donnée sensible n'est stockée sur le serveur du site.</p>
-
-      <h2>Cookies &amp; mesure d'audience</h2>
-      <p>Ce site utilise Plausible Analytics, outil de mesure d'audience respectueux de la vie privée — sans cookies, sans données personnelles. <a href="cookies.html" style="text-decoration:underline; color:var(--mid);">En savoir plus →</a></p>
-
-    </div>
-
-  </div>
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__brand">
-      <div class="footer__brand-logo">the <em>interior</em> by caroline</div>
-      <p class="footer__brand-tag">une signature, un regard, des intérieurs — tout paris.</p>
-    </div>
-    <div class="footer__col">
+    <div class="f-col">
       <h4>le site</h4>
       <ul>
         <li><a href="index.html">accueil</a></li>
@@ -95,7 +113,7 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </div>
-    <div class="footer__col">
+    <div class="f-col">
       <h4>caroline</h4>
       <ul>
         <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
@@ -103,19 +121,20 @@
         <li><a href="contact.html">calendly · 30 min</a></li>
       </ul>
     </div>
-    <div class="footer__col">
+    <div class="f-col">
       <h4>légal</h4>
       <ul>
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
+        <li><a href="honoraires.html">honoraires</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer__bottom">
-    <span class="footer__copy">© caroline · 2026 — paris · fait avec attention</span>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — paris</p>
+    <p class="f-made">fait avec attention</p>
   </div>
 </footer>
-
 </body>
 </html>
