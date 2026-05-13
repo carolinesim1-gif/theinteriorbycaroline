@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Interior by Caroline — Agent immobilier Paris rive gauche</title>
-<meta name="description" content="Agent immobilier indépendante à Paris — 5e, 6e, 7e, 14e. Estimation confidentielle, biens hors-marché." />
+<meta name="description" content="Agent immobilier indépendante à Paris — 5e, 6e, 7e, 14e. Biens off-market, accompagnement signé." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="style.css" />
@@ -69,12 +69,12 @@ nav {
 }
 .lang-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-/* ── HERO ── */
+/* ── HERO — espace réduit des 3/4 ── */
 .hero {
-  height: 100vh;
+  min-height: 40vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center; text-align: center;
-  padding: 58px 48px 0;
+  padding: 80px 48px 24px;
   position: relative; overflow: hidden;
 }
 .hero-bg {
@@ -85,16 +85,14 @@ nav {
     radial-gradient(ellipse 40% 40% at 55% 80%, rgba(180,190,170,.15) 0%, transparent 45%);
 }
 .hero-eyebrow {
-  font-family: var(--mono); font-size: 11px; letter-spacing: .22em;
-  text-transform: none; color: var(--muted);
-  font-style: italic; margin-bottom: 20px;
-  font-family: var(--serif);
+  font-family: var(--serif); font-style: italic; font-size: 13px;
+  color: var(--muted); margin-bottom: 14px;
 }
 .hero h1 {
   font-family: var(--display); font-weight: 300;
   font-size: clamp(64px, 8vw, 110px); line-height: .92;
   letter-spacing: -.025em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 22px; position: relative;
+  margin-bottom: 14px; position: relative;
 }
 .hero h1 em { font-style: italic; }
 .hero-sub {
@@ -103,9 +101,8 @@ nav {
   max-width: 480px; line-height: 1.55; margin-bottom: 0;
 }
 .hero-scroll {
-  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  cursor: default;
+  margin-top: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
 }
 .hero-scroll-label {
   font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--muted);
@@ -118,9 +115,9 @@ nav {
   border-top: 1px solid var(--rule);
 }
 .panel {
-  padding: 52px 56px;
+  padding: 44px 48px;
   display: flex; flex-direction: column; justify-content: space-between;
-  min-height: 380px; position: relative; overflow: hidden;
+  min-height: 340px; position: relative; overflow: hidden;
 }
 .panel-left {
   background: var(--paper);
@@ -140,19 +137,19 @@ nav {
 }
 .panel-eyebrow {
   font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); margin-bottom: 16px;
+  color: var(--muted); margin-bottom: 12px;
 }
 .panel-title {
   font-family: var(--display); font-weight: 300;
   font-size: clamp(40px, 4.5vw, 60px); line-height: .92;
   letter-spacing: -.022em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .panel-title em { font-style: italic; }
 .panel-body {
   font-family: var(--serif); font-style: italic;
   font-size: 15px; color: var(--ink-soft); line-height: 1.55;
-  margin-bottom: 32px; max-width: 320px;
+  margin-bottom: 24px; max-width: 320px;
 }
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
@@ -170,7 +167,7 @@ nav {
 /* ── CONTACT BAND ── */
 .contact-band {
   background: var(--dark);
-  padding: 64px 48px;
+  padding: 48px 48px;
   text-align: center;
   position: relative; overflow: hidden;
 }
@@ -184,35 +181,34 @@ nav {
 }
 .contact-eyebrow {
   font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: rgba(245,240,232,.4); margin-bottom: 14px; position: relative;
+  color: rgba(245,240,232,.4); margin-bottom: 10px; position: relative;
 }
 .contact-title {
   font-family: var(--display); font-weight: 300;
   font-size: clamp(34px, 4vw, 56px); line-height: .95;
   letter-spacing: -.02em; font-variation-settings: 'opsz' 144;
-  color: var(--paper); margin-bottom: 10px; position: relative;
+  color: var(--paper); margin-bottom: 8px; position: relative;
 }
 .contact-title em { font-style: italic; }
 .contact-sub {
   font-family: var(--serif); font-style: italic;
   font-size: 15px; color: rgba(245,240,232,.55);
-  margin-bottom: 36px; position: relative;
+  margin-bottom: 28px; position: relative;
 }
+/* 3 boutons en 1 ligne desktop, même largeur, colonne mobile */
 .contact-btns {
   display: flex; gap: 12px; justify-content: center;
-  flex-wrap: wrap; position: relative;
-}
-.contact-btns-row2 {
-  display: flex; justify-content: center; margin-top: 10px; position: relative;
+  flex-wrap: nowrap; position: relative;
 }
 .btn-contact {
-  display: inline-flex; align-items: center; gap: 8px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: var(--serif); font-style: italic; font-size: 15px;
   color: rgba(245,240,232,.85);
   padding: 12px 28px; border-radius: 40px;
   border: 1px solid rgba(245,240,232,.2);
   background: transparent; cursor: pointer; text-decoration: none;
   transition: all .22s;
+  flex: 1; max-width: 200px;
 }
 .btn-contact:hover {
   border-color: rgba(245,240,232,.5);
@@ -226,12 +222,12 @@ nav {
 
 /* ── FOOTER ── */
 footer {
-  padding: 52px 48px 24px;
+  padding: 44px 48px 20px;
   border-top: 1px solid var(--rule);
 }
 .footer-top {
   display: grid; grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
-  gap: 40px; margin-bottom: 36px;
+  gap: 40px; margin-bottom: 28px;
 }
 .f-logo {
   font-family: var(--display); font-weight: 300; font-size: 22px;
@@ -240,14 +236,8 @@ footer {
 .f-logo em { font-style: italic; }
 .f-tagline {
   font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); line-height: 1.5; margin-bottom: 16px;
+  color: var(--muted); line-height: 1.5; margin-bottom: 14px;
 }
-.gp-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 16px; background: var(--green-soft); border-radius: 40px;
-}
-.gp-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b8c6b; flex-shrink: 0; }
-.gp-text { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft); }
 .f-col h4 {
   font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
@@ -260,7 +250,7 @@ footer {
 .f-col a em { font-family: var(--serif); font-style: italic; color: var(--accent-deep); }
 .footer-bottom {
   display: flex; justify-content: space-between; align-items: center;
-  padding-top: 18px; border-top: 1px solid var(--rule);
+  padding-top: 16px; border-top: 1px solid var(--rule);
 }
 .f-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); }
 .f-made { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); }
@@ -269,12 +259,13 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
-  .hero { padding: 80px 24px 0; }
+  .hero { padding: 76px 24px 16px; }
   .dual { grid-template-columns: 1fr; }
-  .panel { padding: 40px 24px; min-height: auto; border-right: none; border-bottom: 1px solid var(--rule); }
-  .contact-band { padding: 48px 24px; }
-  .contact-btns { flex-direction: column; align-items: center; }
-  footer { padding: 40px 24px 20px; }
+  .panel { padding: 36px 24px; min-height: auto; border-right: none; border-bottom: 1px solid var(--rule); }
+  .contact-band { padding: 40px 24px; }
+  .contact-btns { flex-direction: column; align-items: center; flex-wrap: wrap; }
+  .btn-contact { max-width: 280px; width: 100%; }
+  footer { padding: 36px 24px 16px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 </style>
@@ -300,9 +291,9 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <p class="hero-eyebrow">— immobilier résidentiel haut de gamme · paris —</p>
+  <p class="hero-eyebrow">— immobilier résidentiel · tout paris —</p>
   <h1>habiter <em>autrement</em></h1>
-  <p class="hero-sub">caroline accompagne, à paris, une sélection confidentielle de propriétaires et d'acquéreurs.</p>
+  <p class="hero-sub">caroline accompagne propriétaires et acquéreurs à paris, avec un regard singulier et un accompagnement signé.</p>
   <div class="hero-scroll">
     <span class="hero-scroll-arrow">↓</span>
     <span class="hero-scroll-label">faites votre choix</span>
@@ -314,8 +305,8 @@ footer {
   <div class="panel panel-left">
     <div>
       <p class="panel-eyebrow">— pour vous, propriétaire —</p>
-      <h2 class="panel-title">vendre <em>en<br/>confidence</em></h2>
-      <p class="panel-body">une lecture précise du marché, un parti pris de mise en valeur, un accompagnement signé.</p>
+      <h2 class="panel-title">vendre <em>en<br/>confiance</em></h2>
+      <p class="panel-body">estimation stratégique, mise en valeur signée, diffusion ciblée — et un accompagnement jusqu'à la signature, avec l'œil d'une designer d'intérieur.</p>
     </div>
     <a href="vendre.html" class="btn btn-dark">demander une estimation →</a>
   </div>
@@ -323,7 +314,7 @@ footer {
     <div>
       <p class="panel-eyebrow">— pour vous, acquéreur —</p>
       <h2 class="panel-title">acheter <em>avant les<br/>autres</em></h2>
-      <p class="panel-body">recevez en avant-première les biens qui correspondent à votre projet — y compris ceux qui ne paraissent jamais.</p>
+      <p class="panel-body">accédez en avant-première aux biens off-market — y compris ceux qui ne paraissent jamais.</p>
     </div>
     <a href="acheter.html" class="btn btn-terracotta">recevoir en avant-première →</a>
   </div>
@@ -333,7 +324,7 @@ footer {
 <section class="contact-band">
   <p class="contact-eyebrow">— parlons-en —</p>
   <h2 class="contact-title">une question, <em>un projet ?</em></h2>
-  <p class="contact-sub">je réponds en personne, sous 24 heures ouvrées. choisissez le canal qui vous convient.</p>
+  <p class="contact-sub">je réponds en personne, sous 24 heures. choisissez le canal qui vous convient.</p>
   <div class="contact-btns">
     <a href="tel:+33602106754" class="btn-contact">
       <span class="dot"></span>+33 6 02 10 67 54
@@ -341,10 +332,8 @@ footer {
     <a href="https://wa.me/33602106754" class="btn-contact">
       <span class="dot"></span>whatsapp
     </a>
-  </div>
-  <div class="contact-btns-row2">
     <a href="contact.html" class="btn-contact">
-      <span class="dot"></span>prendre rdv (calendly)
+      <span class="dot"></span>prendre rdv
     </a>
   </div>
 </section>
@@ -354,9 +343,9 @@ footer {
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— tout paris.</p>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+        <img src="logo_greenpartners.png" alt="Réseau" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
       </a>
     </div>
     <div class="f-col">
@@ -385,8 +374,6 @@ footer {
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
-        <li><a href="honoraires.html">honoraires</a></li>
-        <li><a href="#">plan du site</a></li>
       </ul>
     </div>
   </div>
