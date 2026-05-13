@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vendre — The Interior by Caroline</title>
-<meta name="description" content="Vendez votre appartement à Paris avec Caroline — estimation confidentielle, mise en valeur signée, accompagnement jusqu'à la signature." />
+<meta name="description" content="Vendez votre appartement à Paris avec Caroline — estimation stratégique, mise en valeur signée, accompagnement jusqu'à la signature." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="style.css" />
@@ -21,7 +21,6 @@
   --accent-soft:#e8c9bf;
   --accent-deep:#6d3a32;
   --dark:       #2c2720;
-  --green-soft: #d4ddd0;
   --serif:   'Cormorant Garamond', serif;
   --display: 'Fraunces', serif;
   --sans:    'Inter', sans-serif;
@@ -70,14 +69,12 @@ nav {
 }
 .btn-dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .btn-dark:hover { background: var(--ink-soft); }
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: var(--paper); }
 
-/* ── HERO ── */
+/* ── HERO — même hauteur que home ── */
 .hero {
-  min-height: 100vh; display: flex; flex-direction: column;
+  min-height: 40vh; display: flex; flex-direction: column;
   justify-content: center; align-items: center; text-align: center;
-  padding: 58px 48px 48px; position: relative; overflow: hidden;
+  padding: 80px 48px 24px; position: relative; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0; pointer-events: none;
@@ -88,13 +85,13 @@ nav {
 }
 .hero-eyebrow {
   font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); margin-bottom: 18px; position: relative;
+  color: var(--muted); margin-bottom: 14px; position: relative;
 }
 .hero h1 {
   font-family: var(--display); font-weight: 300;
   font-size: clamp(56px, 7.5vw, 100px); line-height: .92;
   letter-spacing: -.025em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 20px; position: relative;
+  margin-bottom: 14px; position: relative;
 }
 .hero h1 em { font-style: italic; }
 .hero-sub {
@@ -103,30 +100,30 @@ nav {
   max-width: 500px; line-height: 1.55; position: relative;
 }
 
-/* ── TROIS PILIERS ── */
-.piliers {
+/* ── 6 SERVICES ── */
+.services {
   display: grid; grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--rule);
 }
-.pilier {
-  padding: 44px 44px;
+.service {
+  padding: 36px 36px;
   border-right: 1px solid var(--rule);
-  background: var(--paper-warm);
+  border-bottom: 1px solid var(--rule);
 }
-.pilier:last-child { border-right: none; }
-.pilier-num {
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); margin-bottom: 14px;
+.service:nth-child(3n) { border-right: none; }
+.service-num {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .18em;
+  color: var(--accent); margin-bottom: 10px; display: block;
 }
-.pilier-title {
-  font-family: var(--display); font-weight: 300; font-size: 26px;
+.service-title {
+  font-family: var(--display); font-weight: 300; font-size: 20px;
   line-height: 1.1; letter-spacing: -.01em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-.pilier-title em { font-style: italic; }
-.pilier-body {
+.service-title em { font-style: italic; }
+.service-body {
   font-family: var(--serif); font-style: italic;
-  font-size: 14px; color: var(--ink-soft); line-height: 1.6;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.65;
 }
 
 /* ── MÉTHODE ── */
@@ -135,7 +132,7 @@ nav {
   gap: 0; border-top: 1px solid var(--rule);
 }
 .methode-lhs {
-  padding: 52px 48px; border-right: 1px solid var(--rule);
+  padding: 44px 48px; border-right: 1px solid var(--rule);
   display: flex; flex-direction: column; justify-content: flex-start;
 }
 .section-eyebrow {
@@ -155,7 +152,7 @@ nav {
 .methode-steps { display: flex; flex-direction: column; }
 .step {
   display: grid; grid-template-columns: 52px 1fr;
-  gap: 20px; padding: 24px 48px;
+  gap: 20px; padding: 22px 48px;
   border-bottom: 1px solid var(--rule); align-items: start;
 }
 .step:last-child { border-bottom: none; }
@@ -166,7 +163,7 @@ nav {
 }
 .step-title {
   font-family: var(--display); font-weight: 300; font-size: 19px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 5px;
+  font-variation-settings: 'opsz' 144; margin-bottom: 4px;
 }
 .step-title em { font-style: italic; }
 .step-body { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
@@ -177,7 +174,7 @@ nav {
   border-top: 1px solid var(--rule);
 }
 .estim-lhs {
-  padding: 52px 48px;
+  padding: 44px 48px;
   background: linear-gradient(140deg,
     rgba(196,123,108,.18) 0%, rgba(196,164,108,.12) 50%, rgba(180,190,170,.12) 100%);
   display: flex; flex-direction: column; justify-content: center;
@@ -191,20 +188,21 @@ nav {
   font-family: var(--serif); font-style: italic; font-size: 13px;
   color: var(--muted); margin-top: 8px;
 }
-.form-card { padding: 52px 48px; }
-.field { margin-bottom: 22px; }
+.form-card { padding: 44px 48px; }
+.field { margin-bottom: 20px; }
 .field label {
   display: block; font-family: var(--mono); font-size: 10px;
   letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px;
 }
-.field input {
+.field input, .field select, .field textarea {
   width: 100%; background: none; border: none;
   border-bottom: 1px solid var(--ink); padding: 7px 0;
   font-family: var(--serif); font-style: italic; font-size: 17px;
   color: var(--ink); outline: none; transition: border-color .2s;
+  appearance: none; resize: none;
 }
-.field input::placeholder { color: var(--muted); }
-.field input:focus { border-bottom-color: var(--accent); }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+.field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: var(--accent); }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-legal {
   font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
@@ -212,20 +210,18 @@ nav {
 }
 
 /* ── FOOTER ── */
-footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
+footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
 .footer-top {
   display: grid; grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
-  gap: 40px; margin-bottom: 32px;
+  gap: 40px; margin-bottom: 28px;
 }
 .f-logo { font-family: var(--display); font-weight: 300; font-size: 22px;
   font-variation-settings: 'opsz' 144; margin-bottom: 8px; }
 .f-logo em { font-style: italic; }
 .f-tagline { font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); line-height: 1.5; margin-bottom: 16px; }
-.gp-badge { display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 16px; background: var(--green-soft); border-radius: 40px; }
-.gp-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b8c6b; flex-shrink: 0; }
-.gp-text { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft); }
+  color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+.f-network { font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px; display: block; }
 .f-col h4 { font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
@@ -233,7 +229,7 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
 .f-col a:hover { color: var(--ink); }
 .f-col a em { font-family: var(--serif); font-style: italic; color: var(--accent-deep); }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center;
-  padding-top: 18px; border-top: 1px solid var(--rule); }
+  padding-top: 16px; border-top: 1px solid var(--rule); }
 .f-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); }
 .f-made { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); }
 
@@ -241,16 +237,18 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
-  .hero { padding: 80px 24px 40px; }
-  .piliers { grid-template-columns: 1fr; }
-  .pilier { border-right: none; border-bottom: 1px solid var(--rule); }
+  .hero { padding: 76px 24px 16px; }
+  .services { grid-template-columns: 1fr; }
+  .service { border-right: none; }
+  .service:nth-child(3n) { border-right: none; }
   .methode { grid-template-columns: 1fr; }
-  .methode-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 24px; }
-  .step { padding: 22px 24px; }
+  .methode-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 36px 24px; }
+  .step { padding: 20px 24px; }
   .estimation { grid-template-columns: 1fr; }
-  .estim-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 24px; }
-  .form-card { padding: 40px 24px; }
-  footer { padding: 40px 24px 20px; }
+  .estim-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 36px 24px; }
+  .form-card { padding: 36px 24px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  footer { padding: 36px 24px 16px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 </style>
@@ -281,34 +279,51 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   <p class="hero-sub">confier son bien, c'est confier un peu de son histoire. je m'engage à la respecter — et à la faire briller au juste prix.</p>
 </section>
 
-<!-- TROIS PILIERS -->
-<div class="piliers">
-  <div class="pilier">
-    <h2 class="pilier-title">vision & <em>valorisation</em></h2>
-    <p class="pilier-body">lecture du potentiel du bien, estimation stratégique, séance photo et mise en valeur de son identité.</p>
+<!-- 6 SERVICES -->
+<div class="services">
+
+  <div class="service">
+    <span class="service-num">01</span>
+    <h2 class="service-title">estimation & <em>stratégie</em></h2>
+    <p class="service-body">pas une estimation en 5 minutes. une lecture fine du bien, du marché, du bon moment : pour fixer le prix qui attire les bons acheteurs sans laisser d'argent sur la table.</p>
   </div>
-  <div class="pilier">
-    <h2 class="pilier-title">diffusion <em>ciblée</em></h2>
-    <p class="pilier-body">pendant 48h avant toute diffusion publique, je consulte mon fichier acquéreurs : si votre bien correspond à un projet en attente, je les contacte en avant-première. le bien est ensuite diffusé sur l'ensemble des supports du réseau, auprès d'une clientèle sensible à l'emplacement, aux volumes et aux usages.</p>
+
+  <div class="service">
+    <span class="service-num">02</span>
+    <h2 class="service-title">mise en valeur & <em>désirabilité</em></h2>
+    <p class="service-body">regard design sur chaque espace, conseils de mise en scène, séance photo professionnelle. et parce qu'un acquéreur achète aussi une projection de vie : proposition de plans d'aménagement pour donner à voir le potentiel du bien et déclencher le coup de cœur.</p>
   </div>
-  <div class="pilier">
-    <h2 class="pilier-title">pilotage & <em>négociation</em></h2>
-    <p class="pilier-body">gestion des visites, aide à la projection des acquéreurs potentiels et négociation avec une approche précise, discrète et orientée résultat.</p>
+
+  <div class="service">
+    <span class="service-num">03</span>
+    <h2 class="service-title">accès off-market & <em>diffusion maîtrisée</em></h2>
+    <p class="service-body">pendant 48h, votre bien est présenté en avant-première à une sélection ciblée d'acquéreurs qualifiés de mon fichier — discrétion totale, résultats immédiats possibles. passé ce délai, diffusion sur les meilleurs portails du réseau : SeLoger, Figaro Immobilier, Belles Demeures, Bien'ici, Zefir, GoFlint et Instagram — pour une exposition maximale auprès d'une clientèle sensible à l'emplacement, aux volumes et au potentiel.</p>
   </div>
-  <div class="pilier">
-    <h2 class="pilier-title">accompagnement <em>complet</em></h2>
-    <p class="pilier-body">coordination administrative et suivi de chaque intervenant jusqu'à la signature.</p>
+
+  <div class="service">
+    <span class="service-num">04</span>
+    <h2 class="service-title">sélection & <em>filtrage des acquéreurs</em></h2>
+    <p class="service-body">chaque visite est préparée. seuls les profils sérieux, finançables et réellement alignés avec votre bien franchissent la porte. votre temps a de la valeur.</p>
   </div>
-  <div class="pilier">
-    <h2 class="pilier-title">projection & <em>décoration</em></h2>
-    <p class="pilier-body">propositions d'aménagement, plans et projections 3D, recommandations d'artisans, conseils décoration et mise en relation avec des partenaires de confiance.</p>
+
+  <div class="service">
+    <span class="service-num">05</span>
+    <h2 class="service-title">négociation & <em>closing</em></h2>
+    <p class="service-body">de l'offre à la signature, je pilote chaque étape avec précision. vous êtes informé, jamais submergé. le résultat prime sur le volume.</p>
   </div>
+
+  <div class="service">
+    <span class="service-num">06</span>
+    <h2 class="service-title">suivi post-vente & <em>réseau de confiance</em></h2>
+    <p class="service-body">la transaction signée n'est pas la fin de mon accompagnement. mise en relation avec notaires, architectes, artisans et décorateurs de confiance : je reste votre interlocutrice pour que la suite — rénovation, aménagement, nouvelle acquisition — se passe aussi bien que la vente.</p>
+  </div>
+
 </div>
 
 <!-- MÉTHODE -->
 <div class="methode">
   <div class="methode-lhs">
-    <p class="section-eyebrow">— ma méthode —</p>
+    <p class="section-eyebrow">— concrètement —</p>
     <h2 class="section-title">en quatre <em>temps</em></h2>
     <p class="section-sub">de la première visite à la signature, un fil conducteur clair — et un seul interlocuteur.</p>
   </div>
@@ -324,21 +339,21 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
       <span class="step-num">02</span>
       <div>
         <h3 class="step-title">l'<em>estimation</em></h3>
-        <p class="step-body">vous recevez sous 24h une estimation argumentée : prix de marché, fourchette de négociation, stratégie de mise en vente.</p>
+        <p class="step-body">vous recevez sous 72h une estimation argumentée : prix de marché, fourchette de négociation, et stratégie de diffusion sur-mesure — canaux, timing, positionnement.</p>
       </div>
     </div>
     <div class="step">
       <span class="step-num">03</span>
       <div>
         <h3 class="step-title">la <em>mise en scène</em></h3>
-        <p class="step-body">recommandations de mise en valeur — couleurs, mobilier, photographe — pour que le bien parle de lui-même.</p>
+        <p class="step-body">recommandations de mise en valeur — couleurs, mobilier, photographe — et proposition de plans d'aménagement pour permettre à chaque acquéreur de se projeter et d'imaginer sa vie dans le bien.</p>
       </div>
     </div>
     <div class="step">
       <span class="step-num">04</span>
       <div>
         <h3 class="step-title">l'<em>accompagnement</em></h3>
-        <p class="step-body">diffusion confidentielle, visites filtrées, négociation, suivi notaire. je reste à vos côtés jusqu'à la signature.</p>
+        <p class="step-body">visites filtrées, négociation, coordination administrative complète — compromis, pièces obligatoires, suivi notaire, gestion des intervenants. je reste à vos côtés jusqu'à la signature de l'acte authentique.</p>
       </div>
     </div>
   </div>
@@ -353,48 +368,54 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
     <p class="estim-sig">— caroline, je vous réponds personnellement sous 24h.</p>
   </div>
   <div class="form-card">
-    <div class="field">
-      <label>L'adresse de votre bien</label>
-      <input type="text" placeholder="6, rue de Sèvres — Paris VI&#7497;" />
-    </div>
-    <div class="field-row">
+    <form action="https://formspree.io/f/VOTRE_ID" method="POST">
       <div class="field">
-        <label>Surface</label>
-        <input type="text" placeholder="142 m²" />
+        <label>L'adresse de votre bien</label>
+        <input type="text" name="adresse" placeholder="6, rue de Sèvres — Paris 6e" />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Surface</label>
+          <input type="text" name="surface" placeholder="142 m²" />
+        </div>
+        <div class="field">
+          <label>Pièces</label>
+          <input type="text" name="pieces" placeholder="4 pièces" />
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Étage</label>
+          <input type="text" name="etage" placeholder="3e" />
+        </div>
+        <div class="field">
+          <label>Ascenseur</label>
+          <input type="text" name="ascenseur" placeholder="oui / non" />
+        </div>
       </div>
       <div class="field">
-        <label>Pièces</label>
-        <input type="text" placeholder="4 pièces" />
+        <label>Exposition</label>
+        <input type="text" name="exposition" placeholder="sud-ouest, cour, rue…" />
       </div>
-    </div>
-    <div class="field-row">
-      <div class="field">
-        <label>Étage</label>
-        <input type="text" placeholder="3e" />
-      </div>
-      <div class="field">
-        <label>Ascenseur</label>
-        <input type="text" placeholder="oui / non" />
-      </div>
-    </div>
-    <div class="field">
-      <label>Exposition</label>
-      <input type="text" placeholder="sud-ouest, cour, rue…" />
-    </div>
-    <div class="field-row">
-      <div class="field">
-        <label>Votre prénom</label>
-        <input type="text" placeholder="Caroline" />
+      <div class="field-row">
+        <div class="field">
+          <label>Votre prénom</label>
+          <input type="text" name="prenom" placeholder="Caroline" required />
+        </div>
+        <div class="field">
+          <label>Téléphone</label>
+          <input type="tel" name="telephone" placeholder="06 …" required />
+        </div>
       </div>
       <div class="field">
-        <label>Téléphone</label>
-        <input type="tel" placeholder="06 …" />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="caroline@example.com" />
       </div>
-    </div>
-    <button class="btn btn-dark" style="width:100%;justify-content:center;margin-top:8px;">
-      envoyer ma demande →
-    </button>
-    <p class="form-legal">confidentiel · sans engagement · réponse sous 24h ouvrées</p>
+      <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:8px;">
+        envoyer ma demande →
+      </button>
+      <p class="form-legal">confidentiel · sans engagement · réponse sous 24h</p>
+    </form>
   </div>
 </div>
 
@@ -404,8 +425,9 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
       <p class="f-tagline">une signature, un regard, des intérieurs<br/>— tout paris.</p>
+      <span class="f-network">membre du réseau immobilier</span>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+        <img src="logo_greenpartners.png" alt="GreenPartners Immobilier" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
       </a>
     </div>
     <div class="f-col">
@@ -435,8 +457,6 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
-        <li></li>
-        <li><a href="#">plan du site</a></li>
       </ul>
     </div>
   </div>
