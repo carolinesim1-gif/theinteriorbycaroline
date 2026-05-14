@@ -132,6 +132,55 @@
   font-size: 13px; color: var(--ink-soft);
 }
 
+/* INSTAGRAM */
+.insta-section { border-bottom: 1px solid var(--rule); }
+.insta-header {
+  padding: 44px 48px 28px;
+  border-bottom: 1px solid var(--rule);
+}
+.insta-title {
+  font-family: var(--display); font-weight: 300;
+  font-size: clamp(28px, 3vw, 40px); line-height: 1;
+  font-variation-settings: 'opsz' 144; margin-bottom: 8px;
+}
+.insta-title em { font-style: italic; }
+.insta-sub {
+  font-family: var(--serif); font-style: italic;
+  font-size: 14px; color: var(--muted);
+}
+.insta-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--rule);
+}
+.insta-post {
+  aspect-ratio: 1; background: var(--paper-warm);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: background .2s;
+  position: relative; overflow: hidden;
+}
+.insta-post:hover { background: var(--accent-soft); }
+.insta-placeholder {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.insta-icon { color: rgba(26,22,18,.25); }
+.insta-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase; color: rgba(26,22,18,.3);
+}
+.insta-footer {
+  padding: 24px 48px;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+}
+.insta-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .14em;
+  text-transform: lowercase; color: var(--ink);
+  text-decoration: none; border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px; transition: border-color .2s, color .2s;
+}
+.insta-cta:hover { color: var(--accent); border-color: var(--accent); }
+
 /* CTA */
 .cta-band {
   padding: 52px 48px;
@@ -230,22 +279,68 @@
 
 <!-- PORTFOLIO -->
 <div class="portfolio-header">
-  <h2 class="portfolio-title">quelques <em>réalisations</em></h2>
-  <p class="portfolio-note">— portfolio en construction · à venir</p>
+  <h2 class="portfolio-title">portfolio <em>sur demande</em></h2>
+  <p class="portfolio-note">— disponible sur demande · me contacter directement</p>
 </div>
 
-<div class="portfolio-grid">
-  <div class="portfolio-item portfolio-item-tall p-img-1">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">appartement · Paris 6<sup>e</sup></p>
+<!-- INSTAGRAM -->
+<div class="insta-section">
+  <div class="insta-header">
+    <p class="section-eyebrow">— univers créatif & inspirations —</p>
+    <h2 class="insta-title">découvrir <em>mon univers</em></h2>
+    <p class="insta-sub">quelques images choisies — matières, espaces, regards.</p>
   </div>
-  <div class="portfolio-item p-img-2">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">mise en valeur avant vente · Paris 7<sup>e</sup></p>
+  <div class="insta-grid">
+    <!-- Post 1 — remplacer l'URL par le lien direct vers votre post Instagram -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
+    <!-- Post 2 -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
+    <!-- Post 3 -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
+    <!-- Post 4 -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
+    <!-- Post 5 -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
+    <!-- Post 6 -->
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-post">
+      <div class="insta-placeholder">
+        <span class="insta-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="insta-label">post instagram</span>
+      </div>
+    </a>
   </div>
-  <div class="portfolio-item p-img-3">
-    <div class="portfolio-placeholder"><span class="placeholder-icon">photo à venir</span></div>
-    <p class="portfolio-caption">conseil couleurs · Paris 5<sup>e</sup></p>
+  <div class="insta-footer">
+    <a href="https://instagram.com/theinteriorbycaroline" target="_blank" rel="noopener" class="insta-cta">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      voir tout sur @theinteriorbycaroline →
+    </a>
   </div>
 </div>
 
@@ -289,7 +384,6 @@
       <ul>
         <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
         <li><a href="https://wa.me/33602106754">whatsapp</a></li>
-        <li><a href="contact.html">calendly · 30 min</a></li>
         <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
       </ul>
     </div>
@@ -298,7 +392,6 @@
       <ul>
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
-        <li><a href="honoraires.html">honoraires</a></li>
       </ul>
     </div>
   </div>
