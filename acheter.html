@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Acheter — The Interior by Caroline</title>
-<meta name="description" content="Recevez en avant-première les biens qui correspondent à votre projet — y compris ceux qui ne paraîtront jamais." />
+<meta name="description" content="Recevez en avant-première les biens qui correspondent à votre projet — y compris ceux qui ne paraissent jamais." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="style.css" />
@@ -62,9 +62,9 @@ nav {
 
 /* HERO */
 .hero {
-  min-height: 100vh; display: flex; flex-direction: column;
+  min-height: 40vh; display: flex; flex-direction: column;
   justify-content: center; align-items: center; text-align: center;
-  padding: 58px 48px 48px; position: relative; overflow: hidden;
+  padding: 80px 48px 24px; position: relative; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0; pointer-events: none;
@@ -255,22 +255,22 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   <div class="hero-bg"></div>
   <p class="hero-eyebrow">— pour vous, acquéreur —</p>
   <h1>les biens <em>avant</em><br/>qu'ils ne paraissent</h1>
-  <p class="hero-sub">une partie des biens que je vends ne sera jamais publiée. inscrivez-vous — je vous écris quand l'un d'eux correspond à votre projet.</p>
+  <p class="hero-sub">une partie des biens que je vends ne sera jamais publiée.<br/>inscrivez-vous — je vous contacte quand l'un d'eux correspond à votre projet.</p>
 </section>
 
 <!-- TROIS RAISONS -->
 <div class="raisons">
   <div class="raison">
-    <h2 class="raison-title">une <em>sélection</em> signée</h2>
+    <h2 class="raison-title">une <em>sélection</em> soignée</h2>
     <p class="raison-body">je ne travaille qu'avec un nombre restreint de mandats — ce qui me permet de connaître chaque bien en profondeur avant de vous en parler.</p>
   </div>
   <div class="raison">
     <h2 class="raison-title">des biens <em>hors-marché</em></h2>
-    <p class="raison-body">certains vendeurs ne souhaitent pas de diffusion publique. vous y avez accès en avant-première, avant toute annonce.</p>
+    <p class="raison-body">vous avez accès aux annonces en avant-première avant toute diffusion. je vous contacte si un nouveau bien correspond à votre projet.</p>
   </div>
   <div class="raison">
     <h2 class="raison-title">un accompagnement <em>personnel</em></h2>
-    <p class="raison-body">je vous écris en personne quand un bien correspond. pas d'alerte automatique — une proposition réfléchie.</p>
+    <p class="raison-body">je vous contacte en personne quand un bien correspond. pas d'alerte automatique — une proposition réfléchie.</p>
   </div>
 </div>
 
@@ -283,62 +283,93 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
     <p class="form-sig">— vous recevrez un mot de bienvenue signé, puis seulement quand un bien correspond.</p>
   </div>
   <div class="form-card">
+    <div id="form-wrapper">
+      <form id="acheter-form" action="https://formspree.io/f/xkoyaqpv" method="POST">
     <div class="field-row">
       <div class="field">
-        <label>Budget — de</label>
-        <input type="text" placeholder="1 500 000 €" />
+        <label>Budget maximum</label>
+        <input type="text" name="budget" placeholder="2 500 000 €" />
       </div>
       <div class="field">
-        <label>Budget — à</label>
-        <input type="text" placeholder="2 500 000 €" />
+        <label>Surface minimum</label>
+        <input type="text" name="surface" placeholder="100 m²" />
       </div>
     </div>
     <div class="field">
       <label>Arrondissements de prédilection</label>
       <div class="arr-grid">
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">1er</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">3e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">4e</button>
-        <button class="arr-pill selected" onclick="this.classList.toggle('selected')">5e</button>
-        <button class="arr-pill selected" onclick="this.classList.toggle('selected')">6e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">7e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">8e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">13e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">14e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">16e</button>
-        <button class="arr-pill" onclick="this.classList.toggle('selected')">autre</button>
-      </div>
-    </div>
-    <div class="field-row">
-      <div class="field">
-        <label>Type de bien</label>
-        <select>
-          <option>appartement</option>
-          <option>maison</option>
-          <option>hôtel particulier</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Surface minimum</label>
-        <input type="text" placeholder="100 m²" />
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">1er</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">3e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">4e</button>
+        <button type="button" class="arr-pill selected" onclick="this.classList.toggle('selected')">5e</button>
+        <button type="button" class="arr-pill selected" onclick="this.classList.toggle('selected')">6e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">7e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">8e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">13e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">14e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">16e</button>
+        <button type="button" class="arr-pill" onclick="this.classList.toggle('selected')">autre</button>
       </div>
     </div>
     <div class="field">
       <label>Quelques mots sur votre projet</label>
-      <textarea rows="3" placeholder="ce qui compte vraiment, l'horizon, votre histoire…"></textarea>
+      <textarea rows="3" name="projet" placeholder="ce qui compte vraiment, l'horizon, votre histoire…"></textarea>
     </div>
     <div class="field-row">
       <div class="field">
-        <label>Votre prénom</label>
-        <input type="text" placeholder="Caroline" />
+        <label>Prénom</label>
+        <input type="text" name="prenom" placeholder="Caroline" required />
       </div>
       <div class="field">
-        <label>Téléphone</label>
-        <input type="tel" placeholder="06 …" />
+        <label>Nom</label>
+        <input type="text" name="nom" placeholder="Dupont" required />
       </div>
     </div>
-    <button class="btn-accent">rejoindre le cercle →</button>
-    <p class="form-legal">confidentiel · consentement RGPD · je vous écris en personne</p>
+    <div class="field-row">
+      <div class="field">
+        <label>Téléphone</label>
+        <input type="tel" name="telephone" placeholder="06 …" required />
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="caroline@example.com" required />
+      </div>
+    </div>
+    <button type="submit" class="btn-accent" style="width:auto;">envoyer ma recherche →</button>
+    <p class="form-legal">confidentiel · sans engagement · je vous contacte en personne</p>
+      </form>
+    </div>
+    <div id="form-merci" style="display:none; padding: 32px 0;">
+      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size: clamp(22px,2.5vw,32px); font-weight:300; line-height:1.2; margin-bottom:16px; color:var(--ink);">merci, je vous contacte<br/><em>sous 24 heures.</em></p>
+      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:var(--muted);">— caroline</p>
+    </div>
+  </div>
+  </div>
+
+<script>
+document.getElementById('acheter-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  // Ajouter les arrondissements sélectionnés
+  const arr = [...document.querySelectorAll('.arr-pill.selected')].map(p => p.textContent).join(', ');
+  data.append('arrondissements', arr);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST', body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('form-wrapper').style.display = 'none';
+      document.getElementById('form-merci').style.display = 'block';
+    } else {
+      alert('Une erreur est survenue, veuillez réessayer.');
+    }
+  } catch(err) {
+    alert('Une erreur est survenue, veuillez réessayer.');
+  }
+});
+</script>
   </div>
 </div>
 
@@ -347,10 +378,9 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— tout paris.</p>
-      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6f6659;display:block;margin-bottom:6px;">membre du réseau immobilier</span>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; sa région.</p>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
       </a>
     </div>
     <div class="f-col">
@@ -380,7 +410,7 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
-        <li></li>
+        <li><a href="honoraires.html">honoraires</a></li>
         <li><a href="#">plan du site</a></li>
       </ul>
     </div>
@@ -391,10 +421,28 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   </div>
 </footer>
 
+
 <script>
-// Arrondissements pills — sélection multiple
-document.querySelectorAll('.arr-pill').forEach(pill => {
-  pill.addEventListener('click', () => pill.classList.toggle('selected'));
+document.getElementById('acheter-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const arr = [...document.querySelectorAll('.arr-pill.selected')].map(p => p.textContent).join(', ');
+  data.append('arrondissements', arr);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST', body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('form-wrapper').style.display = 'none';
+      document.getElementById('form-merci').style.display = 'block';
+    } else {
+      alert('Une erreur est survenue, veuillez réessayer.');
+    }
+  } catch(err) {
+    alert('Une erreur est survenue, veuillez réessayer.');
+  }
 });
 </script>
 </body>
