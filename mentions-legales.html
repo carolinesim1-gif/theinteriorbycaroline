@@ -9,6 +9,19 @@
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
+.lang-select {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  background: none; border: 1px solid var(--rule);
+  border-radius: 20px; padding: 4px 28px 4px 11px;
+  cursor: pointer; outline: none; appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color .2s, color .2s;
+}
+.lang-select:hover { border-color: var(--ink); color: var(--ink); }
 .legal-header {
   padding: 100px 48px 48px;
   border-bottom: 1px solid var(--rule);
@@ -72,9 +85,12 @@
     <li><a href="a-propos.html">à propos</a></li>
     <li><a href="contact.html">contact</a></li>
   </ul>
-  <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+    <div class="nav-lang">
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="" selected>fr</option>
+      <option value="en/mentions-legales.html">en</option>
+      <option value="it/mentions-legales.html">it</option>
+    </select>
   </div>
 </nav>
 
@@ -143,7 +159,7 @@
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; sa région.</p>
       <div class="gp-badge"><span class="gp-dot"></span><span class="gp-text"></span></div>
     </div>
     <div class="f-col">
@@ -176,7 +192,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="f-copy">© caroline · 2026 — paris</p>
+    <p class="f-copy">© caroline · 2026 — paris &amp; sa région</p>
     <p class="f-made">fait avec attention</p>
   </div>
 </footer>
