@@ -9,29 +9,22 @@
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-.legal-header { padding: 100px 48px 48px; border-bottom: 1px solid var(--rule); }
+.legal-header { padding: 80px 48px 40px; border-bottom: 1px solid var(--rule); }
 .legal-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 .legal-title { font-family: var(--display); font-weight: 300; font-size: clamp(32px,4vw,52px); line-height: .93; letter-spacing: -.022em; font-variation-settings: 'opsz' 144; }
 .legal-title em { font-style: italic; }
 .legal-body { max-width: 720px; padding: 52px 48px; }
-.legal-body h2 { font-family: var(--display); font-weight: 300; font-size: 22px; font-variation-settings: 'opsz' 144; margin: 36px 0 12px; letter-spacing: -.01em; }
-.legal-body h2:first-child { margin-top: 0; }
-.legal-body h2 em { font-style: italic; }
-.legal-body p { font-family: var(--serif); font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 10px; }
-.legal-body a { color: var(--ink); }
-.placeholder { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; background: var(--accent-soft); color: var(--accent-deep); padding: 2px 8px; border-radius: 3px; }
-.honoraires-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-.honoraires-table th { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--rule); }
-.honoraires-table td { font-family: var(--serif); font-size: 15px; color: var(--ink-soft); padding: 14px 16px; border-bottom: 1px solid var(--rule); line-height: 1.5; }
-.honoraires-table tr:last-child td { border-bottom: none; }
+.legal-body p { font-family: var(--serif); font-size: 17px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 10px; }
+.legal-body a { color: var(--ink); text-underline-offset: 3px; }
 .legal-nav { display: flex; gap: 24px; padding: 24px 48px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
 .legal-nav a { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
 .legal-nav a:hover, .legal-nav a.active { color: var(--ink); }
+.lang-select { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 20px; padding: 4px 28px 4px 11px; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; transition: border-color .2s, color .2s; }
+.lang-select:hover { border-color: var(--ink); color: var(--ink); }
 @media (max-width: 768px) {
-  .legal-header { padding: 80px 24px 36px; }
+  .legal-header { padding: 76px 24px 32px; }
   .legal-body { padding: 36px 24px; }
   .legal-nav { padding: 20px 24px; gap: 16px; }
-  .honoraires-table th, .honoraires-table td { padding: 10px 8px; }
 }
 </style>
 </head>
@@ -47,8 +40,11 @@
     <li><a href="contact.html">contact</a></li>
   </ul>
   <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="" selected>fr</option>
+      <option value="en/honoraires.html">en</option>
+      <option value="it/honoraires.html">it</option>
+    </select>
   </div>
 </nav>
 
@@ -65,58 +61,23 @@
 </div>
 
 <div class="legal-body">
-
-  <h2>Transactions <em>immobilières</em></h2>
-  <p>Conformément à la loi ALUR du 24 mars 2014 et à l'arrêté du 10 janvier 2017, les honoraires sont affichés toutes taxes comprises (TTC).</p>
-  <p>Les honoraires sont à la charge du <strong>vendeur</strong>, sauf mention contraire dans le mandat.</p>
-
-  <table class="honoraires-table">
-    <thead>
-      <tr>
-        <th>Prix de vente</th>
-        <th>Honoraires TTC</th>
-        <th>% TTC</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Jusqu'à 300 000 €</td>
-        <td><span class="placeholder">[À COMPLÉTER]</span></td>
-        <td><span class="placeholder">[x %]</span></td>
-      </tr>
-      <tr>
-        <td>De 300 001 € à 600 000 €</td>
-        <td><span class="placeholder">[À COMPLÉTER]</span></td>
-        <td><span class="placeholder">[x %]</span></td>
-      </tr>
-      <tr>
-        <td>De 600 001 € à 1 000 000 €</td>
-        <td><span class="placeholder">[À COMPLÉTER]</span></td>
-        <td><span class="placeholder">[x %]</span></td>
-      </tr>
-      <tr>
-        <td>Au-delà de 1 000 000 €</td>
-        <td><span class="placeholder">[À COMPLÉTER]</span></td>
-        <td><span class="placeholder">[x %]</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Modalités</h2>
-  <p>Les honoraires sont dus et exigibles à la date de signature de l'acte authentique de vente chez le notaire. Aucune somme n'est due avant cette date.</p>
-  <p>Un mandat écrit est obligatoire avant toute mise en vente. Les conditions exactes sont précisées dans le mandat signé entre les parties.</p>
-
-  <h2>Médiation & réclamations</h2>
-  <p>En cas de litige, vous pouvez contacter le médiateur de la consommation compétent : <span class="placeholder">[nom et coordonnées]</span>.</p>
-
+  <p>Conformément à la loi ALUR du 24 mars 2014, le barème de mes honoraires est consultable sur le site de</p>
+  <p style="margin-top:16px;">
+    <a href="https://greenpartners.immo/fr/mentions-legales/honoraires" target="_blank" rel="noopener">
+      <img src="logo_greenpartners.png" alt="GreenPartners Immobilier" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+    </a>
+  </p>
 </div>
 
 <footer>
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
-      <div class="gp-badge"><span class="gp-dot"></span><span class="gp-text"></span></div>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; sa région.</p>
+      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6f6659;display:block;margin-bottom:6px;">membre du réseau immobilier</span>
+      <a href="https://greenpartners.fr" target="_blank" rel="noopener">
+        <img src="logo_greenpartners.png" alt="GreenPartners Immobilier" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+      </a>
     </div>
     <div class="f-col">
       <h4>le site</h4>
@@ -134,7 +95,8 @@
       <ul>
         <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
         <li><a href="https://wa.me/33602106754">whatsapp</a></li>
-        <li><a href="contact.html">calendly · 30 min</a></li>
+        <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
+        <li><a href="conception.html"><em>conception d'intérieurs →</em></a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -148,9 +110,10 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="f-copy">© caroline · 2026 — paris</p>
+    <p class="f-copy">© caroline · 2026 — paris &amp; sa région</p>
     <p class="f-made">fait avec attention</p>
   </div>
 </footer>
+
 </body>
 </html>
