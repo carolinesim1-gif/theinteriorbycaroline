@@ -69,6 +69,20 @@ nav {
 }
 .lang-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
+.lang-select {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  background: none; border: 1px solid var(--rule);
+  border-radius: 20px; padding: 4px 28px 4px 11px;
+  cursor: pointer; outline: none; appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color .2s, color .2s;
+}
+.lang-select:hover { border-color: var(--ink); color: var(--ink); }
+
 /* ── HERO — espace réduit des 3/4 ── */
 .hero {
   min-height: 40vh;
@@ -283,15 +297,18 @@ footer {
     <li><a href="contact.html">contact</a></li>
   </ul>
   <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="" selected>fr</option>
+      <option value="en/index.html">en</option>
+      <option value="it/index.html">it</option>
+    </select>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <p class="hero-eyebrow">— immobilier résidentiel · tout paris —</p>
+  <p class="hero-eyebrow">— immobilier résidentiel · paris &amp; sa région —</p>
   <h1>habiter <em>autrement</em></h1>
   <p class="hero-sub">caroline accompagne propriétaires et acquéreurs à paris, avec un regard singulier et un accompagnement signé.</p>
   <div class="hero-scroll">
@@ -343,7 +360,7 @@ footer {
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— tout paris.</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; sa région.</p>
       <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6f6659;display:block;margin-bottom:6px;">membre du réseau immobilier</span>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
         <img src="logo_greenpartners.png" alt="Réseau" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
