@@ -39,6 +39,20 @@ body {
   background-position: 0 0, 1px 2px;
 }
 
+.lang-select {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  background: none; border: 1px solid var(--rule);
+  border-radius: 20px; padding: 4px 28px 4px 11px;
+  cursor: pointer; outline: none; appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color .2s, color .2s;
+}
+.lang-select:hover { border-color: var(--ink); color: var(--ink); }
+
 /* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -245,8 +259,11 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
     <li><a href="contact.html">contact</a></li>
   </ul>
   <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="" selected>fr</option>
+      <option value="../en/acheter.html">en</option>
+      <option value="../it/acheter.html">it</option>
+    </select>
   </div>
 </nav>
 
