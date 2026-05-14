@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>À propos — The Interior by Caroline</title>
-<meta name="description" content="Caroline — agent immobilier indépendante à Paris, diplômée grande école, formée à l'architecture d'intérieur." />
+<meta name="description" content="Caroline — agent immobilier indépendante à Paris & sa région, diplômée grande école, formée au design d'intérieur." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="style.css" />
@@ -20,7 +20,6 @@
   --accent:     #c47b6c;
   --accent-soft:#e8c9bf;
   --accent-deep:#6d3a32;
-  --green-soft: #d4ddd0;
   --serif:   'Cormorant Garamond', serif;
   --display: 'Fraunces', serif;
   --sans:    'Inter', sans-serif;
@@ -53,16 +52,25 @@ nav {
 .nav-links a { font-size: 13px; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a.active { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
-.nav-lang { display: flex; gap: 4px; }
-.lang-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
-  padding: 4px 11px; border: 1px solid transparent; background: none;
-  cursor: pointer; color: var(--muted); border-radius: 20px; transition: all .2s; }
-.lang-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-/* INTRO — portrait + texte */
+.lang-select {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+  background: none; border: 1px solid var(--rule);
+  border-radius: 20px; padding: 4px 28px 4px 11px;
+  cursor: pointer; outline: none; appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color .2s, color .2s;
+}
+.lang-select:hover { border-color: var(--ink); color: var(--ink); }
+
+/* INTRO — même hauteur que acheter */
 .intro {
   display: grid; grid-template-columns: 1fr 1.4fr;
-  min-height: calc(100vh - 58px);
+  min-height: 28vh;
   margin-top: 58px;
   border-bottom: 1px solid var(--rule);
 }
@@ -81,7 +89,7 @@ nav {
   color: rgba(245,240,232,.7);
 }
 .intro-rhs {
-  padding: 64px 56px;
+  padding: 48px 56px;
   display: flex; flex-direction: column; justify-content: center;
 }
 .intro-eyebrow {
@@ -92,49 +100,29 @@ nav {
   font-family: var(--display); font-weight: 300;
   font-size: clamp(36px, 4vw, 56px); line-height: .93;
   letter-spacing: -.022em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .intro-title em { font-style: italic; }
 .intro-body {
   font-family: var(--serif); font-size: 17px;
   line-height: 1.7; color: var(--ink-soft);
-  max-width: 480px;
+  max-width: 480px; margin-bottom: 28px;
 }
 .intro-body em { font-style: italic; }
 
-/* PARCOURS */
-.parcours { border-bottom: 1px solid var(--rule); }
-.parcours-item {
-  display: grid; grid-template-columns: 180px 1fr;
-  gap: 0; border-bottom: 1px solid var(--rule);
-  align-items: stretch;
-}
-.parcours-item:last-child { border-bottom: none; }
-.p-date {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .16em;
-  color: var(--accent); padding: 32px 48px;
-  border-right: 1px solid var(--rule);
-  display: flex; align-items: center;
-}
-.p-content { padding: 32px 48px; }
-.p-title {
-  font-family: var(--display); font-weight: 300; font-size: 22px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 8px; line-height: 1.1;
-}
-.p-title em { font-style: italic; }
-.p-body { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-
-/* CE QUI ME GUIDE */
+/* CONVICTIONS */
 .convictions {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(2, 1fr);
   border-bottom: 1px solid var(--rule);
   background: var(--paper-warm);
 }
 .conviction {
   padding: 44px 40px;
   border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
-.conviction:last-child { border-right: none; }
+.conviction:nth-child(2n) { border-right: none; }
+.conviction:nth-last-child(-n+2) { border-bottom: none; }
 .conviction-title {
   font-family: var(--display); font-style: italic; font-weight: 300;
   font-size: 22px; font-variation-settings: 'opsz' 144;
@@ -145,57 +133,33 @@ nav {
   font-size: 14px; color: var(--ink-soft); line-height: 1.65;
 }
 
-/* GREENPARTNERS */
-.gp-section {
-  display: grid; grid-template-columns: 1fr 1fr;
+/* RÉSEAU */
+.reseau-section {
+  display: grid; grid-template-columns: 1fr 1.8fr;
   border-bottom: 1px solid var(--rule);
-  background: var(--green-soft);
 }
-.gp-lhs {
-  padding: 44px 48px;
-  border-right: 1px solid rgba(26,22,18,.1);
+.reseau-lhs {
+  padding: 44px 48px; border-right: 1px solid var(--rule);
   display: flex; flex-direction: column; justify-content: center;
 }
-.gp-eyebrow {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
-  text-transform: uppercase; color: #6b8c6b; margin-bottom: 10px;
+.section-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
 }
-.gp-title {
-  font-family: var(--display); font-weight: 300; font-size: 28px;
-  font-variation-settings: 'opsz' 144; margin-bottom: 0;
+.section-title {
+  font-family: var(--display); font-weight: 300;
+  font-size: clamp(24px, 2.8vw, 36px); line-height: 1.05;
+  letter-spacing: -.02em; font-variation-settings: 'opsz' 144;
 }
-.gp-title em { font-style: italic; }
-.gp-rhs {
+.section-title em { font-style: italic; }
+.reseau-rhs {
   padding: 44px 48px;
-  display: flex; align-items: center;
+  display: flex; flex-direction: column; justify-content: center; gap: 16px;
 }
-.gp-body {
+.reseau-body {
   font-family: var(--serif); font-style: italic;
   font-size: 15px; color: var(--ink-soft); line-height: 1.65;
 }
-
-/* CTA BAND */
-.cta-band {
-  padding: 52px 48px;
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
-}
-.cta-text {
-  font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted);
-}
-.cta-btns { display: flex; gap: 12px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .16em;
-  text-transform: lowercase; padding: 13px 26px; border-radius: 40px;
-  border: 1px solid transparent; cursor: pointer;
-  text-decoration: none; transition: all .22s ease;
-}
-.btn-dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.btn-dark:hover { background: var(--ink-soft); }
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: var(--paper); }
 
 /* LIEN CONCEPTION */
 .conception-link {
@@ -209,21 +173,30 @@ nav {
   text-underline-offset: 3px;
 }
 
+/* BOUTONS */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .16em;
+  text-transform: lowercase; padding: 13px 26px; border-radius: 40px;
+  border: 1px solid transparent; cursor: pointer;
+  text-decoration: none; transition: all .22s ease;
+}
+.btn-dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-dark:hover { background: var(--ink-soft); }
+
 /* FOOTER */
-footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
+footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
 .footer-top {
   display: grid; grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
-  gap: 40px; margin-bottom: 32px;
+  gap: 40px; margin-bottom: 28px;
 }
 .f-logo { font-family: var(--display); font-weight: 300; font-size: 22px;
   font-variation-settings: 'opsz' 144; margin-bottom: 8px; }
 .f-logo em { font-style: italic; }
 .f-tagline { font-family: var(--serif); font-style: italic; font-size: 13px;
-  color: var(--muted); line-height: 1.5; margin-bottom: 16px; }
-.gp-badge { display: inline-flex; align-items: center; gap: 10px;
-  padding: 9px 16px; background: var(--green-soft); border-radius: 40px; }
-.gp-dot { width: 6px; height: 6px; border-radius: 50%; background: #6b8c6b; flex-shrink: 0; }
-.gp-text { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-soft); }
+  color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+.f-network { font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px; display: block; }
 .f-col h4 { font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
@@ -231,7 +204,7 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
 .f-col a:hover { color: var(--ink); }
 .f-col a em { font-family: var(--serif); font-style: italic; color: var(--accent-deep); }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center;
-  padding-top: 18px; border-top: 1px solid var(--rule); }
+  padding-top: 16px; border-top: 1px solid var(--rule); }
 .f-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--muted); }
 .f-made { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); }
 
@@ -241,18 +214,15 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   .nav-links { display: none; }
   .intro { grid-template-columns: 1fr; min-height: auto; }
   .portrait-col { height: 60vw; border-right: none; border-bottom: 1px solid var(--rule); }
-  .intro-rhs { padding: 40px 24px; }
-  .parcours-item { grid-template-columns: 1fr; }
-  .p-date { padding: 20px 24px 0; border-right: none; }
-  .p-content { padding: 12px 24px 28px; }
+  .intro-rhs { padding: 36px 24px; }
   .convictions { grid-template-columns: 1fr; }
   .conviction { border-right: none; border-bottom: 1px solid var(--rule); }
-  .gp-section { grid-template-columns: 1fr; }
-  .gp-lhs { border-right: none; border-bottom: 1px solid rgba(26,22,18,.1); padding: 36px 24px; }
-  .gp-rhs { padding: 36px 24px; }
-  .cta-band { flex-direction: column; gap: 24px; align-items: flex-start; padding: 36px 24px; }
+  .conviction:last-child { border-bottom: none; }
+  .reseau-section { grid-template-columns: 1fr; }
+  .reseau-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 36px 24px; }
+  .reseau-rhs { padding: 36px 24px; }
   .conception-link { padding: 20px 24px; }
-  footer { padding: 40px 24px 20px; }
+  footer { padding: 36px 24px 16px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 </style>
@@ -270,84 +240,52 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
     <li><a href="contact.html">contact</a></li>
   </ul>
   <div class="nav-lang">
-    <button class="lang-btn active">fr</button>
-    <button class="lang-btn">en</button>
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="" selected>fr</option>
+      <option value="en/a-propos.html">en</option>
+      <option value="it/a-propos.html">it</option>
+    </select>
   </div>
 </nav>
 
 <!-- INTRO -->
 <div class="intro">
   <div class="portrait-col">
-    <img src="caroline.png" alt="Caroline — agent immobilier Paris rive gauche" />
+    <img src="caroline.png" alt="Caroline — agent immobilier Paris & sa région" />
     <span class="portrait-caption">— caroline · paris</span>
   </div>
   <div class="intro-rhs">
     <p class="intro-eyebrow">— à propos —</p>
     <h1 class="intro-title">un parcours <em>singulier</em></h1>
     <p class="intro-body">
-      diplômée d'une grande école de commerce, quinze ans à piloter des projets complexes pour des clients haut de gamme. puis une formation à l'architecture d'intérieur — <em>l'œil affûté, le sens des matières, la lecture des espaces</em>. aujourd'hui, l'immobilier résidentiel haut de gamme à paris, en confidence.
+      diplômée d'une grande école de commerce, quinze ans à travailler dans des environnements exigeants et à piloter des projets complexes pour des clients du luxe et de l'immobilier. puis une formation au design d'intérieur — <em>l'œil affûté, le sens des matières, la lecture des espaces</em>. aujourd'hui, l'immobilier résidentiel à paris & sa région avec toujours la même rigueur.
     </p>
-  </div>
-</div>
-
-<!-- PARCOURS -->
-<div class="parcours">
-  <div class="parcours-item">
-    <span class="p-date">2008 → 2020</span>
-    <div class="p-content">
-      <p class="p-title">grande école & <em>projets exigeants</em></p>
-      <p class="p-body">la rigueur, le sens du détail, et l'art d'écouter avant de proposer.</p>
-    </div>
-  </div>
-  <div class="parcours-item">
-    <span class="p-date">2021 → 2023</span>
-    <div class="p-content">
-      <p class="p-title">architecture <em>d'intérieur</em></p>
-      <p class="p-body">formation à la décoration et à la conception. qui change la façon dont on présente un bien.</p>
-    </div>
-  </div>
-  <div class="parcours-item">
-    <span class="p-date">2024 → aujourd'hui</span>
-    <div class="p-content">
-      <p class="p-title">immobilier <em>résidentiel</em> haut de gamme</p>
-      <p class="p-body">paris & île-de-france. une sélection restreinte de mandats, un accompagnement signé.</p>
+    <p class="intro-body" style="margin-top:0;">
+      j'ai rejoint un réseau d'agents indépendants engagés sur une charte de qualité, de transparence et de confiance — partagée par tous ses membres.
+      <a href="https://greenpartners.fr" target="_blank" rel="noopener" style="display:inline-block;vertical-align:middle;margin-left:10px;"><img src="logo_greenpartners.png" alt="GreenPartners Immobilier" style="height:18px;width:auto;object-fit:contain;opacity:0.75;vertical-align:middle;" /></a>
+    </p>
+    <div style="display:flex;gap:12px;margin-top:4px;">
+      <a href="contact.html" class="btn btn-dark">me contacter →</a>
     </div>
   </div>
 </div>
 
-<!-- CE QUI ME GUIDE -->
 <div class="convictions">
   <div class="conviction">
     <p class="conviction-title">— l'écoute d'abord</p>
     <p class="conviction-body">chaque bien a une histoire, chaque acquéreur un projet. je préfère poser quelques questions de plus avant de proposer.</p>
   </div>
   <div class="conviction">
+    <p class="conviction-title">— estimer au plus juste</p>
+    <p class="conviction-body">je m'appuie sur un outil propriétaire du réseau qui croise le marché visible et l'historique des transactions sur des biens comparables — pour fixer le prix qui attire les bons acquéreurs sans laisser d'argent sur la table.</p>
+  </div>
+  <div class="conviction">
     <p class="conviction-title">— le détail change tout</p>
-    <p class="conviction-body">un mur, une lumière, un meuble déplacé. mon œil d'architecte d'intérieur sert d'abord vos biens.</p>
+    <p class="conviction-body">un mur, une lumière, un meuble déplacé. mon regard de designer sert d'abord vos biens.</p>
   </div>
   <div class="conviction">
     <p class="conviction-title">— la confidentialité, toujours</p>
     <p class="conviction-body">vos chiffres, votre adresse, votre histoire — strictement entre nous, et le réseau que je choisis.</p>
-  </div>
-</div>
-
-<!-- GREENPARTNERS -->
-<div class="gp-section">
-  <div class="gp-lhs">
-    <p class="gp-eyebrow">— le réseau —</p>
-    <img src="logo_greenpartners.png" alt="Membre greenpartners" style="height:32px;opacity:0.9;" />
-  </div>
-  <div class="gp-rhs">
-    <p class="gp-body">un réseau d'agents indépendants engagés sur une charte de qualité, de transparence et de confiance — partagée par tous ses membres.</p>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta-band">
-  <p class="cta-text">— parlons de votre projet</p>
-  <div class="cta-btns">
-    <a href="contact.html" class="btn btn-dark">prendre rdv →</a>
-    <a href="contact.html" class="btn btn-ghost">m'écrire</a>
   </div>
 </div>
 
@@ -361,9 +299,10 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; île-de-france.</p>
+      <p class="f-tagline">une signature, un regard, des intérieurs<br/>— paris &amp; sa région.</p>
+      <span class="f-network">membre du réseau immobilier</span>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="Membre " style="height:28px;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+        <img src="logo_greenpartners.png" alt="GreenPartners Immobilier" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
       </a>
     </div>
     <div class="f-col">
@@ -393,8 +332,6 @@ footer { padding: 52px 48px 24px; border-top: 1px solid var(--rule); }
         <li><a href="mentions-legales.html">mentions légales</a></li>
         <li><a href="confidentialite.html">confidentialité</a></li>
         <li><a href="cookies.html">cookies</a></li>
-        <li><a href="honoraires.html">honoraires</a></li>
-        <li><a href="#">plan du site</a></li>
       </ul>
     </div>
   </div>
