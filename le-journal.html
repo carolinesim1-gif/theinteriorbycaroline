@@ -383,6 +383,23 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
   }
 })();
+
+function openArticle(id){ window.location.hash = id; }
+function closeArticle(id){ history.back(); }
+function handleHash(){
+  document.querySelectorAll('.article-overlay').forEach(function(el){ el.classList.remove('open'); });
+  document.body.style.overflow = '';
+  var hash = window.location.hash.replace('#','');
+  if(hash){
+    var el = document.getElementById(hash);
+    if(el && el.classList.contains('article-overlay')){
+      el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+}
+window.addEventListener('hashchange', handleHash);
+window.addEventListener('load', handleHash);
 </script>
 </body>
 </html>
