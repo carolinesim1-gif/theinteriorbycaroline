@@ -62,6 +62,12 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .insta-band-cta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:lowercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s;}
 .insta-band-cta:hover{color:var(--ink);border-color:var(--ink);}
 @media(max-width:768px){.insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.insta-thumb{border-radius:12px;}}
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;order:-1;}
+  .nav-logo{order:0;}
+}
 </style></head><body><nav>
   <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
   <ul class="nav-links"><li><a href="vendre.html">sell</a></li><li><a href="acheter.html" class="active">acheter</a></li><li><a href="le-journal.html">journal</a></li><li><a href="a-propos.html">about</a></li><li><a href="contact.html">contact</a></li></ul>
@@ -72,6 +78,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
       <option value="../it/acheter.html">it</option>
     </select>
   </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
 <section style="min-height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 48px 24px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 22% 42%,rgba(196,123,108,.16) 0%,transparent 55%),radial-gradient(ellipse 50% 50% at 80% 55%,rgba(196,164,108,.14) 0%,transparent 50%);"></div>
@@ -148,6 +155,18 @@ document.getElementById('acheter-form').addEventListener('submit',async function
   if(res.ok){document.getElementById('form-wrapper').style.display='none';document.getElementById('form-merci').style.display='block';}
   else{alert('An error occurred, please try again.');}}catch(err){alert('An error occurred, please try again.');}});
 </script>
+<!-- BANDEAU INSTAGRAM -->
+<div class="insta-band">
+  <p class="insta-band-label">— inspirations &amp; perspectives —</p>
+  <div class="insta-band-grid">
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="interior inspiration" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="interior inspiration" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="interior inspiration" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="interior inspiration" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="interior inspiration" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="interior inspiration" loading="lazy" /></a>
+  </div>
+</div>
 <footer>
   <div class="footer-top">
     <div>
@@ -182,4 +201,22 @@ document.getElementById('acheter-form').addEventListener('submit',async function
     <p class="f-copy">© caroline · 2026 — paris &amp; surroundings</p>
     <p class="f-made">made with care</p>
   </div>
-</footer></body></html>
+</footer><!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">close ×</button>
+  <a href="vendre.html">sell</a>
+  <a href="acheter.html">buy</a>
+  <a href="le-journal.html">journal</a>
+  <a href="a-propos.html">about</a>
+  <a href="contact.html">contact</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){
+    btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
+  }
+})();
+</script>
+</body></html>

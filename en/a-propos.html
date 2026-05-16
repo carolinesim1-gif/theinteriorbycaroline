@@ -72,6 +72,12 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .insta-band-cta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:lowercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s;}
 .insta-band-cta:hover{color:var(--ink);border-color:var(--ink);}
 @media(max-width:768px){.insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(3,1fr);gap:8px;}.insta-thumb{border-radius:10px;}}
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;order:-1;}
+  .nav-logo{order:0;}
+}
 </style>
 <style>
 .intro{display:grid;grid-template-columns:1fr 1.4fr;min-height:28vh;margin-top:58px;border-bottom:1px solid var(--rule);}
@@ -102,6 +108,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
       <option value="../it/a-propos.html">it</option>
     </select>
   </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="intro">
   <div class="portrait-col">
@@ -171,4 +178,22 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     <p class="f-copy">© caroline · 2026 — paris &amp; surroundings</p>
     <p class="f-made">made with care</p>
   </div>
-</footer></body></html>
+</footer><!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">close ×</button>
+  <a href="vendre.html">sell</a>
+  <a href="acheter.html">buy</a>
+  <a href="le-journal.html">journal</a>
+  <a href="a-propos.html">about</a>
+  <a href="contact.html">contact</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){
+    btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
+  }
+})();
+</script>
+</body></html>
