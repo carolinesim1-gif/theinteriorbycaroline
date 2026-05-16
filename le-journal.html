@@ -41,13 +41,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .card{background:var(--paper);display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:background .2s;cursor:pointer;}
 .card:hover{background:var(--paper-warm);}
 .card-featured{grid-row:span 2;}
-.card-img{height:200px;flex-shrink:0;background:var(--paper-warm);}
+/* CARTES IMAGES */
+.card-img{height:200px;flex-shrink:0;background-size:cover;background-position:center;filter:grayscale(100%);transition:filter .3s;}
+.card:hover .card-img{filter:grayscale(80%);}
 .card-featured .card-img{height:260px;}
-.img-rose{background:linear-gradient(135deg,rgba(196,123,108,.35),rgba(236,228,214,.6));}
-.img-sage{background:linear-gradient(135deg,rgba(180,190,170,.5),rgba(236,228,214,.4));}
-.img-stone{background:linear-gradient(135deg,rgba(196,123,108,.2),rgba(180,190,170,.35));}
-.img-warm{background:linear-gradient(135deg,rgba(236,228,214,.9),rgba(196,123,108,.25));}
-.img-blush{background:linear-gradient(135deg,rgba(196,123,108,.28),rgba(236,201,191,.55));}
+.img-1{background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80');}
+.img-2{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80');}
+.img-3{background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80');}
+.img-4{background-image:url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&q=80');}
+.img-5{background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80');}
 .card-body{padding:28px 32px 32px;display:flex;flex-direction:column;flex:1;}
 .card-cat{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
 .card-title{font-family:var(--display);font-weight:300;font-size:22px;line-height:1.15;letter-spacing:-.01em;font-variation-settings:'opsz' 144;margin-bottom:8px;flex:1;}
@@ -125,7 +127,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 <!-- GRILLE -->
 <div class="grille">
   <div class="card card-featured" onclick="openArticle('a1')">
-    <div class="card-img img-rose"></div>
+    <div class="card-img img-1"></div>
     <div class="card-body">
       <p class="card-cat">— vendre —</p>
       <h2 class="card-title">sept erreurs qui coûtent cher quand on vend à Paris</h2>
@@ -134,7 +136,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     </div>
   </div>
   <div class="card" onclick="openArticle('a2')">
-    <div class="card-img img-sage"></div>
+    <div class="card-img img-2"></div>
     <div class="card-body">
       <p class="card-cat">— acheter —</p>
       <h2 class="card-title">lire un DPE, vraiment</h2>
@@ -143,7 +145,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     </div>
   </div>
   <div class="card" onclick="openArticle('a3')">
-    <div class="card-img img-stone"></div>
+    <div class="card-img img-3"></div>
     <div class="card-body">
       <p class="card-cat">— arrondissements —</p>
       <h2 class="card-title">paris rive gauche — le marché vu de l'intérieur</h2>
@@ -152,7 +154,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     </div>
   </div>
   <div class="card" onclick="openArticle('a4')">
-    <div class="card-img img-blush"></div>
+    <div class="card-img img-4"></div>
     <div class="card-body">
       <p class="card-cat">— acheter —</p>
       <h2 class="card-title">comprendre une copropriété en dix minutes</h2>
@@ -161,7 +163,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     </div>
   </div>
   <div class="card" onclick="openArticle('a5')">
-    <div class="card-img img-warm"></div>
+    <div class="card-img img-5"></div>
     <div class="card-body">
       <p class="card-cat">— vivre —</p>
       <h2 class="card-title">le détail change tout — une note sur la couleur</h2>
