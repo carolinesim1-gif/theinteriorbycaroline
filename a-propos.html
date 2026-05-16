@@ -309,8 +309,12 @@ footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
 
 /* ── NAV MOBILE ── */
 @media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
   .nav-lang{display:none;}
-  .nav-hamburger{display:flex;}
+  .nav-hamburger{display:flex;order:-1;}
+  .nav-logo{order:0;}
+}
 }
 </style>
 </head>
@@ -332,7 +336,8 @@ footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
       <option value="en/a-propos.html">en</option>
       <option value="it/a-propos.html">it</option>
     </select>
-  </div>  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- INTRO -->
