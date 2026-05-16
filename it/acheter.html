@@ -61,6 +61,12 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .insta-band-cta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:lowercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s;}
 .insta-band-cta:hover{color:var(--ink);border-color:var(--ink);}
 @media(max-width:768px){.insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.insta-thumb{border-radius:12px;}}
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;order:-1;}
+  .nav-logo{order:0;}
+}
 </style>
 <style>
 .hero{min-height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 48px 24px;position:relative;overflow:hidden;}
@@ -81,6 +87,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
       <option value="acheter.html" selected>it</option>
     </select>
   </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
 <section class="hero">
   <div class="hero-bg"></div>
@@ -144,6 +151,18 @@ document.getElementById('acheter-form').addEventListener('submit',async function
   if(res.ok){document.getElementById('form-wrapper').style.display='none';document.getElementById('form-merci').style.display='block';}
   else{alert('Si è verificato un errore, riprova.');}}catch(err){alert('Si è verificato un errore, riprova.');}});
 </script>
+<!-- BANDEAU INSTAGRAM -->
+<div class="insta-band">
+  <p class="insta-band-label">— ispirazioni &amp; sguardi —</p>
+  <div class="insta-band-grid">
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="ispirazione interni" loading="lazy" /></a>
+  </div>
+</div>
 <footer>
   <div class="footer-top">
     <div>
@@ -178,4 +197,22 @@ document.getElementById('acheter-form').addEventListener('submit',async function
     <p class="f-copy">© caroline · 2026 — parigi &amp; dintorni</p>
     <p class="f-made">fatto con cura</p>
   </div>
-</footer></body></html>
+</footer><!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">chiudi ×</button>
+  <a href="vendre.html">vendere</a>
+  <a href="acheter.html">acquistare</a>
+  <a href="le-journal.html">il diario</a>
+  <a href="a-propos.html">chi sono</a>
+  <a href="contact.html">contatto</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){
+    btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
+  }
+})();
+</script>
+</body></html>
