@@ -287,5 +287,23 @@
   </div>
 </footer>
 
+<!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">fermer ×</button>
+  <a href="vendre.html">vendre</a>
+  <a href="acheter.html">acheter</a>
+  <a href="le-journal.html">le <em>journal</em></a>
+  <a href="a-propos.html">à propos</a>
+  <a href="contact.html">contact</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){
+    btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
+  }
+})();
+</script>
 </body>
 </html>

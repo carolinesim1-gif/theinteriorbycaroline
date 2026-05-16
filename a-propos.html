@@ -445,6 +445,7 @@ footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
     <p class="f-made">fait avec attention</p>
   </div>
 </footer>
+
 <!-- OVERLAY MOBILE -->
 <div class="nav-overlay" id="nav-overlay">
   <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">fermer ×</button>
@@ -455,7 +456,13 @@ footer { padding: 44px 48px 20px; border-top: 1px solid var(--rule); }
   <a href="contact.html">contact</a>
 </div>
 <script>
-(function(){var btn=document.getElementById('nav-ham');var overlay=document.getElementById('nav-overlay');if(btn&&overlay){btn.addEventListener('click',function(){overlay.classList.toggle('open');});}})();
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){
+    btn.addEventListener('click', function(){ overlay.classList.toggle('open'); });
+  }
+})();
 </script>
 </body>
 </html>
