@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Journal — The Interior by Caroline</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Journal — The Interior by Caroline</title>
 <meta name="description" content="Notes on the Paris market, practical guides and perspectives on the art of living — by Caroline." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,24 +11,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="alternate" hreflang="fr" href="https://theinteriorbycaroline.fr/le-journal.html" />
 <link rel="alternate" hreflang="en" href="https://theinteriorbycaroline.fr/en/le-journal.html" />
-<link rel="alternate" hreflang="it" href="https://theinteriorbycaroline.fr/it/le-journal.html" /><style>
-:root{--ink:#1a1612;--ink-soft:#3a342d;--paper:#f5f0e8;--paper-warm:#ece4d6;--muted:#6f6659;--rule:rgba(26,22,18,0.13);--accent:#c47b6c;--accent-soft:#e8c9bf;--accent-deep:#6d3a32;--dark:#2c2720;--serif:'Cormorant Garamond',serif;--display:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;}
+<link rel="alternate" hreflang="it" href="https://theinteriorbycaroline.fr/it/le-journal.html" />
+<style>
+:root{--ink:#1a1612;--ink-soft:#3a342d;--paper:#f5f0e8;--paper-warm:#ece4d6;--muted:#6f6659;--rule:rgba(26,22,18,0.13);--accent:#c47b6c;--accent-soft:#e8c9bf;--accent-deep:#6d3a32;--serif:'Cormorant Garamond',serif;--display:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(26,22,18,.02) 1px,transparent 1px),radial-gradient(rgba(26,22,18,.015) 1px,transparent 1px);background-size:3px 3px,7px 7px;background-position:0 0,1px 2px;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:58px;background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
 .nav-logo{font-family:var(--display);font-weight:300;font-size:17px;font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;}.nav-logo em{font-style:italic;}
 .nav-links{display:flex;gap:32px;list-style:none;}.nav-links a{font-size:13px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .lang-select{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:20px;padding:4px 28px 4px 11px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .2s,color .2s;}.lang-select:hover{border-color:var(--ink);color:var(--ink);}
-.legal-header{padding:80px 48px 40px;border-bottom:1px solid var(--rule);}
-.legal-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
-.legal-title{font-family:var(--display);font-weight:300;font-size:clamp(32px,4vw,52px);line-height:.93;letter-spacing:-.022em;font-variation-settings:'opsz' 144;}.legal-title em{font-style:italic;}
-.legal-body{max-width:720px;padding:52px 48px;}
-.legal-body h2{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin:36px 0 12px;letter-spacing:-.01em;}.legal-body h2:first-child{margin-top:0;}.legal-body h2 em{font-style:italic;}
-.legal-body p{font-family:var(--serif);font-size:16px;color:var(--ink-soft);line-height:1.75;margin-bottom:10px;}
-.legal-body ul{font-family:var(--serif);font-size:16px;color:var(--ink-soft);line-height:1.75;padding-left:20px;margin-bottom:10px;}
-.legal-body a{color:var(--ink);}
-.legal-nav{display:flex;gap:24px;padding:24px 48px;border-top:1px solid var(--rule);flex-wrap:wrap;}
-.legal-nav a{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}.legal-nav a:hover,.legal-nav a.active{color:var(--ink);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .25s;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.nav-overlay.open{display:flex;}
+.nav-overlay a{font-family:var(--display);font-weight:300;font-size:clamp(28px,6vw,44px);font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;letter-spacing:-.01em;transition:color .2s;}
+.nav-overlay a em{font-style:italic;}.nav-overlay a:hover{color:var(--accent);}
+.nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
+@media(max-width:768px){.nav-hamburger{display:flex;}.nav-links{display:none;}}
+.journal-header{padding:76px 48px 40px;border-bottom:1px solid var(--rule);}
+.header-eyebrow{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:10px;}
+.header-title{font-family:var(--display);font-weight:300;font-size:clamp(40px,5vw,64px);line-height:.92;letter-spacing:-.025em;font-variation-settings:'opsz' 144;}
+.header-title em{font-style:italic;}
+.header-sub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);margin-top:12px;max-width:400px;line-height:1.55;}
+.grille{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:auto auto;gap:1px;background:var(--rule);border-bottom:1px solid var(--rule);}
+.card{background:var(--paper);display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:background .2s;cursor:pointer;}
+.card:hover{background:var(--paper-warm);}
+.card-featured{grid-row:span 2;}
+.card-img{height:200px;flex-shrink:0;background-size:cover;background-position:center;filter:grayscale(100%);transition:filter .3s;}
+.card:hover .card-img{filter:grayscale(80%);}
+.card-featured .card-img{height:260px;}
+.img-1{background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80');}
+.img-2{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80');}
+.img-3{background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80');}
+.img-4{background-image:url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&q=80');}
+.img-5{background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80');}
+.card-body{padding:28px 32px 32px;display:flex;flex-direction:column;flex:1;}
+.card-cat{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.card-title{font-family:var(--display);font-weight:300;font-size:22px;line-height:1.15;letter-spacing:-.01em;font-variation-settings:'opsz' 144;margin-bottom:8px;flex:1;}
+.card-featured .card-title{font-size:28px;}
+.card-sub{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:16px;}
+.card-meta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);margin-top:auto;}
+.article-overlay{display:none;position:fixed;inset:0;z-index:200;background:var(--paper);overflow-y:auto;}
+.article-overlay.open{display:block;}
+.article-inner{max-width:720px;margin:0 auto;padding:80px 48px 80px;}
+.article-close{position:fixed;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;z-index:201;}
+.article-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+.article-title{font-family:var(--display);font-weight:300;font-size:clamp(32px,4vw,52px);line-height:.95;letter-spacing:-.022em;font-variation-settings:'opsz' 144;margin-bottom:12px;}
+.article-title em{font-style:italic;}
+.article-sub{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--muted);margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--rule);}
+.article-body h3{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin:36px 0 10px;letter-spacing:-.01em;}
+.article-body p{font-family:var(--serif);font-size:17px;color:var(--ink-soft);line-height:1.75;margin-bottom:18px;}
+.article-body p em{font-style:italic;}
 footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;gap:40px;margin-bottom:28px;}
 .f-logo{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin-bottom:8px;}.f-logo em{font-style:italic;}
@@ -40,57 +74,28 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule);}
 .f-copy{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);}
 .f-made{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--muted);}
-@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.legal-header{padding:76px 24px 32px;}.legal-body{padding:36px 24px;}.legal-nav{padding:20px 24px;gap:16px;}footer{padding:36px 24px 16px;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}}
-
-/* ── MENU HAMBURGER MOBILE ── */
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200;}
-.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .25s;}
-.nav-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
-.nav-overlay.open{display:flex;}
-.nav-overlay a{font-family:var(--display);font-weight:300;font-size:clamp(28px,6vw,44px);font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;letter-spacing:-.01em;transition:color .2s;}
-.nav-overlay a em{font-style:italic;}.nav-overlay a:hover{color:var(--accent);}
-.nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
-@media(max-width:768px){.nav-hamburger{display:flex;}}
-
-/* ── BANDEAU INSTAGRAM ── */
-.insta-band{padding:44px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;}
-.insta-band-label{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:24px;}
-.insta-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:0 auto 20px;}
-.insta-thumb{display:block;aspect-ratio:1;overflow:hidden;border-radius:16px;transition:transform .25s,opacity .25s;}
-.insta-thumb:hover{transform:scale(1.03);opacity:.9;}
-.insta-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
-.insta-band-cta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:lowercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s;}
-.insta-band-cta:hover{color:var(--ink);border-color:var(--ink);}
-@media(max-width:768px){.insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.insta-thumb{border-radius:12px;}}
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .journal-header{padding:76px 24px 32px;}
+  .grille{grid-template-columns:1fr;grid-template-rows:auto;}
+  .card-featured{grid-row:span 1;}
+  .article-inner{padding:80px 24px 60px;}
+  footer{padding:36px 24px 16px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+}
 </style>
-<style>
-.journal-header{padding:76px 48px 40px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--rule);}
-.header-eyebrow{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:10px;}
-.header-title{font-family:var(--display);font-weight:300;font-size:clamp(40px,5vw,64px);line-height:.92;letter-spacing:-.025em;font-variation-settings:'opsz' 144;}
-.header-title em{font-style:italic;}
-.header-sub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);margin-top:12px;max-width:400px;line-height:1.55;}
-.grille{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:auto auto;gap:1px;background:var(--rule);}
-.card{background:var(--paper);display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:background .2s;}
-.card:hover{background:var(--paper-warm);}
-.card-featured{grid-row:span 2;}
-.card-img{height:200px;flex-shrink:0;}
-.card-featured .card-img{height:260px;}
-.img-rose{background:linear-gradient(135deg,rgba(196,123,108,.35),rgba(236,228,214,.6));}
-.img-sage{background:linear-gradient(135deg,rgba(180,190,170,.5),rgba(236,228,214,.4));}
-.img-stone{background:linear-gradient(135deg,rgba(196,123,108,.2),rgba(180,190,170,.35));}
-.img-warm{background:linear-gradient(135deg,rgba(236,228,214,.9),rgba(196,123,108,.25));}
-.img-blush{background:linear-gradient(135deg,rgba(196,123,108,.28),rgba(236,201,191,.55));}
-.card-body{padding:28px 32px 32px;display:flex;flex-direction:column;flex:1;}
-.card-cat{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
-.card-title{font-family:var(--display);font-weight:300;font-size:22px;line-height:1.15;letter-spacing:-.01em;font-variation-settings:'opsz' 144;margin-bottom:8px;flex:1;}
-.card-featured .card-title{font-size:28px;}
-.card-sub{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:16px;}
-.card-meta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);margin-top:auto;}
-@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.journal-header{padding:76px 24px 32px;flex-direction:column;gap:20px;align-items:flex-start;}.grille{grid-template-columns:1fr;grid-template-rows:auto;}.card-featured{grid-row:span 1;}}
-</style>
-</head><body><nav>
+</head>
+<body>
+
+<nav>
   <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
-  <ul class="nav-links"><li><a href="vendre.html">sell</a></li><li><a href="acheter.html">buy</a></li><li><a href="le-journal.html" class="active">journal</a></li><li><a href="a-propos.html">about</a></li><li><a href="contact.html">contact</a></li></ul>
+  <ul class="nav-links">
+    <li><a href="vendre.html">sell</a></li>
+    <li><a href="acheter.html">buy</a></li>
+    <li><a href="le-journal.html" class="active">journal</a></li>
+    <li><a href="a-propos.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
   <div class="nav-lang">
     <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
       <option value="../le-journal.html">fr</option>
@@ -98,21 +103,63 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
       <option value="../it/le-journal.html">it</option>
     </select>
   </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
 </nav>
+
 <div class="journal-header">
-  <div>
-    <p class="header-eyebrow">— notes &amp; perspectives —</p>
-    <h1 class="header-title">the <em>journal</em></h1>
-    <p class="header-sub">practical guides, market readings and notes on the art of living — by caroline.</p>
+  <p class="header-eyebrow">— notes &amp; perspectives —</p>
+  <h1 class="header-title">the <em>journal</em></h1>
+  <p class="header-sub">practical guides, market readings and notes on the art of living — by caroline.</p>
+</div>
+
+<div class="grille">
+  <div class="card card-featured" onclick="openArticle('a1')">
+    <div class="card-img img-1"></div>
+    <div class="card-body">
+      <p class="card-cat">— sell —</p>
+      <h2 class="card-title">seven mistakes that cost dearly when selling in Paris</h2>
+      <p class="card-sub">asking price, photographs, first viewings — what plays out in the first three weeks.</p>
+      <p class="card-meta">january 2026 · 9 min read</p>
+    </div>
+  </div>
+  <div class="card" onclick="openArticle('a2')">
+    <div class="card-img img-2"></div>
+    <div class="card-body">
+      <p class="card-cat">— buy —</p>
+      <h2 class="card-title">reading an EPC, really</h2>
+      <p class="card-sub">beyond the label: what the audit tells you about the property.</p>
+      <p class="card-meta">january 2026 · 6 min</p>
+    </div>
+  </div>
+  <div class="card" onclick="openArticle('a3')">
+    <div class="card-img img-3"></div>
+    <div class="card-body">
+      <p class="card-cat">— arrondissements —</p>
+      <h2 class="card-title">paris left bank — the market from the inside</h2>
+      <p class="card-sub">price per m², neighbourhoods on the move, properties that go quickly.</p>
+      <p class="card-meta">december 2025 · 7 min</p>
+    </div>
+  </div>
+  <div class="card" onclick="openArticle('a4')">
+    <div class="card-img img-4"></div>
+    <div class="card-body">
+      <p class="card-cat">— buy —</p>
+      <h2 class="card-title">understanding a copropriété in ten minutes</h2>
+      <p class="card-sub">AGM minutes, charges, approved works: the checklist before signing.</p>
+      <p class="card-meta">december 2025 · 8 min</p>
+    </div>
+  </div>
+  <div class="card" onclick="openArticle('a5')">
+    <div class="card-img img-5"></div>
+    <div class="card-body">
+      <p class="card-cat">— living —</p>
+      <h2 class="card-title">detail changes everything — a note on colour</h2>
+      <p class="card-sub">why a well-painted wall is worth more than a renovated kitchen.</p>
+      <p class="card-meta">november 2025 · 4 min</p>
+    </div>
   </div>
 </div>
-<div class="grille">
-  <a href="#" class="card card-featured"><div class="card-img img-rose"></div><div class="card-body"><p class="card-cat">— sell —</p><h2 class="card-title">seven mistakes that cost dearly when selling in paris</h2><p class="card-sub">asking price, photographs, first viewings — what plays out in the first three weeks.</p><p class="card-meta">january 2026 · 9 min read</p></div></a>
-  <a href="#" class="card"><div class="card-img img-sage"></div><div class="card-body"><p class="card-cat">— buy —</p><h2 class="card-title">reading an EPC, really</h2><p class="card-sub">beyond the label: what the audit tells you about the property.</p><p class="card-meta">january 2026 · 6 min</p></div></a>
-  <a href="#" class="card"><div class="card-img img-stone"></div><div class="card-body"><p class="card-cat">— arrondissements —</p><h2 class="card-title">paris left bank — the market from the inside</h2><p class="card-sub">price per m², neighbourhoods on the move, properties that go quickly.</p><p class="card-meta">december 2025 · 7 min</p></div></a>
-  <a href="#" class="card"><div class="card-img img-blush"></div><div class="card-body"><p class="card-cat">— buy —</p><h2 class="card-title">understanding a copropriété in ten minutes</h2><p class="card-sub">AGM minutes, charges, approved works: the checklist before signing.</p><p class="card-meta">december 2025 · 8 min</p></div></a>
-  <a href="#" class="card"><div class="card-img img-warm"></div><div class="card-body"><p class="card-cat">— living —</p><h2 class="card-title">detail changes everything — a note on colour</h2><p class="card-sub">why a well-painted wall is worth more than a renovated kitchen.</p><p class="card-meta">november 2025 · 4 min</p></div></a>
-</div>
+
 <footer>
   <div class="footer-top">
     <div>
@@ -124,6 +171,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
       </a>
     </div>
     <div class="f-col"><h4>the site</h4><ul>
+      <li><a href="index.html">home</a></li>
       <li><a href="vendre.html">sell</a></li>
       <li><a href="acheter.html">buy</a></li>
       <li><a href="le-journal.html">journal</a></li>
@@ -147,4 +195,156 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     <p class="f-copy">© caroline · 2026 — paris &amp; surroundings</p>
     <p class="f-made">made with care</p>
   </div>
-</footer></body></html>
+</footer>
+
+<!-- ARTICLE 1 -->
+<div class="article-overlay" id="a1">
+  <button class="article-close" onclick="closeArticle('a1')">← back to journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— sell —</p>
+    <h1 class="article-title">seven mistakes that cost dearly<br/><em>when selling in Paris</em></h1>
+    <p class="article-sub">asking price, photographs, first viewings — what plays out in the first three weeks.</p>
+    <div class="article-body">
+      <p>Selling a Paris apartment is often — too often — a race against one's own impatience. A price is set "to see". Photos are taken with an iPhone. The first viewings are accepted without really qualifying the profiles. And three weeks later, the property is burnt.</p>
+      <p>Here are the seven mistakes I observe most frequently, and what they truly cost.</p>
+      <h3>01 — Overpricing to negotiate</h3>
+      <p>It is the most common reflex, and the most costly. A property listed 10% above the market does not generate negotiation — it generates silence. Serious buyers, those who have visited 20 properties, see it immediately. They move on. And when you lower the price two months later, everyone remembers that the property has been "sitting".</p>
+      <h3>02 — Poor photographs</h3>
+      <p>A poorly lit kitchen, a floor-level shot that shrinks the rooms, a backlit photograph from the balcony — this costs viewings. On the portals, you have 3 seconds. The photographs are your only staging before the door.</p>
+      <h3>03 — Neglecting the presentation</h3>
+      <p>A buyer needs to project themselves. Too much furniture, too many personal objects, a too-distinctive paint colour — all of this creates mental friction. A few hours of decluttering and an outside eye radically change the perception.</p>
+      <h3>04 — Accepting all viewings</h3>
+      <p>Showing the property to financially unqualified profiles is a waste of time and wears the property down. Each viewing creates wear — physical and psychological. Ten targeted viewings are worth more than a hundred curious visitors.</p>
+      <h3>05 — Moving too quickly to the preliminary contract</h3>
+      <p>An offer arrives quickly — good sign. But that is no reason to sign without verifying the solidity of the financing. A preliminary contract that falls through three weeks later due to a bank refusal is a commercial catastrophe.</p>
+      <h3>06 — Underestimating distribution</h3>
+      <p>SeLoger alone is insufficient. Premium buyers search on Belles Demeures, Le Figaro, Bien'ici — and often, they go through networks before listings become public.</p>
+      <h3>07 — Failing to anticipate the documents</h3>
+      <p>Incomplete diagnostics, missing AGM minutes, outstanding charges not up to date — this delays everything and creates mistrust. Preparing the file in advance saves 3 weeks at the signing stage.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 2 -->
+<div class="article-overlay" id="a2">
+  <button class="article-close" onclick="closeArticle('a2')">← back to journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— buy —</p>
+    <h1 class="article-title">reading an EPC, <em>really</em></h1>
+    <p class="article-sub">beyond the label: what the audit tells you about the property.</p>
+    <div class="article-body">
+      <p>Since 1 January 2025, properties rated G are banned from rental. F-rated properties will follow in 2028. For a buyer, the EPC is no longer an administrative document — it is a valuation (or devaluation) factor in its own right. But many buyers stop at the letter. That is a mistake.</p>
+      <h3>What the letter does not say</h3>
+      <p>An F can conceal a flat where renovation costs £15,000 and would bring it to a C rating. It can also conceal a Haussmann building whose limestone walls are impossible to insulate without denaturing the space — and where reaching a D rating would cost £80,000. The letter is identical. The renovation project is not.</p>
+      <h3>What to read in the audit</h3>
+      <p>The EPC details consumption items: heating, hot water, ventilation, lighting. It identifies thermal bridges, the state of roof insulation, windows and floors.</p>
+      <p>Look at the construction date. A 1960s-70s concrete building with single glazing and individual electric heating is an energy drain. A Haussmann building with 60cm of limestone has a natural thermal inertia that compensates for some of the heat loss.</p>
+      <h3>The real question</h3>
+      <p>Before being discouraged by an F, ask one question: what are the recommended works, at what cost, and what rating do they achieve? A good EPC tells you. If it is not in the document, request a supplementary audit.</p>
+      <h3>My advice</h3>
+      <p>For energy-intensive properties, I systematically request a quote from a project manager before making an offer. It takes a week. It can avoid a £50,000 discount — or reveal an opportunity that no one else knew how to read.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 3 -->
+<div class="article-overlay" id="a3">
+  <button class="article-close" onclick="closeArticle('a3')">← back to journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— arrondissements —</p>
+    <h1 class="article-title">paris left bank —<br/><em>the market from the inside</em></h1>
+    <p class="article-sub">price per m², neighbourhoods on the move, properties that go quickly.</p>
+    <div class="article-body">
+      <p>My preferred arrondissements are the 5th, 6th, 7th and 14th. Not by chance — by conviction. These are markets I know building by building, concierge by concierge. Here is what I observe at the start of 2026.</p>
+      <h3>The 6th — the market of excellence</h3>
+      <p>Average prices range around €14,000-16,000/m² depending on the street. Saint-Germain, Odéon, Luxembourg — this is the most liquid market on the Paris left bank. Character properties (Versailles parquet, fireplaces, upper floors with Haussmann facades) go in under ten days when well priced. Overpriced properties languish for six months.</p>
+      <p>What I observe: sustained demand from Franco-international families for 5+ room properties, and a slight compression on studio prices since the rise in interest rates.</p>
+      <h3>The 7th — discretion</h3>
+      <p>The 7th is a conviction market. Low turnover, few listings — and a very targeted clientele: diplomats, patrimonial families, international buyers. The finest addresses around the Champ-de-Mars or the Palais Bourbon almost never appear on the portals. They circulate through networks. Prices: €12,000-18,000/m² depending on address and floor.</p>
+      <h3>The 5th — the Latin Quarter re-enchants</h3>
+      <p>Mouffetard, Contrescarpe, the riverbanks: the 5th attracts a younger, international clientele drawn to the authenticity of volumes. Older buildings (stone, beams, irregularities) command a premium. Average prices: €10,500-13,000/m².</p>
+      <h3>The 14th — hidden value</h3>
+      <p>Montparnasse and its borders, Alésia, Denfert — the 14th is systematically undervalued in buyers' minds. Properties are often larger, better maintained, and 20 to 30% cheaper than five streets north in the 6th. For families seeking space without leaving the left bank, this is the market I recommend.</p>
+      <p><em>These ranges are indicative for the current market. It goes without saying that for properties with exceptional features — upper floors, unobstructed views, double reception rooms, terraces, private mansions — prices can significantly exceed these levels.</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 4 -->
+<div class="article-overlay" id="a4">
+  <button class="article-close" onclick="closeArticle('a4')">← back to journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— buy —</p>
+    <h1 class="article-title">understanding a copropriété<br/><em>in ten minutes</em></h1>
+    <p class="article-sub">AGM minutes, charges, approved works: the checklist before signing.</p>
+    <div class="article-body">
+      <p>Buying a flat means buying a share of a building. Everything concerning the common areas, communal heating, the lift, the roof — you will be co-responsible for all of it. Here is how to read a copropriété file in ten minutes.</p>
+      <h3>The last three AGM minutes</h3>
+      <p>This is the most revealing document. Look for: approved works (and their cost), rejected works (which will return to the agenda), ongoing disputes, and above all exceptional calls for funds. A copropriété that regularly votes for works is a well-maintained one. One that never votes for anything is accumulating delays.</p>
+      <h3>The charges</h3>
+      <p>Look at the annual amount and its breakdown. High charges are not necessarily a problem — they may include a concierge, garden, or pool. Low charges in an ageing building often mean a building that is not being maintained.</p>
+      <h3>The works fund</h3>
+      <p>Mandatory since the ALUR Act, it must represent at least 5% of the annual provisional budget. Its amount gives you an idea of the copropriété's "health".</p>
+      <h3>Arrears</h3>
+      <p>Ask for the arrears rate on charges. Above 15%, this is a warning signal — either the copropriété is in difficulty, or some co-owners are in default, which slows all works.</p>
+      <h3>My advice</h3>
+      <p>Never sign a preliminary contract without having read the last three AGM minutes and the maintenance register. If the seller does not have them, it is their responsibility to request them from the managing agent — that is their obligation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 5 -->
+<div class="article-overlay" id="a5">
+  <button class="article-close" onclick="closeArticle('a5')">← back to journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— living —</p>
+    <h1 class="article-title">detail changes everything —<br/><em>a note on colour</em></h1>
+    <p class="article-sub">why a well-painted wall is worth more than a renovated kitchen.</p>
+    <div class="article-body">
+      <p>I am going to tell you something that goes against all the classic home staging advice: the kitchen is not what sells a flat.</p>
+      <p>What sells a flat is the atmosphere of the first three seconds. And atmosphere is created principally by light, proportions — and colour.</p>
+      <h3>Colour as a signal</h3>
+      <p>A wall painted in a beautiful warm grey, a carefully chosen off-white, a deep green in a bookcase — this says something about the inhabitant. It says: someone who pays attention. Someone with taste. And unconsciously, the buyer transfers this perceived quality onto the whole property.</p>
+      <p>A flat entirely in builder's white says the opposite: no one has truly lived here. It is a transit space.</p>
+      <h3>What I observe in the field</h3>
+      <p>On the properties I accompany, I have tested the hypothesis several times. A flat in the 6th, 85m², estimated at €1.1M: three months without an offer. We repaint two rooms (€500), move two pieces of furniture. It sells in ten days at the asking price. The kitchen was the same. The parquet was the same. The light was the same.</p>
+      <h3>How to choose a colour to sell</h3>
+      <p>Forget your personal preferences. Look for the colour that maximises natural light, respects the proportions, and does not divide opinion. Warm stone tones, slightly warm off-whites, discreet sage greens — these are the colours that reach consensus and evoke care.</p>
+      <p>Avoid strongly distinctive colours in living rooms. Keep them for a bedroom, a bathroom, a room that will become a memorable detail rather than an objection.</p>
+      <h3>The return on investment</h3>
+      <p>A quality tin of paint costs €40-80. A painter for a day costs €300-500. On a €1M property, if it accelerates the sale by 6 weeks, you save two months of charges, two months of interest — and avoid the pressure of reducing the price. It is probably the best investment one can make before selling.</p>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">close ×</button>
+  <a href="vendre.html">sell</a>
+  <a href="acheter.html">buy</a>
+  <a href="le-journal.html">journal</a>
+  <a href="a-propos.html">about</a>
+  <a href="contact.html">contact</a>
+</div>
+
+<script>
+document.getElementById('nav-ham').addEventListener('click',function(){
+  document.getElementById('nav-overlay').classList.toggle('open');
+});
+function openArticle(id){ window.location.hash = id; }
+function closeArticle(id){ history.back(); }
+function handleHash(){
+  document.querySelectorAll('.article-overlay').forEach(el => el.classList.remove('open'));
+  document.body.style.overflow = '';
+  const hash = window.location.hash.replace('#','');
+  if(hash && document.getElementById(hash) && document.getElementById(hash).classList.contains('article-overlay')){
+    document.getElementById(hash).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+window.addEventListener('hashchange', handleHash);
+window.addEventListener('load', handleHash);
+</script>
+
+</body>
+</html>
