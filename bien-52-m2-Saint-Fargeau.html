@@ -18,9 +18,17 @@ body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-fo
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:58px;background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
 .nav-logo{font-family:var(--display);font-weight:300;font-size:17px;font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;}.nav-logo em{font-style:italic;}
 .nav-back{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-decoration:none;transition:color .2s;}.nav-back:hover{color:var(--ink);}
-@media(max-width:768px){nav{padding:0 20px;}}
+.nav-ctas{display:flex;gap:10px;align-items:center;}
+.nav-btn{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:lowercase;padding:8px 18px;border-radius:40px;border:1px solid transparent;text-decoration:none;transition:all .2s;white-space:nowrap;}
+.nav-btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink);}.nav-btn-dark:hover{background:var(--ink-soft);}
+.nav-btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink);}.nav-btn-ghost:hover{background:var(--paper-warm);}
+@media(max-width:768px){nav{padding:0 16px;}.nav-logo{font-size:14px;}.nav-btn{font-size:9px;padding:7px 12px;}}
 
-/* HERO PHOTOS */
+/* BADGES */
+.badge-nouveau{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:var(--accent);color:var(--paper);padding:3px 10px;border-radius:40px;margin-right:8px;vertical-align:middle;}
+.hero-badge{position:absolute;top:20px;left:20px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:var(--accent);color:var(--paper);padding:5px 14px;border-radius:40px;}
+
+
 .hero-gallery{margin-top:58px;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:320px 200px;gap:3px;background:var(--rule);}
 .photo-slot{background:var(--paper-warm);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
 .photo-slot img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -100,7 +108,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .insta-section{border-top:1px solid var(--rule);padding-top:40px;margin-bottom:48px;}
 .insta-section h2{font-family:var(--display);font-weight:300;font-size:28px;font-variation-settings:'opsz' 144;margin-bottom:24px;}
 .insta-section h2 em{font-style:italic;}
-.insta-wrap{display:flex;justify-content:center;}
+.insta-card{display:flex;align-items:center;gap:24px;text-decoration:none;border:1px solid var(--rule);border-radius:4px;padding:20px 28px;background:var(--paper-warm);transition:background .2s;width:fit-content;}
+.insta-card:hover{background:var(--accent-soft);}
+.insta-thumb{width:64px;height:64px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.insta-play{display:flex;align-items:center;justify-content:center;padding-left:3px;}
+.insta-caption{display:flex;flex-direction:column;gap:4px;}
+.insta-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.insta-link{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink);}
 
 /* CTA BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:lowercase;padding:14px 28px;border-radius:40px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:all .22s ease;justify-content:center;width:fit-content;}
@@ -135,7 +149,10 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
 
 <nav>
   <a href="index.html" class="nav-logo">the <em>interior</em> by caroline</a>
-  <a href="acheter.html" class="nav-back">← retour</a>
+  <div class="nav-ctas">
+    <a href="https://wa.me/33602106754?text=Bonjour%20Caroline%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20bien%20Paris%2020e%20%E2%80%94%20pouvez-vous%20me%20recontacter%20?" class="nav-btn nav-btn-dark" target="_blank" rel="noopener">whatsapp →</a>
+    <a href="tel:+33602106754" class="nav-btn nav-btn-ghost">+33 6 02 10 67 54</a>
+  </div>
 </nav>
 
 <!-- GALERIE HERO — photos à ajouter -->
@@ -145,6 +162,7 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="#6f6659" stroke-width="1.5"/><circle cx="14" cy="17" r="3" stroke="#6f6659" stroke-width="1.5"/><path d="M4 26l8-6 6 5 5-4 13 9" stroke="#6f6659" stroke-width="1.5"/></svg>
       <span>photo principale</span>
     </div>
+    <div class="hero-badge">nouveau</div>
   </div>
   <div class="photo-slot">
     <div class="photo-placeholder">
@@ -165,7 +183,7 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
   <!-- EN-TÊTE -->
   <div class="bien-header">
     <div>
-      <p class="bien-eyebrow">— paris 20e · disponible —</p>
+      <p class="bien-eyebrow"><span class="badge-nouveau">nouveau</span> — paris 20e · disponible —</p>
       <h1 class="bien-titre">3 pièces <em>52 m²</em></h1>
       <p class="bien-localisation">Paris 20e · résidence sécurisée · 3e étage avec ascenseur</p>
     </div>
@@ -253,7 +271,7 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
         </div>
       </div>
       <div class="plan-item">
-        <p class="plan-label">possibilités d'aménagement</p>
+        <p class="plan-label">possibilités de projections</p>
         <div class="plan-img-wrap plan-paysage">
           <img src="plan-amenagement.jpg" alt="Plans d'aménagement — 2 options" />
         </div>
@@ -307,10 +325,17 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
   <!-- INSTAGRAM -->
   <div class="insta-section">
     <h2>le <em>bien en vidéo</em></h2>
-    <div class="insta-wrap">
-      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DYNc19SC5Lo/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0 auto;max-width:540px;min-width:326px;padding:0;width:100%;"></blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
-    </div>
+    <a href="https://www.instagram.com/reel/DYNc19SC5Lo/" target="_blank" rel="noopener" class="insta-card">
+      <div class="insta-thumb">
+        <div class="insta-play">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--paper)"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+      <div class="insta-caption">
+        <span class="insta-label">reel instagram</span>
+        <span class="insta-link">voir la vidéo →</span>
+      </div>
+    </a>
   </div>
 
   <!-- CTA -->
