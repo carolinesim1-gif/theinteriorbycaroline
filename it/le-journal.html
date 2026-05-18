@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Le Journal — The Interior by Caroline</title>
-<meta name="description" content="Notes sur le marché parisien, guides pratiques et regards sur l'art d'habiter — par Caroline." />
+<title>Il Diario — The Interior by Caroline</title>
+<meta name="description" content="Note sul mercato parigino, guide pratiche e riflessioni sull'arte di abitare — di Caroline." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="../style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="alternate" hreflang="fr" href="https://theinteriorbycaroline.fr/le-journal.html" />
 <link rel="alternate" hreflang="en" href="https://theinteriorbycaroline.fr/en/le-journal.html" />
@@ -63,7 +63,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .header-sub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);
   margin-top:14px;max-width:420px;line-height:1.6;}
 
-/* ── ONGLETS ── */
+/* ── TABS ── */
 .tabs-bar{display:flex;align-items:flex-end;gap:0;padding:32px 48px 0;border-bottom:1px solid var(--rule);}
 .tab-btn{font-family:var(--display);font-weight:300;font-size:clamp(18px,2.2vw,26px);
   font-variation-settings:'opsz' 144;letter-spacing:-.02em;color:var(--muted);
@@ -75,14 +75,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .tab-btn.active{color:var(--ink);}
 .tab-btn.active::after{transform:scaleX(1);}
 .tab-btn:hover{color:var(--ink-soft);}
-.tab-count{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--muted);
-  vertical-align:super;margin-left:5px;font-style:normal;}
 
 /* ── PANELS ── */
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
 
-/* ── FEATURED CARD ── */
+/* ── FEATURED ── */
 .featured{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .2s;}
 .featured:hover{background:var(--paper-warm);}
 .featured-img{background-size:cover;background-position:center;filter:grayscale(100%);transition:filter .4s;}
@@ -98,7 +96,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   text-transform:uppercase;margin-top:16px;transition:letter-spacing .2s;}
 .featured:hover .featured-arrow{letter-spacing:.3em;}
 
-/* ── GRILLE 3 COL ── */
+/* ── GRILLE ── */
 .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);}
 .card{background:var(--paper);display:flex;flex-direction:column;cursor:pointer;transition:background .2s;}
 .card:hover{background:var(--paper-warm);}
@@ -113,12 +111,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .card-meta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);margin-top:auto;}
 
 /* ── IMAGES ── */
-/* Immobilier */
 .img-1{background-image:url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=1200&q=85');}
 .img-2{background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80');}
 .img-3{background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80');}
 .img-4{background-image:url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&q=80');}
-/* Intérieurs */
 .img-5{background-image:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&q=85');}
 .img-6{background-image:url('https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80');}
 .img-7{background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80');}
@@ -142,9 +138,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   font-variation-settings:'opsz' 144;margin:40px 0 12px;letter-spacing:-.01em;}
 .article-body p{font-family:var(--serif);font-size:17.5px;color:var(--ink-soft);line-height:1.8;margin-bottom:20px;}
 .article-body p em{font-style:italic;}
-.article-body p strong{font-weight:400;color:var(--ink);}
 
-/* ── BANDEAU INSTAGRAM ── */
+/* ── INSTAGRAM ── */
 .insta-band{padding:20px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;}
 .insta-band-label{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:12px;}
 .insta-band-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1200px;margin:0 auto;}
@@ -197,157 +192,152 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 
 <nav>
   <button class="nav-hamburger" id="nav-ham" aria-label="menu" style="order:-1"><span></span><span></span><span></span></button>
-  <a href="index.html" class="nav-logo">the <em>interior</em> by caroline</a>
+  <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
   <ul class="nav-links">
-    <li><a href="vendre.html">vendre</a></li>
-    <li><a href="acheter.html">acheter</a></li>
-    <li><a href="le-journal.html" class="active">le journal</a></li>
-    <li><a href="a-propos.html">à propos</a></li>
-    <li><a href="contact.html">contact</a></li>
+    <li><a href="vendre.html">vendere</a></li>
+    <li><a href="acheter.html">acquistare</a></li>
+    <li><a href="le-journal.html" class="active">il diario</a></li>
+    <li><a href="a-propos.html">chi sono</a></li>
+    <li><a href="contact.html">contatto</a></li>
   </ul>
   <div class="nav-lang">
     <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
-      <option value="le-journal.html" selected>fr</option>
-      <option value="en/le-journal.html">en</option>
-      <option value="it/le-journal.html">it</option>
+      <option value="../le-journal.html">fr</option>
+      <option value="../en/le-journal.html">en</option>
+      <option value="le-journal.html" selected>it</option>
     </select>
   </div>
 </nav>
 
 <div class="journal-header">
-  <p class="header-eyebrow">— notes & regards —</p>
-  <h1 class="header-title">le <em>journal</em></h1>
-  <p class="header-sub">lectures du marché, guides pratiques et notes sur l'art d'habiter — par caroline.</p>
+  <p class="header-eyebrow">— note &amp; sguardi —</p>
+  <h1 class="header-title">il <em>diario</em></h1>
+  <p class="header-sub">letture del mercato, guide pratiche e note sull'arte di abitare — di caroline.</p>
 </div>
 
-<!-- ONGLETS -->
 <div class="tabs-bar">
-  <button class="tab-btn active" onclick="switchTab('immo')" id="tab-immo">
-    <em>immobilier</em>
+  <button class="tab-btn active" onclick="switchTab('immobiliare')" id="tab-immobiliare">
+    <em>immobiliare</em>
   </button>
-  <button class="tab-btn" onclick="switchTab('interieurs')" id="tab-interieurs">
-    <em>intérieurs</em>
+  <button class="tab-btn" onclick="switchTab('interni')" id="tab-interni">
+    <em>interni</em>
   </button>
 </div>
 
 <!-- ══════════════════════════════════════ -->
-<!-- PANEL IMMOBILIER                       -->
+<!-- PANEL IMMOBILIARE                      -->
 <!-- ══════════════════════════════════════ -->
-<div class="tab-panel active" id="panel-immo">
+<div class="tab-panel active" id="panel-immobiliare">
 
-  <!-- Featured -->
   <div class="featured" onclick="openArticle('a1')">
     <div class="featured-img img-1"></div>
     <div class="featured-body">
       <div>
-        <p class="featured-cat">— vendre —</p>
-        <h2 class="featured-title">sept erreurs qui coûtent cher<br/><em>quand on vend à Paris</em></h2>
-        <p class="featured-sub">Le prix de départ, les photos, les premières visites — ce qui se joue dans les trois premières semaines et détermine souvent le reste.</p>
+        <p class="featured-cat">— vendere —</p>
+        <h2 class="featured-title">sette errori che costano caro<br/><em>quando si vende a Parigi</em></h2>
+        <p class="featured-sub">Prezzo di partenza, fotografie, prime visite — ciò che si gioca nelle prime tre settimane e determina spesso tutto il resto.</p>
       </div>
       <div>
-        <p class="featured-meta">janvier 2026 · 9 min de lecture</p>
-        <p class="featured-arrow">lire →</p>
+        <p class="featured-meta">gennaio 2026 · 9 min di lettura</p>
+        <p class="featured-arrow">leggere →</p>
       </div>
     </div>
   </div>
 
-  <!-- Grille -->
   <div class="grille">
     <div class="card" onclick="openArticle('a2')">
       <div class="card-img img-2"></div>
       <div class="card-body">
-        <p class="card-cat">— acheter —</p>
-        <h2 class="card-title">lire un DPE, vraiment</h2>
-        <p class="card-sub">Au-delà de l'étiquette : ce que l'audit vous dit sur le bien.</p>
-        <p class="card-meta">janvier 2026 · 6 min</p>
+        <p class="card-cat">— acquistare —</p>
+        <h2 class="card-title">leggere un DPE, davvero</h2>
+        <p class="card-sub">Oltre l'etichetta: cosa vi dice l'audit sull'immobile.</p>
+        <p class="card-meta">gennaio 2026 · 6 min</p>
       </div>
     </div>
     <div class="card" onclick="openArticle('a3')">
       <div class="card-img img-3"></div>
       <div class="card-body">
-        <p class="card-cat">— arrondissements —</p>
-        <h2 class="card-title">paris rive gauche — le marché vu de l'intérieur</h2>
-        <p class="card-sub">Prix au m², quartiers en mouvement, biens qui partent vite.</p>
-        <p class="card-meta">décembre 2025 · 7 min</p>
+        <p class="card-cat">— arrondissement —</p>
+        <h2 class="card-title">parigi riva sinistra — il mercato visto dall'interno</h2>
+        <p class="card-sub">Prezzi al m², quartieri in movimento, immobili che vanno rapidamente.</p>
+        <p class="card-meta">dicembre 2025 · 7 min</p>
       </div>
     </div>
     <div class="card" onclick="openArticle('a4')">
       <div class="card-img img-4"></div>
       <div class="card-body">
-        <p class="card-cat">— acheter —</p>
-        <h2 class="card-title">comprendre une copropriété en dix minutes</h2>
-        <p class="card-sub">PV d'AG, charges, travaux votés : la checklist avant de signer.</p>
-        <p class="card-meta">décembre 2025 · 8 min</p>
+        <p class="card-cat">— acquistare —</p>
+        <h2 class="card-title">capire una copropriété in dieci minuti</h2>
+        <p class="card-sub">Verbali AG, spese, lavori approvati: la checklist prima di firmare.</p>
+        <p class="card-meta">dicembre 2025 · 8 min</p>
       </div>
     </div>
   </div>
 
-</div><!-- /panel-immo -->
+</div>
 
 <!-- ══════════════════════════════════════ -->
-<!-- PANEL INTÉRIEURS                       -->
+<!-- PANEL INTERNI                          -->
 <!-- ══════════════════════════════════════ -->
-<div class="tab-panel" id="panel-interieurs">
+<div class="tab-panel" id="panel-interni">
 
-  <!-- Featured -->
   <div class="featured" onclick="openArticle('a5')">
     <div class="featured-img img-5"></div>
     <div class="featured-body">
       <div>
-        <p class="featured-cat">— lumière —</p>
-        <h2 class="featured-title">la lumière artificielle —<br/><em>une question d'atmosphère</em></h2>
-        <p class="featured-sub">Pourquoi le plafonnier central est l'ennemi de l'atmosphère, et comment construire plusieurs niveaux de lumière dans un appartement parisien.</p>
+        <p class="featured-cat">— luce —</p>
+        <h2 class="featured-title">la luce artificiale —<br/><em>una questione di atmosfera</em></h2>
+        <p class="featured-sub">Perché il lampadario centrale è il nemico dell'atmosfera, e come costruire più livelli di luce in un appartamento parigino.</p>
       </div>
       <div>
-        <p class="featured-meta">mai 2026 · 6 min de lecture</p>
-        <p class="featured-arrow">lire →</p>
+        <p class="featured-meta">maggio 2026 · 6 min di lettura</p>
+        <p class="featured-arrow">leggere →</p>
       </div>
     </div>
   </div>
 
-  <!-- Grille -->
   <div class="grille">
     <div class="card" onclick="openArticle('a6')">
       <div class="card-img img-6"></div>
       <div class="card-body">
-        <p class="card-cat">— matières —</p>
-        <h2 class="card-title">le bois comme matière première</h2>
-        <p class="card-sub">Chêne, noyer, pin traité — ce que la matière dit de celui qui habite le lieu.</p>
-        <p class="card-meta">mars 2026 · 5 min</p>
+        <p class="card-cat">— materie —</p>
+        <h2 class="card-title">il legno come materia prima</h2>
+        <p class="card-sub">Rovere, noce, pino trattato — cosa dice la materia di chi abita il luogo.</p>
+        <p class="card-meta">marzo 2026 · 5 min</p>
       </div>
     </div>
     <div class="card" onclick="openArticle('a7')">
       <div class="card-img img-7"></div>
       <div class="card-body">
-        <p class="card-cat">— objets —</p>
-        <h2 class="card-title">l'objet comme intention</h2>
-        <p class="card-sub">Ce qui différencie un intérieur décoré d'un intérieur habité.</p>
-        <p class="card-meta">avril 2026 · 5 min</p>
+        <p class="card-cat">— oggetti —</p>
+        <h2 class="card-title">l'oggetto come intenzione</h2>
+        <p class="card-sub">Ciò che distingue un interno decorato da uno abitato.</p>
+        <p class="card-meta">aprile 2026 · 5 min</p>
       </div>
     </div>
     <div class="card" onclick="openArticle('a8')">
       <div class="card-img img-8"></div>
       <div class="card-body">
-        <p class="card-cat">— couleur —</p>
-        <h2 class="card-title">le détail change tout — une note sur la couleur</h2>
-        <p class="card-sub">Pourquoi un mur bien peint dit quelque chose sur l'habitant.</p>
+        <p class="card-cat">— colore —</p>
+        <h2 class="card-title">il dettaglio cambia tutto — nota sul colore</h2>
+        <p class="card-sub">Perché una parete ben dipinta dice qualcosa su chi abita il luogo.</p>
         <p class="card-meta">novembre 2025 · 4 min</p>
       </div>
     </div>
   </div>
 
-</div><!-- /panel-interieurs -->
+</div>
 
-<!-- BANDEAU INSTAGRAM -->
+<!-- INSTAGRAM -->
 <div class="insta-band">
-  <p class="insta-band-label">— inspirations & regards —</p>
+  <p class="insta-band-label">— ispirazioni &amp; sguardi —</p>
   <div class="insta-band-grid">
-    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta1.jpg" alt="inspiration intérieur" loading="lazy" /></a>
-    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta2.jpg" alt="inspiration intérieur" loading="lazy" /></a>
-    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta3.jpg" alt="inspiration intérieur" loading="lazy" /></a>
-    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta4.jpg" alt="inspiration intérieur" loading="lazy" /></a>
-    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta5.jpg" alt="inspiration intérieur" loading="lazy" /></a>
-    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="insta6.jpg" alt="inspiration intérieur" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="ispirazione interni" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="ispirazione interni" loading="lazy" /></a>
   </div>
 </div>
 
@@ -355,240 +345,240 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
   <div class="footer-top">
     <div>
       <p class="f-logo">the <em>interior</em> by caroline</p>
-      <p class="f-tagline">une signature, un regard, des intérieurs —<br/>paris & sa région.</p>
-      <span class="f-network">membre du réseau immobilier</span>
+      <p class="f-tagline">una firma, uno sguardo, degli interni —<br/>parigi &amp; dintorni.</p>
+      <span class="f-network">membro della rete immobiliare</span>
       <a href="https://greenpartners.fr" target="_blank" rel="noopener">
-        <img src="logo_greenpartners.png" alt="GreenPartners" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+        <img src="../logo_greenpartners.png" alt="GreenPartners" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
       </a>
     </div>
-    <div class="f-col"><h4>le site</h4><ul>
-      <li><a href="index.html">accueil</a></li>
-      <li><a href="vendre.html">vendre</a></li>
-      <li><a href="acheter.html">acheter</a></li>
-      <li><a href="le-journal.html">le journal</a></li>
-      <li><a href="a-propos.html">à propos</a></li>
-      <li><a href="contact.html">contact</a></li>
+    <div class="f-col"><h4>il sito</h4><ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="vendre.html">vendere</a></li>
+      <li><a href="acheter.html">acquistare</a></li>
+      <li><a href="le-journal.html">il diario</a></li>
+      <li><a href="a-propos.html">chi sono</a></li>
+      <li><a href="contact.html">contatto</a></li>
     </ul></div>
     <div class="f-col"><h4>caroline</h4><ul>
       <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
       <li><a href="https://wa.me/33602106754">whatsapp</a></li>
       <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
-      <li><a href="conception.html"><em>conception d'intérieurs →</em></a></li>
+      <li><a href="conception.html"><em>interior design →</em></a></li>
     </ul></div>
-    <div class="f-col"><h4>légal</h4><ul>
-      <li><a href="mentions-legales.html">mentions légales</a></li>
-      <li><a href="confidentialite.html">confidentialité</a></li>
+    <div class="f-col"><h4>legale</h4><ul>
+      <li><a href="mentions-legales.html">note legali</a></li>
+      <li><a href="confidentialite.html">privacy</a></li>
       <li><a href="cookies.html">cookies</a></li>
-      <li><a href="honoraires.html">honoraires</a></li>
+      <li><a href="honoraires.html">onorari</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <p class="f-copy">© caroline · 2026 — paris & sa région</p>
-    <p class="f-made">fait avec attention</p>
+    <p class="f-copy">© caroline · 2026 — parigi &amp; dintorni</p>
+    <p class="f-made">fatto con cura</p>
   </div>
 </footer>
 
 <!-- ══════════════════════════════════════════════════ -->
-<!-- ARTICLES IMMOBILIER                               -->
+<!-- ARTICOLI IMMOBILIARE                              -->
 <!-- ══════════════════════════════════════════════════ -->
 
 <div class="article-overlay" id="a1">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— vendre —</p>
-    <h1 class="article-title">sept erreurs qui coûtent cher<br/><em>quand on vend à Paris</em></h1>
-    <p class="article-sub">Le prix de départ, les photos, les premières visites — ce qui se joue dans les trois premières semaines.</p>
+    <p class="article-eyebrow">— vendere —</p>
+    <h1 class="article-title">sette errori che costano caro<br/><em>quando si vende a Parigi</em></h1>
+    <p class="article-sub">Prezzo di partenza, fotografie, prime visite — ciò che si gioca nelle prime tre settimane.</p>
     <div class="article-body">
-      <p>Vendre un appartement à Paris, c'est souvent — trop souvent — une course contre sa propre impatience. On fixe un prix "pour voir". On prend les photos soi-même avec un iPhone. On accepte les premières visites sans vraiment qualifier les profils. Et trois semaines plus tard, le bien est brûlé.</p>
-      <p>Voici les sept erreurs que j'observe le plus souvent, et ce qu'elles coûtent vraiment.</p>
-      <h3>01 — Surestimer pour négocier</h3>
-      <p>C'est le réflexe le plus courant, et le plus coûteux. Un bien affiché 10 % au-dessus du marché ne génère pas de négociation — il génère du silence. Les acquéreurs sérieux, ceux qui ont visité 20 biens, le voient immédiatement. Ils passent. Et quand vous baissez, deux mois plus tard, tout le monde se souvient que le bien "traîne".</p>
-      <h3>02 — Les photos ratées</h3>
-      <p>Une cuisine mal éclairée, un plan-pied qui rétrécit les pièces, une photo contre-jour depuis le balcone — ça fait perdre des visites. Sur les portails, vous avez 3 secondes. Les photos sont votre seule mise en scène avant la porte.</p>
-      <h3>03 — Négliger la présentation du bien</h3>
-      <p>Un acheteur a besoin de se projeter. Trop de meubles, trop d'objets personnels, une couleur de peinture trop marquée — tout ça crée une friction mentale. Quelques heures de désencombrement et un regard extérieur changent radicalement la perception.</p>
-      <h3>04 — Accepter toutes les visites</h3>
-      <p>Faire visiter des profils non qualifiés financièrement, c'est perdre du temps et user le bien. Chaque visite crée de l'usure — physique et psychologique. Mieux vaut dix visites ciblées qu'une centaine de curieux.</p>
-      <h3>05 — Partir trop vite au compromis</h3>
-      <p>Une offre arrive vite, c'est bon signe — mais ce n'est pas une raison de signer sans vérifier la solidité du financement. Un compromis qui tombe trois semaines plus tard pour refus bancaire, c'est une catastrophe commerciale.</p>
-      <h3>06 — Sous-estimer la diffusion</h3>
-      <p>SeLoger seul, c'est insuffisant. Les acquéreurs premium cherchent sur Belles Demeures, Le Figaro, Bien'ici — et souvent, ils passent par des réseaux avant que les annonces ne soient publiques.</p>
-      <h3>07 — Ne pas anticiper les documents</h3>
-      <p>Diagnostics incomplets, PV d'assemblée générale manquants, relevé de charges non à jour — ça retarde tout et ça crée de la méfiance. Préparer le dossier en amont, c'est trois semaines gagnées à la signature.</p>
+      <p>Vendere un appartamento a Parigi è spesso — troppo spesso — una corsa contro la propria impazienza. Si fissa un prezzo "per vedere". Si scattano le foto da soli con un iPhone. Si accettano le prime visite senza qualificare davvero i profili. E tre settimane dopo, l'immobile è bruciato.</p>
+      <p>Ecco i sette errori che osservo più frequentemente, e quanto costano davvero.</p>
+      <h3>01 — Sopravvalutare per negoziare</h3>
+      <p>È il riflesso più comune, e il più costoso. Un immobile pubblicato al 10% sopra il mercato non genera trattativa — genera silenzio. Gli acquirenti seri, quelli che hanno visitato 20 immobili, lo vedono immediatamente. Passano oltre. E quando si abbassa il prezzo due mesi dopo, tutti ricordano che l'immobile è fermo.</p>
+      <h3>02 — Le fotografie sbagliate</h3>
+      <p>Una cucina mal illuminata, uno scatto da terra che restringe le stanze, una foto controluce dal balcone — questo fa perdere visite. Sui portali, avete 3 secondi. Le fotografie sono la vostra unica messa in scena prima della porta.</p>
+      <h3>03 — Trascurare la presentazione dell'immobile</h3>
+      <p>Un acquirente ha bisogno di proiettarsi. Troppi mobili, troppi oggetti personali, un colore di pittura troppo marcato — tutto ciò crea una frizione mentale. Alcune ore di riordino e uno sguardo esterno cambiano radicalmente la percezione.</p>
+      <h3>04 — Accettare tutte le visite</h3>
+      <p>Far visitare profili non qualificati finanziariamente è perdere tempo e usurare l'immobile. Ogni visita crea usura — fisica e psicologica. Meglio dieci visite mirate che cento curiosi.</p>
+      <h3>05 — Correre al compromesso</h3>
+      <p>Un'offerta arriva in fretta — buon segno. Ma non è una ragione per firmare senza verificare la solidità del finanziamento. Un compromesso che cade tre settimane dopo per rifiuto bancario è una catastrofe commerciale.</p>
+      <h3>06 — Sottovalutare la diffusione</h3>
+      <p>SeLoger da solo è insufficiente. Gli acquirenti premium cercano su Belles Demeures, Le Figaro, Bien'ici — e spesso passano attraverso reti prima che gli annunci siano pubblici.</p>
+      <h3>07 — Non anticipare i documenti</h3>
+      <p>Diagnosi incomplete, verbali di assemblea mancanti, estratto spese non aggiornato — tutto questo ritarda ogni cosa e crea sfiducia. Preparare il fascicolo in anticipo fa guadagnare tre settimane alla firma.</p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a2">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— acheter —</p>
-    <h1 class="article-title">lire un DPE, <em>vraiment</em></h1>
-    <p class="article-sub">Au-delà de l'étiquette : ce que l'audit vous dit sur le bien.</p>
+    <p class="article-eyebrow">— acquistare —</p>
+    <h1 class="article-title">leggere un DPE, <em>davvero</em></h1>
+    <p class="article-sub">Oltre l'etichetta: cosa vi dice l'audit sull'immobile.</p>
     <div class="article-body">
-      <p>Depuis le 1er janvier 2025, les logements classés G sont interdits à la location. Les F le seront en 2028. Pour un acheteur, le DPE n'est plus un document administratif — c'est un élément de valorisation (ou de décote) à part entière. Mais beaucoup d'acheteurs s'arrêtent à la lettre. C'est une erreur.</p>
-      <h3>Ce que la lettre ne dit pas</h3>
-      <p>Un F peut cacher un appartement dont les travaux coûtent 15 000 € et qui deviendra C. Il peut aussi cacher un immeuble haussmannien dont les murs en pierre de taille sont impossibles à isoler sans dénaturer l'espace — et où le passage en D coûterait 80 000 €. La lettre est identique. Le projet de rénovation ne l'est pas.</p>
-      <h3>Ce qu'il faut lire dans l'audit</h3>
-      <p>Le DPE détaille les postes de consommation : chauffage, eau chaude, ventilation, éclairage. Il identifie les ponts thermiques, l'état de l'isolation des combles, des fenêtres, des planchers.</p>
-      <p>Regardez la date de construction. Un immeuble des années 60-70 en béton avec simple vitrage et chauffage électrique individuel est un gouffre énergétique. Un haussmannien avec ses 60 cm de pierre a une inertie thermique naturelle qui compense une partie des déperditions.</p>
-      <h3>La vraie question</h3>
-      <p>Avant de vous décourager d'un F, posez une seule question : quels sont les travaux recommandés, à quel coût, et quelle étiquette atteignent-ils ? Un bon DPE vous le dit. Si ce n'est pas dans le document, demandez un audit complémentaire.</p>
-      <h3>Mon conseil</h3>
-      <p>Sur les biens énergivores, je demande systématiquement un devis à un maître d'œuvre avant offre. Ça prend une semaine. Ça peut éviter une décote considérable — ou révéler une opportunité que personne d'autre n'a su lire.</p>
+      <p>Dal 1° gennaio 2025, gli alloggi classificati G sono vietati alla locazione. Gli F lo saranno nel 2028. Per un acquirente, il DPE non è più un documento amministrativo — è un elemento di valorizzazione (o svalutazione) a pieno titolo. Ma molti acquirenti si fermano all'etichetta. È un errore.</p>
+      <h3>Quello che la lettera non dice</h3>
+      <p>Un F può nascondere un appartamento i cui lavori costano 15.000 € e che diventerà C. Può anche nascondere un immobile haussmanniano i cui muri in pietra da taglio sono impossibili da isolare senza snaturare lo spazio — e dove passare alla D costerebbe 80.000 €. La lettera è identica. Il progetto di ristrutturazione non lo è.</p>
+      <h3>Cosa leggere nell'audit</h3>
+      <p>Il DPE dettaglia i consumi: riscaldamento, acqua calda, ventilazione, illuminazione. Identifica i ponti termici, lo stato dell'isolamento dei sottotetti, delle finestre, dei pavimenti.</p>
+      <p>Guardate la data di costruzione. Un edificio degli anni '60-'70 in cemento con vetro singolo e riscaldamento elettrico individuale è un pozzo energetico. Un haussmanniano con i suoi 60 cm di pietra ha un'inerzia termica naturale che compensa parte delle dispersioni.</p>
+      <h3>La vera domanda</h3>
+      <p>Prima di scoraggiarvi per un F, ponetevi una sola domanda: quali sono i lavori raccomandati, a quale costo, e quale etichetta raggiungono? Un buon DPE ve lo dice. Se non è nel documento, richiedete un audit supplementare.</p>
+      <h3>Il mio consiglio</h3>
+      <p>Per gli immobili energivori, chiedo sistematicamente un preventivo a un direttore dei lavori prima dell'offerta. Richiede una settimana. Può evitare una svalutazione considerevole — o rivelare un'opportunità che nessun altro ha saputo leggere.</p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a3">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— arrondissements —</p>
-    <h1 class="article-title">paris rive gauche —<br/><em>le marché vu de l'intérieur</em></h1>
-    <p class="article-sub">Prix au m², quartiers en mouvement, biens qui partent vite.</p>
+    <p class="article-eyebrow">— arrondissement —</p>
+    <h1 class="article-title">parigi riva sinistra —<br/><em>il mercato visto dall'interno</em></h1>
+    <p class="article-sub">Prezzi al m², quartieri in movimento, immobili che vanno rapidamente.</p>
     <div class="article-body">
-      <p>Mes quartiers de prédilection sont les 5e, 6e, 7e et 14e arrondissements. Pas par hasard — par conviction. Ce sont des marchés que je connais immeuble par immeuble, gardien par gardien. Voici ce que j'observe en ce début 2026.</p>
-      <h3>Le 6e — le marché de l'excellence</h3>
-      <p>Le prix moyen tourne autour de 14 000–16 000 €/m² selon les rues. Saint-Germain, Odéon, Luxembourg — c'est le marché le plus liquide de Paris rive gauche. Les biens de caractère (parquet Versailles, cheminées, étage élevé avec Haussmann) partent en moins de dix jours quand ils sont bien estimés. Les biens surestimés traînent six mois.</p>
-      <p>Ce que j'observe : une demande soutenue des familles franco-étrangères pour les 5+ pièces, et une légère compression des prix sur les studios depuis la hausse des taux.</p>
-      <h3>Le 7e — la discrétion</h3>
-      <p>Le 7e est un marché de conviction. Peu de rotation, peu d'annonces — et une clientèle très ciblée : diplomates, familles patrimoniales, acquéreurs internationaux. Les belles adresses autour du Champ-de-Mars ou du Palais Bourbon n'apparaissent quasiment jamais sur les portails. Elles circulent en réseau. Les prix : 12 000–18 000 €/m² selon l'adresse et l'étage.</p>
-      <h3>Le 5e — le quartier Latin réenchante</h3>
-      <p>Le Mouffetard, la Contrescarpe, les berges : le 5e attire une clientèle plus jeune et internationale, sensible à l'authenticité des volumes. Les immeubles anciens (pierre, poutres, irrégularités) font prime. Prix moyens : 10 500–13 000 €/m².</p>
-      <h3>Le 14e — la valeur cachée</h3>
-      <p>Montparnasse et ses bords, Alésia, Denfert — le 14e est systématiquement sous-évalué dans l'imaginaire acheteur. Les biens sont souvent plus grands, mieux entretenus, et 20 à 30 % moins chers qu'à cinq rues au nord dans le 6e. Pour les familles qui cherchent de l'espace sans quitter la rive gauche, c'est le marché que je recommande.</p>
-      <p><em>Ces fourchettes sont indicatives pour le marché courant. Sur les biens aux prestations exceptionnelles — étages élevés, vues dégagées, doubles réceptions, terrasses, hôtels particuliers — les prix peuvent largement dépasser ces niveaux.</em></p>
+      <p>I miei quartieri di elezione sono il 5°, 6°, 7° e 14° arrondissement. Non per caso — per convinzione. Sono mercati che conosco edificio per edificio, portiere per portiere. Ecco cosa osservo all'inizio del 2026.</p>
+      <h3>Il 6° — il mercato dell'eccellenza</h3>
+      <p>Il prezzo medio si aggira intorno ai 14.000–16.000 €/m² a seconda delle strade. Saint-Germain, Odéon, Lussemburgo — è il mercato più liquido della riva sinistra di Parigi. Gli immobili di carattere (parquet Versailles, camini, piano alto con Haussmann) partono in meno di dieci giorni quando ben stimati. Gli immobili sopravvalutati languiscono sei mesi.</p>
+      <p>Cosa osservo: una domanda sostenuta delle famiglie franco-straniere per i 5+ vani, e una lieve compressione dei prezzi sui monolocali dalla salita dei tassi.</p>
+      <h3>Il 7° — la discrezione</h3>
+      <p>Il 7° è un mercato di convinzione. Poca rotazione, pochi annunci — e una clientela molto mirata: diplomatici, famiglie patrimoniali, acquirenti internazionali. I bei indirizzi intorno al Champ-de-Mars o al Palais Bourbon non compaiono quasi mai sui portali. Circolano attraverso reti. I prezzi: 12.000–18.000 €/m² a seconda dell'indirizzo e del piano.</p>
+      <h3>Il 5° — il quartiere Latino si reincanta</h3>
+      <p>Mouffetard, Contrescarpe, le rive: il 5° attrae una clientela più giovane e internazionale, sensibile all'autenticità dei volumi. Gli edifici antichi (pietra, travi, irregolarità) fanno premio. Prezzi medi: 10.500–13.000 €/m².</p>
+      <h3>Il 14° — il valore nascosto</h3>
+      <p>Montparnasse e dintorni, Alésia, Denfert — il 14° è sistematicamente sottovalutato nell'immaginario degli acquirenti. Gli immobili sono spesso più grandi, meglio tenuti, e dal 20 al 30% più accessibili che a cinque strade a nord nel 6°. Per le famiglie che cercano spazio senza lasciare la riva sinistra, è il mercato che raccomando.</p>
+      <p><em>Queste forchette sono indicative per il mercato corrente. Per gli immobili con prestazioni eccezionali — piani alti, viste libere, doppi saloni, terrazze, hôtels particuliers — i prezzi possono ampiamente superare questi livelli.</em></p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a4">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— acheter —</p>
-    <h1 class="article-title">comprendre une copropriété<br/><em>en dix minutes</em></h1>
-    <p class="article-sub">PV d'AG, charges, travaux votés : la checklist avant de signer.</p>
+    <p class="article-eyebrow">— acquistare —</p>
+    <h1 class="article-title">capire una copropriété<br/><em>in dieci minuti</em></h1>
+    <p class="article-sub">Verbali AG, spese, lavori approvati: la checklist prima di firmare.</p>
     <div class="article-body">
-      <p>Acheter un appartement, c'est acheter une quote-part d'immeuble. Tout ce qui concerne les parties communes, le chauffage collectif, l'ascenseur, la toiture — vous en serez co-responsable. Voici comment lire un dossier de copropriété en dix minutes.</p>
-      <h3>Les trois derniers PV d'assemblée générale</h3>
-      <p>C'est le document le plus révélateur. Cherchez : les travaux votés (et leur coût), les travaux rejetés (qui reviendront à l'ordre du jour), les litiges en cours, et surtout les appels de fonds exceptionnels. Une copropriété qui vote des travaux régulièrement est une bonne copropriété — elle est entretenue. Une copropriété qui ne vote jamais rien accumule les retards.</p>
-      <h3>Les charges</h3>
-      <p>Regardez le montant annuel et sa décomposition. Des charges élevées ne sont pas forcément un problème — elles peuvent inclure un gardien, un espace vert, une piscine. Des charges basses dans un immeuble vieillissant, c'est souvent un immeuble qui ne s'entretient pas.</p>
-      <h3>Le fonds de travaux</h3>
-      <p>Obligatoire depuis la loi ALUR, il doit représenter au minimum 5 % du budget prévisionnel annuel. Son montant vous donne une idée de la santé de la copropriété.</p>
-      <h3>Les impayés</h3>
-      <p>Demandez le taux d'impayés sur les charges. Au-delà de 15 %, c'est un signal d'alerte — soit la copropriété est en difficulté, soit certains copropriétaires sont en défaut, ce qui ralentit tous les travaux.</p>
-      <h3>Mon conseil</h3>
-      <p>Ne signez jamais un compromis sans avoir lu les trois derniers PV d'AG et le carnet d'entretien. Si le vendeur ne les a pas, c'est lui qui les demande au syndic — c'est son obligation.</p>
+      <p>Acquistare un appartamento significa acquistare una quota di edificio. Tutto ciò che riguarda le parti comuni, il riscaldamento collettivo, l'ascensore, il tetto — ne sarete co-responsabili. Ecco come leggere un fascicolo di copropriété in dieci minuti.</p>
+      <h3>Gli ultimi tre verbali di assemblea generale</h3>
+      <p>È il documento più rivelatore. Cercate: i lavori votati (e il loro costo), i lavori respinti (che torneranno all'ordine del giorno), i contenziosi in corso, e soprattutto le chiamate di fondi eccezionali. Una copropriété che vota regolarmente lavori è una buona copropriété — è mantenuta. Una che non vota mai nulla accumula ritardi.</p>
+      <h3>Le spese</h3>
+      <p>Guardate l'importo annuale e la sua composizione. Spese elevate non sono necessariamente un problema — possono includere un portiere, un giardino, una piscina. Spese basse in un edificio che invecchia significano spesso un edificio che non si mantiene.</p>
+      <h3>Il fondo lavori</h3>
+      <p>Obbligatorio dalla legge ALUR, deve rappresentare almeno il 5% del bilancio preventivo annuale. Il suo importo dà un'idea della salute della copropriété.</p>
+      <h3>Gli insoluti</h3>
+      <p>Chiedete il tasso di insoluti sulle spese. Oltre il 15%, è un segnale d'allarme — sia la copropriété è in difficoltà, sia alcuni comproprietari sono inadempienti, il che rallenta tutti i lavori.</p>
+      <h3>Il mio consiglio</h3>
+      <p>Non firmate mai un compromesso senza aver letto gli ultimi tre verbali di AG e il registro di manutenzione. Se il venditore non li ha, è lui che li richiede al syndic — è suo obbligo.</p>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════ -->
-<!-- ARTICLES INTÉRIEURS                               -->
+<!-- ARTICOLI INTERNI                                  -->
 <!-- ══════════════════════════════════════════════════ -->
 
 <div class="article-overlay" id="a5">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— lumière —</p>
-    <h1 class="article-title">la lumière artificielle —<br/><em>une question d'atmosphère</em></h1>
-    <p class="article-sub">Pourquoi le plafonnier central est l'ennemi de l'atmosphère, et comment construire plusieurs niveaux de lumière.</p>
+    <p class="article-eyebrow">— luce —</p>
+    <h1 class="article-title">la luce artificiale —<br/><em>una questione di atmosfera</em></h1>
+    <p class="article-sub">Perché il lampadario centrale è il nemico dell'atmosfera, e come costruire più livelli di luce.</p>
     <div class="article-body">
-      <p>C'est probablement le sujet sur lequel j'interviens le plus souvent dans les appartements que j'accompagne. La structure est juste. Les matières sont bonnes. La palette de couleurs est cohérente. Et pourtant quelque chose ne va pas — l'appartement manque d'atmosphère, il semble plat.</p>
-      <p>Neuf fois sur dix, le problème vient de la lumière.</p>
-      <h3>Le péché originel : le plafonnier central</h3>
-      <p>Les appartements haussmanniens ont souvent une rosace au centre du plafond. Pendant des décennies, on y a accroché un plafonnier unique qui éclaire tout de façon uniforme. C'est pratique. C'est fonctionnel. Et c'est ce qui détruit l'atmosphère le plus efficacement.</p>
-      <p>La lumière verticale et uniforme écrase les volumes, aplatit les textures, supprime les ombres qui donnent du relief à un espace. Elle est utile pour travailler, cuisiner, lire. Elle est catastrophique pour créer une présence.</p>
-      <h3>Les trois niveaux à construire</h3>
-      <p>La lumière générale — diffuse, indirecte, qui éclaire l'espace sans source visible. Obtenue avec des appliques dirigées vers le plafond, des lampes de sol qui éclairent vers le haut, des bandeaux derrière une corniche. Elle donne la luminosité sans éblouir.</p>
-      <p>La lumière d'ambiance — chaleureuse, ponctuelle, qui crée des zones. Lampes de table, bougies, appliques basse tension. C'est ce niveau qui détermine l'atmosphère d'une pièce le soir — la qualité de ce qui s'y vit.</p>
-      <p>La lumière fonctionnelle — dirigée, précise, pour les usages spécifiques. Spots orientables au-dessus d'un plan de travail, liseuse au-dessus d'un fauteuil, éclairage de tableau. Elle ne doit pas dominer visuellement mais être parfaitement efficace là où on en a besoin.</p>
-      <h3>Les erreurs les plus fréquentes</h3>
-      <p>La température de couleur est l'une des variables les moins connues des non-professionnels, et l'une des plus déterminantes. Une ampoule à 4000K donne une lumière de bureau. Une ampoule à 2700K donne une lumière de restaurant. La différence est immédiate — sur la perception de l'espace, sur la chaleur des matières, sur l'humeur de ceux qui habitent là.</p>
-      <p>Les spots encastrés en rangée sont l'autre erreur récurrente. On les voit partout dans les rénovations récentes — alignés au plafond, espacés régulièrement, éclairant le sol de façon uniforme. Résultat : une pièce qui ressemble à un commerce. Les spots fonctionnent, mais utilisés avec intention, orientés, jamais en grille.</p>
-      <h3>Ce qu'un variateur change</h3>
-      <p>Un appartement sans variateurs est condamné à la même lumière en toutes circonstances — le dîner comme le réveil, l'intimité comme le travail. C'est l'un des premiers équipements que je recommande d'installer, avant même de penser aux luminaires : la capacité de moduler l'intensité transforme radicalement la vie d'une pièce.</p>
+      <p>È probabilmente il tema su cui intervengo più spesso negli appartamenti che accompagno. La struttura è giusta. Le materie sono buone. La palette di colori è coerente. Eppure qualcosa non va — all'appartamento manca atmosfera, sembra piatto.</p>
+      <p>Nove volte su dieci, il problema viene dalla luce.</p>
+      <h3>Il peccato originale: il lampadario centrale</h3>
+      <p>Gli appartamenti haussmanniani hanno spesso una rosetta al centro del soffitto. Per decenni, vi si è appeso un unico lampadario che illumina tutto in modo uniforme. È pratico. È funzionale. Ed è ciò che distrugge l'atmosfera nel modo più efficace.</p>
+      <p>La luce verticale e uniforme schiaccia i volumi, appiattisce le texture, elimina le ombre che danno rilievo a uno spazio. È utile per lavorare, cucinare, leggere. È catastrofica per creare una presenza.</p>
+      <h3>I tre livelli da costruire</h3>
+      <p>La luce generale — diffusa, indiretta, che illumina lo spazio senza sorgente visibile. Ottenuta con applique dirette verso il soffitto, lampade da terra che illuminano verso l'alto, strisce dietro una cornice. Dà luminosità senza abbagliare.</p>
+      <p>La luce d'atmosfera — calda, puntuale, che crea zone. Lampade da tavolo, candele, applique a bassa tensione. È questo livello che determina l'atmosfera di una stanza la sera — la qualità di ciò che vi si vive.</p>
+      <p>La luce funzionale — diretta, precisa, per gli usi specifici. Faretti orientabili sopra un piano di lavoro, luce articolata sopra una poltrona, illuminazione quadro. Non deve dominare visivamente ma essere perfettamente efficace dove serve.</p>
+      <h3>Gli errori più frequenti</h3>
+      <p>La temperatura di colore è una delle variabili meno conosciute dai non professionisti, e una delle più determinanti. Una lampadina a 4000K dà una luce da ufficio. Una lampadina a 2700K dà una luce da ristorante. La differenza è immediata — sulla percezione dello spazio, sul calore delle materie, sull'umore di chi abita lì.</p>
+      <p>I faretti incassati in fila sono l'altro errore ricorrente. Li si vede ovunque nelle ristrutturazioni recenti — allineati al soffitto, spaziati regolarmente, che illuminano il pavimento in modo uniforme. Risultato: una stanza che assomiglia a un negozio. I faretti funzionano, ma utilizzati con intenzione, orientati, mai in griglia.</p>
+      <h3>Cosa cambia un dimmer</h3>
+      <p>Un appartamento senza dimmer è condannato alla stessa luce in tutte le circostanze — la cena come il risveglio, l'intimità come il lavoro. È uno dei primi equipaggiamenti che raccomando di installare, prima ancora di pensare ai punti luce: la capacità di modulare l'intensità trasforma radicalmente la vita di una stanza.</p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a6">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— matières —</p>
-    <h1 class="article-title">le bois comme<br/><em>matière première</em></h1>
-    <p class="article-sub">Chêne, noyer, pin traité — ce que la matière dit de celui qui habite le lieu.</p>
+    <p class="article-eyebrow">— materie —</p>
+    <h1 class="article-title">il legno come<br/><em>materia prima</em></h1>
+    <p class="article-sub">Rovere, noce, pino trattato — cosa dice la materia di chi abita il luogo.</p>
     <div class="article-body">
-      <p>Il y a dix ans, les intérieurs parisiens haut de gamme se déclinaient en laqué blanc, béton ciré, acier brossé. Des finitions parfaites, froides, photographiables. Aujourd'hui, les mêmes appartements se refont en bois. Pas par nostalgie — par conviction.</p>
-      <p>Le bois est revenu dans les intérieurs pour la même raison qu'il en était parti : il vieillit. Mais ce qui était autrefois perçu comme un défaut est devenu une qualité. Les marques, les patines, les variations de teinte avec la lumière — tout ça raconte quelque chose. Et dans des appartements où tout le reste est parfaitement maîtrisé, c'est le bois qui donne l'impression que quelqu'un habite vraiment là.</p>
-      <h3>Choisir son essence en fonction de la lumière</h3>
-      <p>C'est la première question que je pose quand un client me parle de bois : quelle est l'orientation de la pièce ? Un chêne clair dans un appartement nord-est va bleuir à certaines heures, prendre une teinte froide qui peut déconcerter. Ce même chêne dans un appartement plein sud va dorer progressivement, gagner en chaleur avec les années. Ce n'est pas un défaut — c'est une donnée à intégrer dès le choix de la matière.</p>
-      <p>Le noyer, plus sombre, plus dense, fonctionne mieux dans les pièces lumineuses où il n'écrase pas le volume. Il apporte une profondeur que le chêne clair ne peut pas donner. C'est une matière pour les appartements qui ont de l'espace, qui assument leur propre présence.</p>
-      <p>Le pin traité — souvent mal-aimé parce qu'associé aux meubles de série des années 90 — connaît une vraie réhabilitation dans les intérieurs contemporains. Bien choisi, bien huilé, il apporte une légèreté, presque une fraîcheur, que les essences nobles n'ont pas.</p>
-      <h3>L'erreur que je vois le plus souvent</h3>
-      <p>Mélanger trop d'essences dans la même pièce. Parquet en chêne, cuisine en noyer, bibliothèque en hêtre, fenêtres en pin — chaque choix pris isolément est juste, mais l'ensemble ne parle pas d'une seule voix.</p>
-      <p>La règle que j'applique : une essence dominante par espace, une ou deux secondaires au maximum. Et une cohérence de traitement — tout huilé, ou tout verni, ou tout brut, mais pas les trois ensemble. C'est cette cohérence qui donne à un intérieur son caractère, sa lisibilité.</p>
-      <h3>Ce que le bois dit de l'habitant</h3>
-      <p>Un intérieur avec du bois vrai — pas du stratifié, pas du bois-look — signale quelque chose. Une décision assumée, une sensibilité aux matières, une relation au temps différente. Les appartements que j'aime le plus visiter sont ceux où le bois a vécu. Où les marques sur un parquet racontent une table déplacée, des enfants qui ont couru, des années d'existence. C'est pour ça que je recommande presque toujours de restaurer un vieux parquet plutôt que de le remplacer. Un parquet en point de Hongrie restauré est irremplaçable — il porte une histoire que rien de neuf ne peut imiter.</p>
+      <p>Dieci anni fa, gli interni parigini di fascia alta si declinati in laccato bianco, cemento levigato, acciaio spazzolato. Finiture perfette, fredde, fotografabili. Oggi, gli stessi appartamenti si rifanno in legno. Non per nostalgia — per convinzione.</p>
+      <p>Il legno è tornato negli interni per la stessa ragione per cui era andato via: invecchia. Ma ciò che un tempo era percepito come difetto è diventato qualità. I segni, le patine, le variazioni di tonalità con la luce — tutto questo racconta qualcosa. E in appartamenti dove tutto il resto è perfettamente controllato, è il legno a dare l'impressione che qualcuno abiti davvero lì.</p>
+      <h3>Scegliere l'essenza in funzione della luce</h3>
+      <p>È la prima domanda che pongo quando un cliente mi parla di legno: qual è l'orientamento della stanza? Un rovere chiaro in un appartamento nord-est si tingerà di blu a certe ore, prendendo una tonalità fredda che può disorientare. Lo stesso rovere in un appartamento a pieno sud si dorerà progressivamente, guadagnando calore nel corso degli anni. Non è un difetto — è un dato da integrare fin dalla scelta della materia.</p>
+      <p>Il noce, più scuro e più denso, funziona meglio nelle stanze luminose dove non schiaccia il volume. Porta una profondità che il rovere chiaro non può dare. È una materia per gli appartamenti che hanno spazio, che assumono la propria presenza.</p>
+      <p>Il pino trattato — spesso mal amato perché associato ai mobili di serie — conosce una vera riabilitazione negli interni contemporanei. Ben scelto, ben oliato, porta una leggerezza, quasi una freschezza, che le essenze nobili non hanno.</p>
+      <h3>L'errore che vedo più spesso</h3>
+      <p>Mescolare troppe essenze nella stessa stanza. Parquet in rovere, cucina in noce, libreria in faggio, finestre in pino — ogni scelta presa isolatamente è giusta, ma l'insieme non parla con una sola voce.</p>
+      <p>La regola che applico: un'essenza dominante per spazio, una o due secondarie al massimo. E una coerenza di trattamento — tutto oliato, o tutto verniciato, o tutto grezzo, ma non tutti e tre insieme. È questa coerenza che dà a un interno il suo carattere, la sua leggibilità.</p>
+      <h3>Cosa dice il legno dell'abitante</h3>
+      <p>Un interno con legno vero — non laminato, non effetto legno — segnala qualcosa. Una decisione assunta, una sensibilità alle materie, un rapporto diverso con il tempo. Gli appartamenti che amo di più visitare sono quelli dove il legno ha vissuto. Dove i segni su un parquet raccontano un tavolo spostato, dei bambini che hanno corso, anni di esistenza. È per questo che raccomando quasi sempre di restaurare un vecchio parquet piuttosto che sostituirlo. Un parquet a spina ungherese restaurato è insostituibile — porta una storia che niente di nuovo può imitare.</p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a7">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— objets —</p>
-    <h1 class="article-title">l'objet<br/><em>comme intention</em></h1>
-    <p class="article-sub">Ce qui différencie un intérieur décoré d'un intérieur habité.</p>
+    <p class="article-eyebrow">— oggetti —</p>
+    <h1 class="article-title">l'oggetto<br/><em>come intenzione</em></h1>
+    <p class="article-sub">Ciò che distingue un interno decorato da uno abitato.</p>
     <div class="article-body">
-      <p>Il y a des appartements qu'on visite et dont on sort sans se souvenir d'un seul détail. Tout était propre, coordonné, sans faute de goût — et sans vie. Et il y a des appartements dont on repart avec une image précise : une céramique posée sur une console, un livre laissé ouvert, un objet dont on ne sait pas très bien ce que c'est mais qu'on n'oubliera pas.</p>
-      <p>La différence entre les deux, ce n'est pas le budget. C'est l'intention.</p>
-      <h3>Accumuler vs éditer</h3>
-      <p>L'accumulation, c'est ce qui se passe quand on achète des objets au fil du temps sans se poser de questions. Chaque pièce est jolie isolément. L'ensemble ne dit rien.</p>
-      <p>L'édition, c'est le travail inverse : soustraire jusqu'à ce que ce qui reste soit juste. C'est souvent inconfortable — on a l'impression que la pièce est vide. Mais cette impression disparaît rapidement quand on comprend que le vide n'est pas l'absence, c'est l'espace qui permet à chaque objet d'exister pleinement.</p>
-      <p>La règle que j'applique dans mes projets : chaque objet visible doit avoir une raison d'être là. Soit il est beau, soit il est utile, soit il raconte quelque chose. Idéalement les trois.</p>
-      <h3>Les objets qui parlent bien</h3>
-      <p>Ce que j'appelle un bon objet pour un intérieur n'est pas nécessairement rare ni coûteux. C'est un objet qui a une présence physique — une matière, un poids, une texture qu'on a envie de toucher. Les céramiques artisanales travaillent bien parce qu'elles portent les traces de leur fabrication. Les sculptures en bronze ou en pierre parlent du temps. Les livres — les vrais livres lus, pas les livres achetés pour la couleur de leur couverture — racontent l'habitant.</p>
-      <p>Ce qui ne fonctionne pas : les objets achetés en lot. Les bougeoirs assortis. Les vases identiques en trois tailles. La décoration de catalogue est reconnaissable immédiatement — et elle signale l'absence de décision personnelle.</p>
-      <h3>La cohérence sans uniformité</h3>
-      <p>Une collection cohérente ne veut pas dire une collection uniforme. On peut avoir une céramique japonaise, un bol en grès provençal et un vase scandinave sur la même étagère si la matière parle — si les trois sont en terre cuite non émaillée, par exemple. C'est la matière et la teinte qui créent la cohérence, pas le style ni l'origine.</p>
-      <p>Les meilleurs intérieurs que je connais sont ceux où les objets ont l'air d'avoir toujours été là. Ce n'est pas un hasard. C'est le résultat d'un long travail de soustraction — et d'une attention très particulière portée à chaque chose qu'on laisse entrer.</p>
+      <p>Ci sono appartamenti che si visitano e da cui si esce senza ricordare un solo dettaglio. Tutto era pulito, coordinato, senza errori di gusto — e senza vita. E ci sono appartamenti da cui si riparte con un'immagine precisa: una ceramica posata su una console, un libro lasciato aperto, un oggetto di cui non si sa bene cosa sia ma che non si dimenticherà.</p>
+      <p>La differenza tra i due non è il budget. È l'intenzione.</p>
+      <h3>Accumulare vs modificare</h3>
+      <p>L'accumulazione è ciò che succede quando si comprano oggetti nel tempo senza porsi domande. Ogni pezzo è gradevole isolatamente. L'insieme non dice nulla.</p>
+      <p>L'edizione è il lavoro inverso: sottrarre finché ciò che resta è giusto. È spesso scomodo — si ha l'impressione che la stanza sia vuota. Ma questa impressione scompare rapidamente quando si capisce che il vuoto non è assenza, è lo spazio che permette a ogni oggetto di esistere pienamente.</p>
+      <p>La regola che applico nei miei progetti: ogni oggetto visibile deve avere una ragione per essere lì. O è bello, o è utile, o racconta qualcosa. Idealmente tutte e tre.</p>
+      <h3>Gli oggetti che parlano bene</h3>
+      <p>Ciò che chiamo un buon oggetto per un interno non è necessariamente raro. È un oggetto con una presenza fisica — una materia, un peso, una texture che si ha voglia di toccare. Le ceramiche artigianali funzionano bene perché portano le tracce della loro fabbricazione. Le sculture in bronzo o in pietra parlano del tempo. I libri — i veri libri letti, non i libri comprati per il colore della copertina — raccontano l'abitante.</p>
+      <p>Ciò che non funziona: gli oggetti comprati in serie. I candelabri assortiti. I vasi identici in tre dimensioni. La decorazione da catalogo è riconoscibile immediatamente — e segnala l'assenza di decisione personale.</p>
+      <h3>La coerenza senza uniformità</h3>
+      <p>Una collezione coerente non significa una collezione uniforme. Si può avere una ceramica giapponese, una ciotola in gres provenzale e un vaso scandinavo sullo stesso ripiano se la materia parla — se tutti e tre sono in terracotta non smaltata, ad esempio. È la materia e la tonalità a creare la coerenza, non lo stile né l'origine.</p>
+      <p>I migliori interni che conosco sono quelli dove gli oggetti sembrano esserci sempre stati. Non è un caso. È il risultato di un lungo lavoro di sottrazione — e di un'attenzione molto particolare portata a ogni cosa che si lascia entrare.</p>
     </div>
   </div>
 </div>
 
 <div class="article-overlay" id="a8">
-  <button class="article-close" onclick="closeArticle()">← retour au journal</button>
+  <button class="article-close" onclick="closeArticle()">← torna al diario</button>
   <div class="article-inner">
-    <p class="article-eyebrow">— couleur —</p>
-    <h1 class="article-title">le détail change tout —<br/><em>une note sur la couleur</em></h1>
-    <p class="article-sub">Pourquoi un mur bien peint dit quelque chose sur l'habitant.</p>
+    <p class="article-eyebrow">— colore —</p>
+    <h1 class="article-title">il dettaglio cambia tutto —<br/><em>nota sul colore</em></h1>
+    <p class="article-sub">Perché una parete ben dipinta dice qualcosa su chi abita il luogo.</p>
     <div class="article-body">
-      <p>Je vais vous dire quelque chose qui va à l'encontre de tous les conseils de home staging classiques : la cuisine n'est pas ce qui vend un appartement.</p>
-      <p>Ce qui vend un appartement, c'est l'atmosphère des trois premières secondes. Et l'atmosphère se crée principalement par la lumière, les proportions — et la couleur.</p>
-      <h3>La couleur comme signal</h3>
-      <p>Un mur peint dans un beau gris chaud, un blanc cassé soigneusement choisi, un vert profond dans une bibliothèque — ça dit quelque chose sur l'habitant. Ça dit : quelqu'un qui fait attention. Quelqu'un qui a du goût. Et inconsciemment, l'acheteur transfère cette qualité perçue sur l'ensemble du bien.</p>
-      <p>Un appartement entièrement blanc de chantier dit l'inverse : personne n'a habité ici vraiment. C'est un espace de transit, pas un lieu de vie.</p>
-      <h3>Ce que j'observe sur le terrain</h3>
-      <p>Sur les biens que j'accompagne, j'ai testé l'hypothèse plusieurs fois. Un appartement du 6e, 85 m², estimé à 1,1M€ : trois mois sans offre. On repeint deux pièces, on déplace deux meubles. Il part en dix jours au prix. La cuisine était la même. Le parquet était le même. La lumière était la même. Ce qui avait changé, c'était le signal que l'appartement envoyait dès la porte.</p>
-      <h3>Comment choisir une couleur pour vendre</h3>
-      <p>Oubliez vos préférences personnelles. Cherchez la couleur qui maximise la lumière naturelle, qui respecte les proportions, et qui ne divise pas. Les terres de Sienne, les blancs cassés légèrement chauds, les verts sauge discrets — ce sont les couleurs qui font consensus et qui évoquent le soin, l'habitabilité, le calme.</p>
-      <p>Évitez les couleurs trop marquées dans les pièces de vie. Gardez-les pour une chambre, une salle de bain, une pièce qui deviendra un détail mémorable plutôt qu'une objection. La couleur doit accompagner la projection — jamais la bloquer.</p>
-      <h3>La couleur comme identité</h3>
-      <p>Dans un appartement qu'on habite pour soi — et pas pour le vendre — la question est différente. La couleur n'est plus un signal envoyé à un acheteur, c'est une décision sur ce qu'on veut ressentir en entrant chez soi. C'est peut-être la décision la plus intime qu'on prend sur un espace.</p>
+      <p>Vi dirò qualcosa che va contro tutti i consigli classici di home staging: la cucina non è ciò che vende un appartamento.</p>
+      <p>Ciò che vende un appartamento è l'atmosfera dei primi tre secondi. E l'atmosfera si crea principalmente dalla luce, dalle proporzioni — e dal colore.</p>
+      <h3>Il colore come segnale</h3>
+      <p>Una parete dipinta in un bel grigio caldo, un bianco spezzato accuratamente scelto, un verde profondo in una libreria — questo dice qualcosa sull'abitante. Dice: qualcuno che fa attenzione. Qualcuno con gusto. E inconsciamente, l'acquirente trasferisce questa qualità percepita sull'insieme dell'immobile.</p>
+      <p>Un appartamento interamente bianco da cantiere dice il contrario: nessuno ha davvero abitato qui. È uno spazio di transito, non un luogo di vita.</p>
+      <h3>Cosa osservo sul campo</h3>
+      <p>Sugli immobili che accompagno, ho testato l'ipotesi più volte. Un appartamento nel 6°, 85 m², stimato a 1,1M€: tre mesi senza offerta. Si ridipingono due stanze, si spostano due mobili. Parte in dieci giorni al prezzo. La cucina era la stessa. Il parquet era lo stesso. La luce era la stessa. Ciò che era cambiato era il segnale che l'appartamento inviava dal momento in cui si varcava la soglia.</p>
+      <h3>Come scegliere un colore per vendere</h3>
+      <p>Dimenticate le vostre preferenze personali. Cercate il colore che massimizza la luce naturale, che rispetta le proporzioni, e che non divide. Le terre di Siena, i bianchi caldi leggermente sabbiosi, i verdi salvia discreti — sono i colori che creano consenso ed evocano cura, abitabilità, calma.</p>
+      <p>Evitate i colori troppo marcati nei locali di vita. Teneteli per una camera, un bagno, una stanza che diventerà un dettaglio memorabile piuttosto che un'obiezione. Il colore deve accompagnare la proiezione — mai bloccarla.</p>
+      <h3>Il colore come identità</h3>
+      <p>In un appartamento che si abita per sé — e non per venderlo — la domanda è diversa. Il colore non è più un segnale inviato a un acquirente, è una decisione su ciò che si vuole sentire entrando a casa propria. È forse la decisione più intima che si prende su uno spazio.</p>
     </div>
   </div>
 </div>
 
 <!-- OVERLAY MOBILE -->
 <div class="nav-overlay" id="nav-overlay">
-  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">fermer ×</button>
-  <a href="vendre.html">vendre</a>
-  <a href="acheter.html">acheter</a>
-  <a href="le-journal.html">le <em>journal</em></a>
-  <a href="a-propos.html">à propos</a>
-  <a href="contact.html">contact</a>
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">chiudi ×</button>
+  <a href="vendre.html">vendere</a>
+  <a href="acheter.html">acquistare</a>
+  <a href="le-journal.html">il <em>diario</em></a>
+  <a href="a-propos.html">chi sono</a>
+  <a href="contact.html">contatto</a>
 </div>
 
 <script>
@@ -605,12 +595,8 @@ function switchTab(tab){
   document.getElementById('panel-'+tab).classList.add('active');
 }
 
-function openArticle(id){
-  window.location.hash = id;
-}
-function closeArticle(){
-  history.back();
-}
+function openArticle(id){ window.location.hash = id; }
+function closeArticle(){ history.back(); }
 function handleHash(){
   document.querySelectorAll('.article-overlay').forEach(function(el){ el.classList.remove('open'); });
   document.body.style.overflow = '';
