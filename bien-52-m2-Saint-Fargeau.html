@@ -92,7 +92,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .photos-section h2 em{font-style:italic;}
 .photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .photo-thumb{aspect-ratio:4/3;background:var(--paper-warm);border:1px solid var(--rule);border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.photo-thumb img{width:100%;height:100%;object-fit:cover;}
+.photo-thumb img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s ease;}
+.photo-thumb img:hover{transform:scale(1.03);}
+
+/* LIGHTBOX */
+.lb-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(26,22,18,.94);backdrop-filter:blur(8px);align-items:center;justify-content:center;flex-direction:column;}
+.lb-overlay.open{display:flex;}
+.lb-img-wrap{position:relative;max-width:90vw;max-height:85vh;display:flex;align-items:center;justify-content:center;}
+.lb-img-wrap img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:2px;box-shadow:0 24px 80px rgba(0,0,0,.5);}
+.lb-close{position:fixed;top:24px;right:28px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:rgba(245,240,232,.7);background:none;border:none;cursor:pointer;transition:color .2s;}
+.lb-close:hover{color:var(--paper);}
+.lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:18px;color:rgba(245,240,232,.6);background:none;border:none;cursor:pointer;padding:20px;transition:color .2s;}
+.lb-prev{left:16px;}.lb-next{right:16px;}
+.lb-prev:hover,.lb-next:hover{color:var(--paper);}
+.lb-counter{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:rgba(245,240,232,.5);margin-top:16px;}
 
 /* CTA */
 .cta-section{border-top:1px solid var(--rule);padding-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
@@ -340,6 +353,57 @@ footer{border-top:1px solid var(--rule);padding:24px 48px;display:flex;justify-c
   <a href="index.html" class="f-logo">the <em>interior</em> by caroline</a>
   <p class="f-copy">© caroline · 2026 — paris & sa région</p>
 </footer>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb">
+  <button class="lb-close" id="lb-close">fermer ×</button>
+  <button class="lb-prev" id="lb-prev">←</button>
+  <div class="lb-img-wrap">
+    <img id="lb-img" src="" alt="" />
+  </div>
+  <button class="lb-next" id="lb-next">→</button>
+  <p class="lb-counter" id="lb-counter"></p>
+</div>
+
+<script>
+(function(){
+  var imgs = Array.from(document.querySelectorAll('.photo-thumb img, .photo-slot img'));
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  var lbCounter = document.getElementById('lb-counter');
+  var current = 0;
+
+  function open(idx){
+    current = idx;
+    lbImg.src = imgs[idx].src;
+    lbImg.alt = imgs[idx].alt;
+    lbCounter.textContent = (idx+1) + ' / ' + imgs.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function prev(){ open((current - 1 + imgs.length) % imgs.length); }
+  function next(){ open((current + 1) % imgs.length); }
+
+  imgs.forEach(function(img, i){
+    img.addEventListener('click', function(){ open(i); });
+  });
+
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', prev);
+  document.getElementById('lb-next').addEventListener('click', next);
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') prev();
+    if(e.key === 'ArrowRight') next();
+  });
+})();
+</script>
 
 </body>
 </html>
