@@ -69,6 +69,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .canal-action{font-family:var(--mono);font-size:10px;letter-spacing:.16em;
   color:var(--muted);margin-top:4px;text-transform:lowercase;}
 
+.rappel-band{display:flex;align-items:center;justify-content:space-between;
+  gap:32px;padding:32px 48px;border-bottom:1px solid var(--rule);
+  background:var(--paper-warm);}
+.rappel-text{flex:1;}
+.rappel-text p{font-family:var(--serif);font-style:italic;font-size:16px;
+  color:var(--ink-soft);line-height:1.5;}
+.rappel-text strong{font-style:normal;font-weight:400;color:var(--ink);}
+.rappel-form{display:flex;gap:0;flex:0 0 auto;}
+.rappel-input{background:none;border:none;border-bottom:1px solid var(--ink);
+  padding:8px 0;font-family:var(--serif);font-style:italic;font-size:16px;
+  color:var(--ink);outline:none;width:200px;transition:border-color .2s;}
+.rappel-input::placeholder{color:var(--muted);}
+.rappel-input:focus{border-bottom-color:var(--accent);}
+.rappel-btn{font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:lowercase;padding:9px 20px;border-radius:40px;
+  border:none;background:var(--ink);color:var(--paper);
+  cursor:pointer;transition:all .22s;margin-left:16px;white-space:nowrap;}
+.rappel-btn:hover{background:var(--ink-soft);}
+.rappel-merci{font-family:var(--serif);font-style:italic;font-size:15px;
+  color:var(--muted);display:none;}
+@media(max-width:768px){
+  .rappel-band{flex-direction:column;align-items:flex-start;padding:28px 24px;gap:20px;}
+  .rappel-form{width:100%;}
+  .rappel-input{flex:1;width:auto;}
+}
+
 .form-section{display:grid;grid-template-columns:1fr 1.4fr;
   border-bottom:1px solid var(--rule);}
 .form-lhs{padding:52px 48px;
@@ -260,7 +286,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 <div class="canaux">
   <a href="tel:+33602106754" class="canal">
     <p class="canal-eyebrow">— par téléphone —</p>
-    <h2 class="canal-title">+33 6 02 10 67 54</h2>
+    <h2 class="canal-title">m'<em>appeler</em></h2>
     <p class="canal-detail">9h–19h en semaine · plus court, plus direct.</p>
     <p class="canal-action">appeler →</p>
   </a>
@@ -276,6 +302,19 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     <p class="canal-detail">le quotidien du métier, des intérieurs, des regards.</p>
     <p class="canal-action">suivre →</p>
   </a>
+</div>
+
+<!-- BLOC RAPPEL -->
+<div class="rappel-band">
+  <div class="rappel-text">
+    <p><strong>Vous préférez être rappelé(e) ?</strong> Laissez votre numéro — je vous appelle dans la journée.</p>
+  </div>
+  <form id="rappel-form" class="rappel-form" action="https://formspree.io/f/mvzlnvrz" method="POST">
+    <input type="hidden" name="_subject" value="Demande de rappel" />
+    <input class="rappel-input" type="tel" name="telephone" placeholder="06 …" required />
+    <button type="submit" class="rappel-btn">me rappeler →</button>
+  </form>
+  <p class="rappel-merci" id="rappel-merci">merci, je vous rappelle dans la journée. — caroline</p>
 </div>
 
 <div class="form-section">
@@ -359,7 +398,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     <div class="f-col">
       <h4>caroline</h4>
       <ul>
-        <li><a href="tel:+33602106754">+33 6 02 10 67 54</a></li>
+        <li><a href="tel:+33602106754">téléphone</a></li>
         <li><a href="https://wa.me/33602106754">whatsapp</a></li>
         <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
         <li><a href="conception.html"><em>conception d'intérieurs →</em></a></li>
@@ -380,6 +419,28 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     <p class="f-made">fait avec attention</p>
   </div>
 </footer>
+
+<script>
+document.getElementById('rappel-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST', body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('rappel-merci').style.display = 'block';
+    } else {
+      alert('Une erreur est survenue, veuillez réessayer.');
+    }
+  } catch(err) {
+    alert('Une erreur est survenue, veuillez réessayer.');
+  }
+});
+</script>
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
