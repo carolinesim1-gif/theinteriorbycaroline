@@ -216,4 +216,305 @@ document.getElementById('acheter-form').addEventListener('submit',async function
   }
 })();
 </script>
+<!-- ============================================================
+     EXIT INTENT POP-UP — The Interior by Caroline (IT)
+     Da inserire appena prima di </body> su :
+       it/index.html · it/vendre.html · it/acheter.html · it/le-journal.html
+     ============================================================ -->
+
+<!-- OVERLAY -->
+<div id="ei-overlay" aria-hidden="true">
+  <div id="ei-modal" role="dialog" aria-modal="true" aria-labelledby="ei-title">
+
+    <button id="ei-close" aria-label="Chiudi">&times;</button>
+
+    <p id="ei-eyebrow">Prima di andare</p>
+
+    <h2 id="ei-title">Una consulenza<br><em>gratuita</em></h2>
+
+    <p id="ei-body">
+      Hai un progetto immobiliare a Parigi?<br>
+      Ti offro un primo colloquio — senza impegno.
+    </p>
+
+    <form id="ei-form" action="https://formspree.io/f/mvzlnvrz" method="POST">
+      <input type="hidden" name="_subject" value="Consulenza gratuita — exit intent">
+      <div id="ei-field">
+        <input
+          id="ei-email"
+          type="email"
+          name="email"
+          placeholder="tua@email.com"
+          required
+          autocomplete="email"
+        >
+        <button type="submit" id="ei-submit">Richiedi</button>
+      </div>
+      <p id="ei-legal">Nessuna newsletter. Nessuna cessione di dati. Solo una conversazione.</p>
+    </form>
+
+    <div id="ei-success" hidden>
+      <p>Grazie — la contatterò entro 48 ore.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- STYLES -->
+<style>
+  #ei-overlay {
+    --ink:    #1a1612;
+    --paper:  #f5f0e8;
+    --accent: #c47b6c;
+    --ff-display: 'Fraunces', Georgia, serif;
+    --ff-serif:   'Cormorant Garamond', Georgia, serif;
+    --ff-sans:    'Inter', system-ui, sans-serif;
+
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 22, 18, 0.55);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease, visibility .35s ease;
+  }
+
+  #ei-overlay.ei-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #ei-modal {
+    position: relative;
+    background: var(--paper);
+    color: var(--ink);
+    max-width: 460px;
+    width: 100%;
+    padding: 52px 48px 44px;
+    text-align: center;
+
+    transform: translateY(18px);
+    transition: transform .38s cubic-bezier(.22,.68,0,1.2);
+  }
+
+  #ei-overlay.ei-visible #ei-modal {
+    transform: translateY(0);
+  }
+
+  #ei-modal::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 48px; right: 48px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  #ei-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--ink);
+    opacity: .45;
+    cursor: pointer;
+    padding: 4px 6px;
+    transition: opacity .2s;
+  }
+  #ei-close:hover { opacity: 1; }
+
+  #ei-eyebrow {
+    font-family: var(--ff-sans);
+    font-size: .68rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+
+  #ei-title {
+    font-family: var(--ff-display);
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    color: var(--ink);
+  }
+  #ei-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  #ei-body {
+    font-family: var(--ff-serif);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--ink);
+    opacity: .8;
+    margin: 0 0 28px;
+  }
+
+  #ei-field {
+    display: flex;
+    gap: 0;
+    border: 1px solid rgba(26,22,18,.22);
+  }
+
+  #ei-email {
+    flex: 1;
+    border: none;
+    background: white;
+    padding: 12px 16px;
+    font-family: var(--ff-sans);
+    font-size: .88rem;
+    color: var(--ink);
+    outline: none;
+    min-width: 0;
+  }
+  #ei-email::placeholder { color: rgba(26,22,18,.38); }
+  #ei-email:focus { background: #faf7f2; }
+
+  #ei-submit {
+    border: none;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--ff-sans);
+    font-size: .78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s;
+  }
+  #ei-submit:hover { background: var(--accent); }
+
+  #ei-legal {
+    font-family: var(--ff-sans);
+    font-size: .68rem;
+    color: var(--ink);
+    opacity: .4;
+    margin: 10px 0 0;
+    line-height: 1.5;
+  }
+
+  #ei-success p {
+    font-family: var(--ff-serif);
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin: 0;
+    padding: 12px 0;
+  }
+
+  @media (max-width: 520px) {
+    #ei-modal {
+      padding: 44px 28px 36px;
+    }
+    #ei-modal::before {
+      left: 28px; right: 28px;
+    }
+    #ei-field {
+      flex-direction: column;
+    }
+    #ei-submit {
+      padding: 13px;
+    }
+  }
+</style>
+
+<!-- SCRIPT -->
+<script>
+(function () {
+  'use strict';
+
+  var COOKIE = 'ei_shown';
+  var DELAY_MS = 40000;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|;)\\s*' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  function setCookie(name) {
+    var d = new Date();
+    d.setTime(d.getTime() + 7 * 24 * 60 * 60 * 1000);
+    document.cookie = name + '=1;expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+
+  if (getCookie(COOKIE)) return;
+
+  var overlay = document.getElementById('ei-overlay');
+  var closeBtn = document.getElementById('ei-close');
+  var form    = document.getElementById('ei-form');
+  var success = document.getElementById('ei-success');
+  if (!overlay) return;
+
+  function show() {
+    if (getCookie(COOKIE)) return;
+    setCookie(COOKIE);
+    overlay.classList.add('ei-visible');
+    overlay.setAttribute('aria-hidden', 'false');
+    var firstInput = overlay.querySelector('input[type="email"]');
+    if (firstInput) setTimeout(function(){ firstInput.focus(); }, 380);
+  }
+
+  function hide() {
+    overlay.classList.remove('ei-visible');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 10) show();
+  });
+
+  var mobileTimer = setTimeout(show, DELAY_MS);
+
+  document.addEventListener('mouseleave', function () {
+    clearTimeout(mobileTimer);
+  }, { once: true });
+
+  closeBtn.addEventListener('click', hide);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) hide();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') hide();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function (r) {
+      if (r.ok) {
+        form.hidden = true;
+        success.hidden = false;
+        setTimeout(hide, 3000);
+      }
+    })
+    .catch(function () {
+      form.submit();
+    });
+  });
+
+})();
+</script>
+
+<!-- ============================================================
+     FINE BLOCCO EXIT INTENT
+     ============================================================ -->
+
 </body></html>
