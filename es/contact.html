@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contacto — The Interior by Caroline</title>
+<meta name="description" content="Escríbame, llámeme — respondo personalmente en menos de 24 horas." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="../style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="alternate" hreflang="fr" href="https://theinteriorbycaroline.fr/contact.html" />
+<link rel="alternate" hreflang="en" href="https://theinteriorbycaroline.fr/en/contact.html" />
+<link rel="alternate" hreflang="it" href="https://theinteriorbycaroline.fr/it/contact.html" />
+<link rel="alternate" hreflang="es" href="https://theinteriorbycaroline.fr/es/contact.html" />
+<style>
+:root{--ink:#1a1612;--ink-soft:#3a342d;--paper:#f5f0e8;--paper-warm:#ece4d6;--muted:#6f6659;--rule:rgba(26,22,18,0.13);--accent:#c47b6c;--accent-soft:#e8c9bf;--accent-deep:#6d3a32;--dark:#2c2720;--serif:'Cormorant Garamond',serif;--display:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(26,22,18,.02) 1px,transparent 1px),radial-gradient(rgba(26,22,18,.015) 1px,transparent 1px);background-size:3px 3px,7px 7px;background-position:0 0,1px 2px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:58px;background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+.nav-logo{font-family:var(--display);font-weight:300;font-size:17px;font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;}.nav-logo em{font-style:italic;}
+.nav-links{display:flex;gap:32px;list-style:none;}.nav-links a{font-size:13px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.lang-select{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:20px;padding:4px 28px 4px 11px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .2s,color .2s;}.lang-select:hover{border-color:var(--ink);color:var(--ink);}
+footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;gap:40px;margin-bottom:28px;}
+.f-logo{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin-bottom:8px;}.f-logo em{font-style:italic;}
+.f-tagline{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:10px;}
+.f-network{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-col h4{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.f-col a{font-size:14px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.f-col a:hover{color:var(--ink);}
+.f-col a em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule);}
+.f-copy{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);}
+.f-made{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--muted);}
+@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}footer{padding:36px 24px 16px;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .25s;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.nav-overlay.open{display:flex;}
+.nav-overlay a{font-family:var(--display);font-weight:300;font-size:clamp(28px,6vw,44px);font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;letter-spacing:-.01em;transition:color .2s;}
+.nav-overlay a em{font-style:italic;}.nav-overlay a:hover{color:var(--accent);}
+.nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
+@media(max-width:768px){.nav-hamburger{display:flex;}}
+.insta-band{padding:20px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;}
+.insta-band-label{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:24px;}
+.insta-band-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1200px;margin:0 auto;}
+.insta-thumb{display:block;aspect-ratio:1;overflow:hidden;border-radius:14px;transition:transform .25s,opacity .25s;outline:1px solid rgba(26,22,18,.18);}
+.insta-thumb:hover{transform:scale(1.03);opacity:.9;}
+.insta-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+@media(max-width:768px){.insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(3,1fr);gap:8px;}.insta-thumb{border-radius:12px;}}
+.hero{padding:80px 48px 40px;text-align:center;border-bottom:1px solid var(--rule);}
+.hero-eyebrow{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:16px;}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(44px,6vw,86px);line-height:.92;letter-spacing:-.025em;font-variation-settings:'opsz' 144;margin-bottom:16px;}
+.hero h1 em{font-style:italic;}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(14px,1.5vw,17px);color:var(--ink-soft);max-width:480px;margin:0 auto;line-height:1.55;}
+.canaux{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border-bottom:1px solid var(--rule);}
+.canal{background:var(--paper);padding:44px 48px;text-decoration:none;color:var(--ink);transition:background .2s;display:flex;flex-direction:column;gap:10px;}
+.canal:hover{background:var(--paper-warm);}
+.canal-eyebrow{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--muted);}
+.canal-title{font-family:var(--display);font-weight:300;font-size:26px;font-variation-settings:'opsz' 144;line-height:1.1;}
+.canal-title em{font-style:italic;}
+.canal-detail{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);line-height:1.5;}
+.canal-action{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);margin-top:4px;text-transform:lowercase;}
+.form-section{display:grid;grid-template-columns:1fr 1.4fr;border-bottom:1px solid var(--rule);}
+.form-lhs{padding:52px 48px;background:linear-gradient(140deg,rgba(196,123,108,.15) 0%,rgba(196,164,108,.10) 50%,rgba(180,190,170,.10) 100%);display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule);}
+.section-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.section-title{font-family:var(--display);font-weight:300;font-size:clamp(28px,3.2vw,42px);line-height:1;letter-spacing:-.02em;font-variation-settings:'opsz' 144;}
+.section-title em{font-style:italic;}
+.form-note{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);line-height:1.6;margin-top:14px;}
+.form-sig{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-top:8px;}
+.form-card{padding:52px 48px;}
+.field{margin-bottom:20px;}
+.field label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+.field input,.field textarea{width:100%;background:none;border:none;border-bottom:1px solid var(--ink);padding:7px 0;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink);outline:none;transition:border-color .2s;appearance:none;resize:none;}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.btn-submit{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:lowercase;padding:13px 26px;border-radius:40px;border:none;background:var(--ink);color:var(--paper);cursor:pointer;transition:all .22s;margin-top:8px;}
+.btn-submit:hover{background:var(--ink-soft);}
+.form-legal{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);margin-top:14px;line-height:1.5;}
+@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.hero{padding:76px 24px 32px;}.canaux{grid-template-columns:1fr;}.canal{padding:36px 24px;}.form-section{grid-template-columns:1fr;}.form-lhs{border-right:none;border-bottom:1px solid var(--rule);padding:36px 24px;}.form-card{padding:36px 24px;}.field-row{grid-template-columns:1fr;gap:0;}}
+@media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.nav-hamburger{display:flex;order:-1;}.nav-logo{order:0;}}
+</style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09d4f63b02d9400f8ca01582107b370d"}'></script><!-- End Cloudflare Web Analytics -->
+</head><body><nav>
+  <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links"><li><a href="vendre.html">vender</a></li><li><a href="acheter.html">comprar</a></li><li><a href="le-journal.html">journal</a></li><li><a href="a-propos.html">sobre mí</a></li><li><a href="contact.html" class="active">contacto</a></li></ul>
+  <div class="nav-lang">
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="../contact.html">fr</option>
+      <option value="../en/contact.html">en</option>
+      <option value="../it/contact.html">it</option>
+      <option value="contact.html" selected>es</option>
+    </select>
+  </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="hero">
+  <p class="hero-eyebrow">— hablemos —</p>
+  <h1>escríbame, <em>llámeme</em></h1>
+  <p class="hero-sub">Respondo personalmente, en menos de 24 horas.<br/>Elija el canal que mejor le convenga.</p>
+</div>
+<div class="canaux">
+  <a href="tel:+33602106754" class="canal">
+    <p class="canal-eyebrow">— por teléfono —</p>
+    <h2 class="canal-title">llamarme</h2>
+    <p class="canal-detail">9h–19h en días laborables · más rápido, más directo.</p>
+    <p class="canal-action">llamar →</p>
+  </a>
+  <a href="https://wa.me/33602106754" class="canal">
+    <p class="canal-eyebrow">— en whatsapp —</p>
+    <h2 class="canal-title">mensaje <em>directo</em></h2>
+    <p class="canal-detail">práctico para enviar fotografías, contactarme estando de paso.</p>
+    <p class="canal-action">escribir por whatsapp →</p>
+  </a>
+  <a href="https://instagram.com/theinteriorbycaroline" class="canal">
+    <p class="canal-eyebrow">— en instagram —</p>
+    <h2 class="canal-title">@theinteriorbycaroline</h2>
+    <p class="canal-detail">el día a día de la profesión, interiores, perspectivas.</p>
+    <p class="canal-action">seguir →</p>
+  </a>
+</div>
+<div class="form-section">
+  <div class="form-lhs">
+    <p class="section-eyebrow">— o por escrito —</p>
+    <h2 class="section-title">envíeme <em>un mensaje</em></h2>
+    <p class="form-note">Respondo personalmente, en menos de 24 horas.</p>
+    <p class="form-sig">— caroline</p>
+  </div>
+  <div class="form-card">
+    <div id="contact-form-wrapper">
+      <form id="contact-form" action="https://formspree.io/f/mvzlnvrz" method="POST">
+        <div class="field-row">
+          <div class="field"><label>Nombre</label><input type="text" name="prenom" placeholder="Caroline" required /></div>
+          <div class="field"><label>Apellido</label><input type="text" name="nom" placeholder="García" required /></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Teléfono</label><input type="tel" name="telephone" placeholder="+33 6 …" /></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="caroline@ejemplo.com" required /></div>
+        </div>
+        <div class="field"><label>Su mensaje</label><textarea name="message" rows="4" placeholder="su proyecto, su pregunta…"></textarea></div>
+        <button type="submit" class="btn-submit">enviar mi mensaje →</button>
+        <p class="form-legal">confidencial · respuesta en 24 horas</p>
+      </form>
+    </div>
+    <div id="contact-form-merci" style="display:none;padding:32px 0;">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.5vw,32px);font-weight:300;line-height:1.2;margin-bottom:16px;color:var(--ink);">gracias, le responderé<br/><em>en menos de 24 horas.</em></p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--muted);">— caroline</p>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('contact-form').addEventListener('submit',async function(e){
+  e.preventDefault();const form=e.target;const data=new FormData(form);
+  try{const res=await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+  if(res.ok){document.getElementById('contact-form-wrapper').style.display='none';document.getElementById('contact-form-merci').style.display='block';}
+  else{alert('Se ha producido un error, inténtelo de nuevo.');}}catch(err){alert('Se ha producido un error, inténtelo de nuevo.');}});
+</script>
+<!-- BANDEAU INSTAGRAM -->
+<div class="insta-band">
+  <p class="insta-band-label">— inspiraciones &amp; perspectivas —</p>
+  <div class="insta-band-grid">
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+  </div>
+</div>
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">una firma, una mirada, interiores —<br/>París y alrededores.</p>
+      <span class="f-network">miembro de la red inmobiliaria</span>
+      <img src="../logo_greenpartners.png" alt="GreenPartners" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+    </div>
+    <div class="f-col"><h4>el sitio</h4><ul>
+      <li><a href="vendre.html">vender</a></li>
+      <li><a href="acheter.html">comprar</a></li>
+      <li><a href="le-journal.html">journal</a></li>
+      <li><a href="a-propos.html">sobre mí</a></li>
+      <li><a href="contact.html">contacto</a></li>
+    </ul></div>
+    <div class="f-col"><h4>caroline</h4><ul>
+      <li><a href="tel:+33602106754">teléfono</a></li>
+      <li><a href="https://wa.me/33602106754">whatsapp</a></li>
+      <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
+      <li><a href="conception.html"><em>diseño de interiores →</em></a></li>
+    </ul></div>
+    <div class="f-col"><h4>legal</h4><ul>
+      <li><a href="mentions-legales.html">aviso legal</a></li>
+      <li><a href="confidentialite.html">privacidad</a></li>
+      <li><a href="cookies.html">cookies</a></li>
+      <li><a href="honoraires.html">honorarios</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — París y alrededores</p>
+    <p class="f-made">hecho con cuidado</p>
+  </div>
+</footer>
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">cerrar ×</button>
+  <a href="vendre.html">vender</a>
+  <a href="acheter.html">comprar</a>
+  <a href="le-journal.html">journal</a>
+  <a href="a-propos.html">sobre mí</a>
+  <a href="contact.html">contacto</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){ btn.addEventListener('click', function(){ overlay.classList.toggle('open'); }); }
+})();
+</script>
+</body></html>

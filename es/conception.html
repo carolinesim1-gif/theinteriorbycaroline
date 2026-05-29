@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diseño de interiores — The Interior by Caroline</title>
+<meta name="description" content="Diseño de interiores y decoración en París — consultoría de color, presentación previa a la venta, proyectos completos." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="../style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="alternate" hreflang="fr" href="https://theinteriorbycaroline.fr/conception.html" />
+<link rel="alternate" hreflang="en" href="https://theinteriorbycaroline.fr/en/conception.html" />
+<link rel="alternate" hreflang="it" href="https://theinteriorbycaroline.fr/it/conception.html" />
+<link rel="alternate" hreflang="es" href="https://theinteriorbycaroline.fr/es/conception.html" />
+<style>
+:root{--ink:#1a1612;--ink-soft:#3a342d;--paper:#f5f0e8;--paper-warm:#ece4d6;--muted:#6f6659;--rule:rgba(26,22,18,0.13);--accent:#c47b6c;--accent-soft:#e8c9bf;--accent-deep:#6d3a32;--serif:'Cormorant Garamond',serif;--display:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(26,22,18,.02) 1px,transparent 1px),radial-gradient(rgba(26,22,18,.015) 1px,transparent 1px);background-size:3px 3px,7px 7px;background-position:0 0,1px 2px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:58px;background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+.nav-logo{font-family:var(--display);font-weight:300;font-size:17px;font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;}.nav-logo em{font-style:italic;}
+.nav-links{display:flex;gap:32px;list-style:none;}.nav-links a{font-size:13px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.lang-select{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:20px;padding:4px 28px 4px 11px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .2s,color .2s;}.lang-select:hover{border-color:var(--ink);color:var(--ink);}
+.hero{padding:80px 48px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;border-bottom:1px solid var(--rule);}
+.hero-eyebrow{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:16px;}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(40px,5.5vw,76px);line-height:.92;letter-spacing:-.025em;font-variation-settings:'opsz' 144;}
+.hero h1 em{font-style:italic;}
+.hero-rhs{display:flex;flex-direction:column;gap:20px;justify-content:flex-end;padding-bottom:4px;}
+.hero-body{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-soft);line-height:1.65;}
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--rule);}
+.service{padding:44px 40px;border-right:1px solid var(--rule);}.service:last-child{border-right:none;}
+.service-title{font-family:var(--display);font-weight:300;font-size:24px;font-variation-settings:'opsz' 144;margin-bottom:12px;line-height:1.1;}
+.service-title em{font-style:italic;}
+.service-body{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);line-height:1.65;}
+.service-detail{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);margin-top:16px;line-height:1.7;}
+.portfolio-header{padding:52px 48px 32px;display:flex;justify-content:space-between;align-items:baseline;}
+.portfolio-title{font-family:var(--display);font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1;font-variation-settings:'opsz' 144;}
+.portfolio-title em{font-style:italic;}
+.portfolio-note{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:lowercase;padding:13px 26px;border-radius:40px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:all .22s ease;}
+.btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink);}.btn-dark:hover{background:var(--ink-soft);}
+.insta-band{padding:20px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;}
+.insta-band-label{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:12px;}
+.insta-band-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1200px;margin:0 auto;}
+.insta-thumb{display:block;aspect-ratio:1;overflow:hidden;border-radius:14px;transition:transform .25s,opacity .25s;outline:1px solid rgba(26,22,18,.18);}
+.insta-thumb:hover{transform:scale(1.03);opacity:.9;}
+.insta-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;gap:40px;margin-bottom:28px;}
+.f-logo{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin-bottom:8px;}.f-logo em{font-style:italic;}
+.f-tagline{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:10px;}
+.f-network{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-col h4{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.f-col a{font-size:14px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.f-col a:hover{color:var(--ink);}
+.f-col a em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule);}
+.f-copy{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);}
+.f-made{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--muted);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .25s;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.nav-overlay.open{display:flex;}
+.nav-overlay a{font-family:var(--display);font-weight:300;font-size:clamp(28px,6vw,44px);font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;letter-spacing:-.01em;transition:color .2s;}
+.nav-overlay a em{font-style:italic;}.nav-overlay a:hover{color:var(--accent);}
+.nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
+@media(max-width:768px){.nav-hamburger{display:flex;}.hero{grid-template-columns:1fr;padding:76px 24px 40px;gap:32px;}.services{grid-template-columns:1fr;}.service{border-right:none;border-bottom:1px solid var(--rule);}.service:last-child{border-bottom:none;}.portfolio-header{padding:40px 24px 24px;flex-direction:column;gap:8px;}.insta-band{padding:20px 24px;}.insta-band-grid{grid-template-columns:repeat(3,1fr);gap:8px;}.insta-thumb{border-radius:10px;}footer{padding:36px 24px 16px;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}nav{padding:0 20px;}.nav-links{display:none;}.nav-hamburger{display:flex;order:-1;}.nav-logo{order:0;}}
+</style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09d4f63b02d9400f8ca01582107b370d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links">
+    <li><a href="vendre.html">vender</a></li>
+    <li><a href="acheter.html">comprar</a></li>
+    <li><a href="le-journal.html">journal</a></li>
+    <li><a href="a-propos.html">sobre mí</a></li>
+    <li><a href="contact.html">contacto</a></li>
+  </ul>
+  <div class="nav-lang">
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="../conception.html">fr</option>
+      <option value="../en/conception.html">en</option>
+      <option value="../it/conception.html">it</option>
+      <option value="conception.html" selected>es</option>
+    </select>
+  </div>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="hero">
+  <div>
+    <p class="hero-eyebrow">— diseño &amp; decoración de interiores —</p>
+    <h1>una mirada <em>diferente</em></h1>
+  </div>
+  <div class="hero-rhs">
+    <p class="hero-body">formada en diseño de interiores tras quince años en entornos de excelencia — leo un espacio de manera diferente. esta perspectiva sirve ante todo a mis mandatos. también puede servir a sus interiores.</p>
+    <a href="contact.html" class="btn btn-dark" style="margin-top:20px;align-self:flex-start;">hablar de mi proyecto →</a>
+  </div>
+</div>
+
+<div class="services">
+  <div class="service">
+    <h2 class="service-title">consultoría de <em>color &amp; materiales</em></h2>
+    <p class="service-body">una media jornada en su domicilio. paleta, superficies, mobiliario — lo que transforma sin cambiarlo todo.</p>
+    <p class="service-detail">visita · moodboard · recomendaciones escritas</p>
+  </div>
+  <div class="service">
+    <h2 class="service-title">presentación <em>previa a la venta</em></h2>
+    <p class="service-body">home staging considerado — para que las fotografías y las visitas jueguen a su favor desde el primer día.</p>
+    <p class="service-detail">auditoría · staging · supervisión fotógrafa</p>
+  </div>
+  <div class="service">
+    <h2 class="service-title">proyecto de diseño <em>completo</em></h2>
+    <p class="service-body">del primer boceto a la entrega final. para una reforma parcial o un proyecto integral.</p>
+    <p class="service-detail">planos · selección de artesanos · seguimiento de obra</p>
+  </div>
+</div>
+
+<div class="portfolio-header">
+  <h2 class="portfolio-title">portfolio <em>bajo demanda</em></h2>
+  <p class="portfolio-note">— disponible bajo demanda · <a href="contact.html" style="color:var(--muted);text-underline-offset:3px;">contactarme directamente</a></p>
+</div>
+
+<!-- BANDEAU INSTAGRAM -->
+<div class="insta-band">
+  <p class="insta-band-label">— inspiraciones &amp; perspectivas —</p>
+  <div class="insta-band-grid">
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">una firma, una mirada, interiores —<br/>París y alrededores.</p>
+      <span class="f-network">miembro de la red inmobiliaria</span>
+      <img src="../logo_greenpartners.png" alt="GreenPartners" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+    </div>
+    <div class="f-col"><h4>el sitio</h4><ul>
+      <li><a href="vendre.html">vender</a></li>
+      <li><a href="acheter.html">comprar</a></li>
+      <li><a href="le-journal.html">journal</a></li>
+      <li><a href="a-propos.html">sobre mí</a></li>
+      <li><a href="contact.html">contacto</a></li>
+    </ul></div>
+    <div class="f-col"><h4>caroline</h4><ul>
+      <li><a href="tel:+33602106754">teléfono</a></li>
+      <li><a href="https://wa.me/33602106754">whatsapp</a></li>
+      <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
+      <li><a href="conception.html"><em>diseño de interiores →</em></a></li>
+    </ul></div>
+    <div class="f-col"><h4>legal</h4><ul>
+      <li><a href="mentions-legales.html">aviso legal</a></li>
+      <li><a href="confidentialite.html">privacidad</a></li>
+      <li><a href="cookies.html">cookies</a></li>
+      <li><a href="honoraires.html">honorarios</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — París y alrededores</p>
+    <p class="f-made">hecho con cuidado</p>
+  </div>
+</footer>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">cerrar ×</button>
+  <a href="vendre.html">vender</a>
+  <a href="acheter.html">comprar</a>
+  <a href="le-journal.html">journal</a>
+  <a href="a-propos.html">sobre mí</a>
+  <a href="contact.html">contacto</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var overlay = document.getElementById('nav-overlay');
+  if(btn && overlay){ btn.addEventListener('click', function(){ overlay.classList.toggle('open'); }); }
+})();
+</script>
+</body>
+</html>

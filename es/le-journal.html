@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>El journal — The Interior by Caroline</title>
+<meta name="description" content="Notas sobre el mercado parisino, guías prácticas y perspectivas sobre el arte de vivir — por Caroline." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="../style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="alternate" hreflang="fr" href="https://theinteriorbycaroline.fr/le-journal.html" />
+<link rel="alternate" hreflang="en" href="https://theinteriorbycaroline.fr/en/le-journal.html" />
+<link rel="alternate" hreflang="it" href="https://theinteriorbycaroline.fr/it/le-journal.html" />
+<link rel="alternate" hreflang="es" href="https://theinteriorbycaroline.fr/es/le-journal.html" />
+<style>
+:root{
+  --ink:#1a1612;--ink-soft:#3a342d;--paper:#f5f0e8;--paper-warm:#ece4d6;
+  --muted:#6f6659;--rule:rgba(26,22,18,0.13);--accent:#c47b6c;
+  --accent-deep:#6d3a32;--serif:'Cormorant Garamond',serif;
+  --display:'Fraunces',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(26,22,18,.02) 1px,transparent 1px),radial-gradient(rgba(26,22,18,.015) 1px,transparent 1px);
+  background-size:3px 3px,7px 7px;background-position:0 0,1px 2px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+  justify-content:space-between;padding:0 48px;height:58px;
+  background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);}
+.nav-logo{font-family:var(--display);font-weight:300;font-size:17px;font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;}
+.nav-logo em{font-style:italic;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:13px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.lang-select{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:20px;padding:4px 28px 4px 11px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236f6659' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:border-color .2s,color .2s;}
+.lang-select:hover{border-color:var(--ink);color:var(--ink);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .25s;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(245,240,232,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.nav-overlay.open{display:flex;}
+.nav-overlay a{font-family:var(--display);font-weight:300;font-size:clamp(28px,6vw,44px);font-variation-settings:'opsz' 144;color:var(--ink);text-decoration:none;letter-spacing:-.01em;transition:color .2s;}
+.nav-overlay a em{font-style:italic;}
+.nav-overlay a:hover{color:var(--accent);}
+.nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
+@media(max-width:768px){.nav-hamburger{display:flex;}.nav-links{display:none;}}
+.journal-header{padding:96px 48px 0;border-bottom:none;}
+.header-eyebrow{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:10px;}
+.header-title{font-family:var(--display);font-weight:300;font-size:clamp(44px,6vw,72px);line-height:.9;letter-spacing:-.03em;font-variation-settings:'opsz' 144;}
+.header-title em{font-style:italic;}
+.header-sub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft);margin-top:14px;max-width:420px;line-height:1.6;}
+.tabs-bar{display:flex;align-items:flex-end;gap:0;padding:32px 48px 0;border-bottom:1px solid var(--rule);}
+.tab-btn{font-family:var(--display);font-weight:300;font-size:clamp(18px,2.2vw,26px);font-variation-settings:'opsz' 144;letter-spacing:-.02em;color:var(--muted);background:none;border:none;cursor:pointer;padding:0 0 16px;margin-right:40px;position:relative;transition:color .25s;}
+.tab-btn em{font-style:italic;}
+.tab-btn::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.4,0,.2,1);}
+.tab-btn.active{color:var(--ink);}
+.tab-btn.active::after{transform:scaleX(1);}
+.tab-btn:hover{color:var(--ink-soft);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+.featured{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .2s;}
+.featured:hover{background:var(--paper-warm);}
+.featured-img{background-size:cover;background-position:center;filter:grayscale(100%);transition:filter .4s;}
+.featured:hover .featured-img{filter:grayscale(75%);}
+.featured-body{padding:52px 56px;display:flex;flex-direction:column;justify-content:space-between;border-left:1px solid var(--rule);}
+.featured-cat{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;}
+.featured-title{font-family:var(--display);font-weight:300;font-size:clamp(28px,3vw,42px);line-height:1.05;letter-spacing:-.02em;font-variation-settings:'opsz' 144;margin-bottom:18px;}
+.featured-title em{font-style:italic;}
+.featured-sub{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-soft);line-height:1.65;flex:1;}
+.featured-meta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);margin-top:28px;}
+.featured-arrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-top:16px;transition:letter-spacing .2s;}
+.featured:hover .featured-arrow{letter-spacing:.3em;}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);}
+.card{background:var(--paper);cursor:pointer;transition:background .2s;}
+.card:hover{background:var(--paper-warm);}
+.card-img{aspect-ratio:4/3;background-size:cover;background-position:center;filter:grayscale(100%);transition:filter .4s;}
+.card:hover .card-img{filter:grayscale(60%);}
+.card-body{padding:28px 32px 36px;}
+.card-cat{font-family:var(--mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.card-title{font-family:var(--display);font-weight:300;font-size:clamp(18px,1.8vw,24px);line-height:1.1;letter-spacing:-.01em;font-variation-settings:'opsz' 144;margin-bottom:10px;}
+.card-sub{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft);line-height:1.55;}
+.card-meta{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--muted);margin-top:14px;}
+.img-1{background-image:url('../insta1.jpg');}
+.img-2{background-image:url('../insta2.jpg');}
+.img-3{background-image:url('../insta3.jpg');}
+.img-4{background-image:url('../insta4.jpg');}
+.img-5{background-image:url('../insta5.jpg');}
+.img-6{background-image:url('../insta6.jpg');}
+.img-7{background-image:url('../insta1.jpg');}
+.img-8{background-image:url('../insta2.jpg');}
+footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;gap:40px;margin-bottom:28px;}
+.f-logo{font-family:var(--display);font-weight:300;font-size:22px;font-variation-settings:'opsz' 144;margin-bottom:8px;}.f-logo em{font-style:italic;}
+.f-tagline{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:10px;}
+.f-network{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-col h4{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.f-col a{font-size:14px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}.f-col a:hover{color:var(--ink);}
+.f-col a em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule);}
+.f-copy{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);}
+.f-made{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--muted);}
+.insta-band{padding:20px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;}
+.insta-band-label{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:24px;}
+.insta-band-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1200px;margin:0 auto;}
+.insta-thumb{display:block;aspect-ratio:1;overflow:hidden;border-radius:14px;transition:transform .25s,opacity .25s;outline:1px solid rgba(26,22,18,.18);}
+.insta-thumb:hover{transform:scale(1.03);opacity:.9;}
+.insta-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+/* ARTICLE OVERLAY */
+.article-overlay{display:none;position:fixed;inset:0;z-index:300;background:var(--paper);overflow-y:auto;padding:80px 48px 80px;}
+.article-overlay.open{display:block;}
+.article-close{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;margin-bottom:52px;display:block;transition:color .2s;}
+.article-close:hover{color:var(--ink);}
+.article-inner{max-width:700px;}
+.article-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+.article-title{font-family:var(--display);font-weight:300;font-size:clamp(34px,4vw,56px);line-height:.93;letter-spacing:-.022em;font-variation-settings:'opsz' 144;margin-bottom:16px;}
+.article-title em{font-style:italic;}
+.article-sub{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-soft);line-height:1.6;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--rule);}
+.article-body p{font-family:var(--serif);font-size:17px;color:var(--ink-soft);line-height:1.8;margin-bottom:20px;}
+.article-body h3{font-family:var(--display);font-weight:300;font-size:20px;font-variation-settings:'opsz' 144;margin:36px 0 12px;letter-spacing:-.01em;}
+.article-body h3 em{font-style:italic;}
+@media(max-width:768px){
+  nav{padding:0 20px;}.nav-links{display:none;}
+  .journal-header{padding:76px 24px 0;}
+  .tabs-bar{padding:24px 24px 0;}
+  .featured{grid-template-columns:1fr;}
+  .featured-img{min-height:260px;}
+  .featured-body{padding:32px 24px;border-left:none;border-top:1px solid var(--rule);}
+  .grille{grid-template-columns:1fr;}
+  .insta-band{padding:36px 24px;}.insta-band-grid{grid-template-columns:repeat(3,1fr);gap:8px;}
+  footer{padding:36px 24px 16px;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .article-overlay{padding:60px 24px 60px;}
+  .nav-hamburger{display:flex;order:-1;}.nav-logo{order:0;}
+}
+</style>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09d4f63b02d9400f8ca01582107b370d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<nav>
+  <button class="nav-hamburger" id="nav-ham" aria-label="menú" style="order:-1"><span></span><span></span><span></span></button>
+  <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
+  <ul class="nav-links">
+    <li><a href="vendre.html">vender</a></li>
+    <li><a href="acheter.html">comprar</a></li>
+    <li><a href="le-journal.html" class="active">journal</a></li>
+    <li><a href="a-propos.html">sobre mí</a></li>
+    <li><a href="contact.html">contacto</a></li>
+  </ul>
+  <div class="nav-lang">
+    <select class="lang-select" onchange="if(this.value) window.location.href=this.value">
+      <option value="../le-journal.html">fr</option>
+      <option value="../en/le-journal.html">en</option>
+      <option value="../it/le-journal.html">it</option>
+      <option value="le-journal.html" selected>es</option>
+    </select>
+  </div>
+</nav>
+
+<div class="journal-header">
+  <p class="header-eyebrow">— notas &amp; perspectivas —</p>
+  <h1 class="header-title">el <em>journal</em></h1>
+  <p class="header-sub">lecturas del mercado, guías prácticas y notas sobre el arte de vivir — por caroline.</p>
+</div>
+
+<div class="tabs-bar">
+  <button class="tab-btn active" onclick="switchTab('property')" id="tab-property"><em>inmobiliaria</em></button>
+  <button class="tab-btn" onclick="switchTab('interiors')" id="tab-interiors"><em>interiores</em></button>
+</div>
+
+<div class="tab-panel active" id="panel-property">
+  <div class="featured" onclick="openArticle('a1')">
+    <div class="featured-img img-1"></div>
+    <div class="featured-body">
+      <div>
+        <p class="featured-cat">— vender —</p>
+        <h2 class="featured-title">siete errores que cuestan caro<br/><em>al vender en París</em></h2>
+        <p class="featured-sub">Precio de salida, fotografías, primeras visitas — lo que se juega en las primeras tres semanas y que a menudo lo determina todo.</p>
+      </div>
+      <div>
+        <p class="featured-meta">enero 2026 · 9 min de lectura</p>
+        <p class="featured-arrow">leer →</p>
+      </div>
+    </div>
+  </div>
+  <div class="grille">
+    <div class="card" onclick="openArticle('a2')">
+      <div class="card-img img-2"></div>
+      <div class="card-body">
+        <p class="card-cat">— comprar —</p>
+        <h2 class="card-title">leer un DPE, de verdad</h2>
+        <p class="card-sub">Más allá de la letra: lo que la auditoría revela sobre la propiedad.</p>
+        <p class="card-meta">enero 2026 · 6 min</p>
+      </div>
+    </div>
+    <div class="card" onclick="openArticle('a3')">
+      <div class="card-img img-3"></div>
+      <div class="card-body">
+        <p class="card-cat">— arrondissements —</p>
+        <h2 class="card-title">París rive gauche — el mercado desde dentro</h2>
+        <p class="card-sub">Precio por m², barrios en movimiento, propiedades que se venden rápido.</p>
+        <p class="card-meta">diciembre 2025 · 7 min</p>
+      </div>
+    </div>
+    <div class="card" onclick="openArticle('a4')">
+      <div class="card-img img-4"></div>
+      <div class="card-body">
+        <p class="card-cat">— comprar —</p>
+        <h2 class="card-title">entender una copropriété en diez minutos</h2>
+        <p class="card-sub">Actas de junta, gastos, obras aprobadas: la lista de control antes de firmar.</p>
+        <p class="card-meta">diciembre 2025 · 8 min</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panel" id="panel-interiors">
+  <div class="featured" onclick="openArticle('a5')">
+    <div class="featured-img img-5"></div>
+    <div class="featured-body">
+      <div>
+        <p class="featured-cat">— luz —</p>
+        <h2 class="featured-title">la luz artificial —<br/><em>una cuestión de atmósfera</em></h2>
+        <p class="featured-sub">Por qué la lámpara de techo central es el enemigo de la atmósfera, y cómo construir varias capas de luz en un apartamento parisino.</p>
+      </div>
+      <div>
+        <p class="featured-meta">mayo 2026 · 6 min de lectura</p>
+        <p class="featured-arrow">leer →</p>
+      </div>
+    </div>
+  </div>
+  <div class="grille">
+    <div class="card" onclick="openArticle('a6')">
+      <div class="card-img img-6"></div>
+      <div class="card-body">
+        <p class="card-cat">— materiales —</p>
+        <h2 class="card-title">la madera como material principal</h2>
+        <p class="card-sub">Roble, nogal, pino tratado — lo que un material dice de quien vive allí.</p>
+        <p class="card-meta">marzo 2026 · 5 min</p>
+      </div>
+    </div>
+    <div class="card" onclick="openArticle('a7')">
+      <div class="card-img img-7"></div>
+      <div class="card-body">
+        <p class="card-cat">— objetos —</p>
+        <h2 class="card-title">el objeto como intención</h2>
+        <p class="card-sub">Lo que distingue un interior decorado de uno habitado.</p>
+        <p class="card-meta">abril 2026 · 5 min</p>
+      </div>
+    </div>
+    <div class="card" onclick="openArticle('a8')">
+      <div class="card-img img-8"></div>
+      <div class="card-body">
+        <p class="card-cat">— color —</p>
+        <h2 class="card-title">el detalle lo cambia todo — una nota sobre el color</h2>
+        <p class="card-sub">Por qué una pared bien pintada dice algo de quien vive allí.</p>
+        <p class="card-meta">noviembre 2025 · 4 min</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="insta-band">
+  <p class="insta-band-label">— inspiraciones &amp; perspectivas —</p>
+  <div class="insta-band-grid">
+    <a href="https://www.instagram.com/p/DVLIuMQgq53/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta1.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRWeFWkArnx/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta2.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DRoo8-AAgWM/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta3.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DQ-BhWjAnEo/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta4.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DTSiYDzgomK/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta5.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+    <a href="https://www.instagram.com/p/DUgo_TzAubP/" target="_blank" rel="noopener" class="insta-thumb"><img src="../insta6.jpg" alt="inspiración de interiores" loading="lazy" /></a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="f-logo">the <em>interior</em> by caroline</p>
+      <p class="f-tagline">una firma, una mirada, interiores —<br/>París y alrededores.</p>
+      <span class="f-network">miembro de la red inmobiliaria</span>
+      <img src="../logo_greenpartners.png" alt="GreenPartners" style="height:28px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" />
+    </div>
+    <div class="f-col"><h4>el sitio</h4><ul>
+      <li><a href="index.html">inicio</a></li>
+      <li><a href="vendre.html">vender</a></li>
+      <li><a href="acheter.html">comprar</a></li>
+      <li><a href="le-journal.html">journal</a></li>
+      <li><a href="a-propos.html">sobre mí</a></li>
+      <li><a href="contact.html">contacto</a></li>
+    </ul></div>
+    <div class="f-col"><h4>caroline</h4><ul>
+      <li><a href="tel:+33602106754">teléfono</a></li>
+      <li><a href="https://wa.me/33602106754">whatsapp</a></li>
+      <li><a href="https://instagram.com/theinteriorbycaroline">@theinteriorbycaroline</a></li>
+      <li><a href="conception.html"><em>diseño de interiores →</em></a></li>
+    </ul></div>
+    <div class="f-col"><h4>legal</h4><ul>
+      <li><a href="mentions-legales.html">aviso legal</a></li>
+      <li><a href="confidentialite.html">privacidad</a></li>
+      <li><a href="cookies.html">cookies</a></li>
+      <li><a href="honoraires.html">honorarios</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© caroline · 2026 — París y alrededores</p>
+    <p class="f-made">hecho con cuidado</p>
+  </div>
+</footer>
+
+<!-- ARTICLES — INMOBILIARIA -->
+<div class="article-overlay" id="a1">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— vender —</p>
+    <h1 class="article-title">siete errores que cuestan caro<br/><em>al vender en París</em></h1>
+    <p class="article-sub">Precio de salida, fotografías, primeras visitas — lo que se juega en las primeras tres semanas.</p>
+    <div class="article-body">
+      <p>Vender un apartamento en París es a menudo — demasiado a menudo — una carrera contra la propia impaciencia. Se fija un precio «para ver». Las fotos se hacen con el iPhone. Se aceptan las primeras visitas sin cualificar realmente los perfiles. Y tres semanas después, la propiedad está quemada.</p>
+      <p>Estos son los siete errores que observo con más frecuencia, y lo que realmente cuestan.</p>
+      <h3>01 — Sobrevaluar para negociar</h3>
+      <p>Es el reflejo más habitual, y el más costoso. Una propiedad publicada a un 10 % por encima del mercado no genera negociación — genera silencio. Los compradores serios, los que han visitado 20 propiedades, lo ven de inmediato. Pasan de largo. Y cuando se baja el precio dos meses después, todo el mundo recuerda que la propiedad lleva tiempo en el mercado.</p>
+      <h3>02 — Fotografías mediocres</h3>
+      <p>Una cocina mal iluminada, una toma a ras del suelo que encoge las estancias, una fotografía a contraluz desde el balcón — esto cuesta visitas. En los portales, dispone de 3 segundos. Las fotografías son su único escaparate antes de la puerta.</p>
+      <h3>03 — Descuidar la presentación</h3>
+      <p>Un comprador necesita proyectarse. Demasiados muebles, demasiados objetos personales, un color de pintura demasiado distintivo — todo esto crea fricción mental. Unas horas de reorganización y una mirada exterior cambian radicalmente la percepción.</p>
+      <h3>04 — Aceptar todas las visitas</h3>
+      <p>Mostrar la propiedad a perfiles financieramente no cualificados es una pérdida de tiempo y desgasta la propiedad. Cada visita genera un desgaste — físico y psicológico. Diez visitas selectivas valen más que cien curiosos.</p>
+      <h3>05 — Precipitarse hacia el compromiso de venta</h3>
+      <p>Una oferta llega rápido — buena señal. Pero eso no es razón para firmar sin verificar la solidez de la financiación. Un compromiso que cae tres semanas después por una denegación bancaria es una catástrofe comercial.</p>
+      <h3>06 — Subestimar la distribución</h3>
+      <p>SeLoger solo es insuficiente. Los compradores premium buscan en Belles Demeures, Le Figaro, Bien'ici — y a menudo pasan por redes antes de que los anuncios sean públicos.</p>
+      <h3>07 — No anticipar los documentos</h3>
+      <p>Diagnósticos incompletos, actas de junta que faltan, gastos no al día — esto retrasa todo y genera desconfianza. Preparar el expediente con antelación ahorra tres semanas en la firma.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a2">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— comprar —</p>
+    <h1 class="article-title">leer un DPE, <em>de verdad</em></h1>
+    <p class="article-sub">Más allá de la letra: lo que la auditoría revela sobre la propiedad.</p>
+    <div class="article-body">
+      <p>Desde el 1 de enero de 2025, las propiedades clasificadas G están prohibidas para el alquiler. Las clasificadas F seguirán en 2028. Para un comprador, el DPE ya no es un documento administrativo — es un factor de valoración (o desvalorización) por derecho propio. Pero muchos compradores se quedan en la letra. Es un error.</p>
+      <h3>Lo que la letra no dice</h3>
+      <p>Una F puede esconder un apartamento donde una reforma de 15.000 € lo llevaría a una C. También puede esconder un edificio haussmanniano cuyas paredes de piedra caliza son imposibles de aislar sin desnaturalizar el espacio — y donde alcanzar una D costaría 80.000 €. La letra es idéntica. El proyecto de reforma no.</p>
+      <h3>Qué leer en la auditoría</h3>
+      <p>El DPE detalla los elementos de consumo: calefacción, agua caliente, ventilación, iluminación. Identifica los puentes térmicos, el estado del aislamiento de la cubierta, las ventanas y los suelos.</p>
+      <p>Fíjese en la fecha de construcción. Un edificio de hormigón de los años 60-70 con cristal simple y calefacción eléctrica individual es un sumidero de energía. Un edificio haussmanniano con 60 cm de piedra caliza tiene una inercia térmica natural que compensa parte de las pérdidas de calor.</p>
+      <h3>La pregunta real</h3>
+      <p>Antes de desanimarse por una F, hágase una pregunta: ¿qué obras se recomiendan, a qué coste, y qué clasificación se alcanza? Un buen DPE se lo dice. Si no está en el documento, solicite una auditoría complementaria.</p>
+      <h3>Mi consejo</h3>
+      <p>Para las propiedades energéticamente intensivas, solicito sistemáticamente un presupuesto de un director de obra antes de hacer una oferta. Lleva una semana. Puede evitar un descuento considerable — o revelar una oportunidad que nadie más supo leer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a3">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— arrondissements —</p>
+    <h1 class="article-title">París rive gauche —<br/><em>el mercado desde dentro</em></h1>
+    <p class="article-sub">Precio por m², barrios en movimiento, propiedades que se venden rápido.</p>
+    <div class="article-body">
+      <p>Mis arrondissements preferidos son el 5.º, 6.º, 7.º y 14.º. No por azar — por convicción. Son mercados que conozco edificio a edificio. Esto es lo que observo a principios de 2026.</p>
+      <h3>El 6.º — el mercado de excelencia</h3>
+      <p>Los precios medios oscilan entre 14.000 y 16.000 €/m² según la calle. Saint-Germain, Odéon, Luxembourg — es el mercado más líquido de la rive gauche parisina. Las propiedades con carácter (parquet de Versalles, chimeneas, pisos altos con fachadas haussmannianas) se venden en menos de diez días cuando están bien valoradas.</p>
+      <h3>El 7.º — la discreción</h3>
+      <p>El 7.º es un mercado de convicción. Baja rotación, pocos anuncios — y una clientela muy selectiva: diplomáticos, familias patrimoniales, compradores internacionales. Las mejores direcciones en torno al Champ-de-Mars o el Palais Bourbon casi nunca aparecen en los portales. Circulan por redes. Precios: 12.000–18.000 €/m².</p>
+      <h3>El 5.º — el Barrio Latino se reinventa</h3>
+      <p>Mouffetard, Contrescarpe, los muelles: el 5.º atrae a una clientela más joven e internacional atraída por la autenticidad de los volúmenes. Los edificios antiguos (piedra, vigas, irregularidades) se pagan con prima. Precios medios: 10.500–13.000 €/m².</p>
+      <h3>El 14.º — valor oculto</h3>
+      <p>Montparnasse y sus alrededores, Alésia, Denfert — el 14.º está sistemáticamente infravalorado en la mente de los compradores. Las propiedades son a menudo más grandes, mejor mantenidas, y un 20-30 % más asequibles que cinco calles al norte en el 6.º.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a4">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— comprar —</p>
+    <h1 class="article-title">entender una copropriété<br/><em>en diez minutos</em></h1>
+    <p class="article-sub">Actas de junta, gastos, obras aprobadas: la lista de control antes de firmar.</p>
+    <div class="article-body">
+      <p>Comprar un apartamento significa comprar una parte de un edificio. Todo lo que concierne a las zonas comunes, la calefacción comunal, el ascensor, la cubierta — usted será corresponsable de todo ello. Así se lee un expediente de copropriété en diez minutos.</p>
+      <h3>Las últimas tres actas de junta</h3>
+      <p>Es el documento más revelador. Busque: obras aprobadas (y su coste), obras rechazadas (que volverán al orden del día), litigios en curso, y sobre todo convocatorias de fondos extraordinarias. Una copropriété que vota regularmente obras es una bien mantenida.</p>
+      <h3>Los gastos</h3>
+      <p>Fíjese en el importe anual y su desglose. Los gastos altos no son necesariamente un problema — pueden incluir conserje, jardín o piscina. Los gastos bajos en un edificio envejecido a menudo significan un edificio que no se mantiene.</p>
+      <h3>El fondo de obras</h3>
+      <p>Obligatorio desde la ley ALUR, debe representar al menos el 5 % del presupuesto provisional anual. Su importe le da una idea del estado general de salud de la copropriété.</p>
+      <h3>Los impagos</h3>
+      <p>Solicite el porcentaje de impagos en los gastos. Por encima del 15 %, es una señal de alarma — o la copropriété está en dificultades, o algunos copropietarios están en mora.</p>
+      <h3>Mi consejo</h3>
+      <p>Nunca firme un compromiso de venta sin haber leído las tres últimas actas de junta y el registro de mantenimiento. Si el vendedor no los tiene, es su responsabilidad solicitarlos al administrador de fincas — esa es su obligación.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES — INTERIORES -->
+<div class="article-overlay" id="a5">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— luz —</p>
+    <h1 class="article-title">la luz artificial —<br/><em>una cuestión de atmósfera</em></h1>
+    <p class="article-sub">Por qué la lámpara de techo central es el enemigo de la atmósfera, y cómo construir varias capas de luz.</p>
+    <div class="article-body">
+      <p>Es probablemente el tema que abordo con más frecuencia en los apartamentos con los que trabajo. La estructura es correcta. Los materiales son buenos. La paleta de colores es coherente. Y sin embargo algo no funciona — al apartamento le falta atmósfera, se siente plano.</p>
+      <p>Nueve veces de diez, el problema es la luz.</p>
+      <h3>El pecado original: la lámpara de techo central</h3>
+      <p>Los apartamentos haussmannianos suelen tener una roseta en el centro del techo. Durante décadas, se colgaba allí un único colgante para iluminar todo uniformemente. Es práctico. Es funcional. Y es la forma más eficaz de destruir la atmósfera.</p>
+      <p>La luz vertical y uniforme aplasta los volúmenes, aplana las texturas y elimina las sombras que dan relieve a un espacio. Es útil para trabajar, cocinar, leer. Es catastrófica para crear presencia.</p>
+      <h3>Los tres niveles a construir</h3>
+      <p>Luz general — difusa, indirecta, que ilumina el espacio sin fuente visible. Con apliques dirigidos hacia el techo, lámparas de pie apuntando hacia arriba, tiras LED detrás de una cornisa. Proporciona luminosidad sin deslumbramiento.</p>
+      <p>Luz ambiental — cálida, puntual, que crea zonas. Lámparas de mesa, velas, apliques de bajo voltaje. Es el nivel que determina la atmósfera de una habitación por la noche.</p>
+      <p>Luz funcional — dirigida y precisa, para usos específicos. Focos orientables sobre una encimera, una luz de lectura sobre un sillón, iluminación de cuadros. No debe dominar visualmente, pero debe ser perfectamente eficaz donde se necesita.</p>
+      <h3>Lo que cambia un regulador de intensidad</h3>
+      <p>Un apartamento sin reguladores está condenado a la misma luz en todas las circunstancias — cena y despertar, intimidad y trabajo. Es una de las primeras cosas que recomiendo instalar: la capacidad de modular la intensidad transforma radicalmente la vida de una habitación.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a6">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— materiales —</p>
+    <h1 class="article-title">la madera como<br/><em>material principal</em></h1>
+    <p class="article-sub">Roble, nogal, pino tratado — lo que un material dice de quien vive allí.</p>
+    <div class="article-body">
+      <p>Hace diez años, los interiores parisinos de gama alta se definían por el blanco lacado, el hormigón pulido y el acero cepillado. Acabados perfectos, fríos, fotogénicos. Hoy, los mismos apartamentos se rehacen en madera. No por nostalgia — por convicción.</p>
+      <p>La madera regresó a los interiores por la misma razón por la que se fue: envejece. Pero lo que antes se veía como un defecto se ha convertido en una cualidad. Las marcas, las pátinas, la forma en que cambia de tono con la luz — todo esto cuenta una historia.</p>
+      <h3>Elegir la madera según la luz</h3>
+      <p>La primera pregunta que hago cuando un cliente menciona la madera: ¿cuál es la orientación de la estancia? El roble claro en un apartamento nororiental se tornará azulado en ciertas horas. Ese mismo roble en un apartamento de pleno sur se irá oscureciendo, ganando calidez con los años.</p>
+      <p>El nogal, más oscuro y denso, funciona mejor en estancias luminosas donde no abruma el volumen. Es un material para apartamentos que tienen espacio, que asumen su propia presencia.</p>
+      <h3>El error que veo con más frecuencia</h3>
+      <p>Mezclar demasiadas especies en la misma habitación. Parquet de roble, cocina de nogal, estantería de haya, ventanas de pino — cada elección es correcta por separado, pero el conjunto no habla con una sola voz.</p>
+      <p>La regla que aplico: una especie dominante por espacio, una o dos secundarias como máximo. Y un tratamiento coherente — todo aceitado, o todo barnizado, o todo en crudo, pero no los tres juntos.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a7">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— objetos —</p>
+    <h1 class="article-title">el objeto<br/><em>como intención</em></h1>
+    <p class="article-sub">Lo que distingue un interior decorado de uno habitado.</p>
+    <div class="article-body">
+      <p>Hay apartamentos que se visitan y se dejan sin recordar ningún detalle. Todo era limpio, coordinado, sin ningún fallo de gusto — y sin vida. Y hay apartamentos que se dejan con una imagen precisa: una cerámica sobre una consola, un libro dejado abierto, un objeto cuya finalidad es incierta pero que no se olvidará.</p>
+      <p>La diferencia entre los dos no es el presupuesto. Es la intención.</p>
+      <h3>Acumular frente a editar</h3>
+      <p>La acumulación es lo que ocurre cuando se compran objetos con el tiempo sin hacerse preguntas. Cada pieza es atractiva por separado. El conjunto no dice nada.</p>
+      <p>Editar es el proceso inverso: restar hasta que lo que queda es justo. La regla que aplico en mis proyectos: cada objeto visible debe tener una razón para estar allí. O es bello, o es útil, o cuenta una historia. Idealmente las tres cosas.</p>
+      <h3>Objetos que hablan bien</h3>
+      <p>Lo que llamo un buen objeto para un interior no es necesariamente caro ni raro. Es un objeto con presencia física — un material, un peso, una textura que se quiere tocar. Las cerámicas artesanales funcionan bien porque llevan las huellas de su fabricación. Los libros reales — libros que han sido leídos, no libros comprados por el color de su portada — cuentan la historia del habitante.</p>
+      <h3>Coherencia sin uniformidad</h3>
+      <p>Una colección coherente no significa una uniforme. Una cerámica japonesa, un cuenco de gres provenzal y un jarrón escandinavo pueden coexistir en el mismo estante si el material habla — si los tres son de terracota sin esmaltar, por ejemplo. Es el material y el tono los que crean coherencia, no el estilo ni el origen.</p>
+    </div>
+  </div>
+</div>
+
+<div class="article-overlay" id="a8">
+  <button class="article-close" onclick="closeArticle()">← volver al journal</button>
+  <div class="article-inner">
+    <p class="article-eyebrow">— color —</p>
+    <h1 class="article-title">el detalle lo cambia todo —<br/><em>una nota sobre el color</em></h1>
+    <p class="article-sub">Por qué una pared bien pintada dice algo de quien vive allí.</p>
+    <div class="article-body">
+      <p>Voy a decir algo que va en contra de todos los clásicos consejos de home staging: la cocina no es lo que vende un piso.</p>
+      <p>Lo que vende un piso es la atmósfera de los primeros tres segundos. Y la atmósfera la crean principalmente la luz, las proporciones — y el color.</p>
+      <h3>El color como señal</h3>
+      <p>Una pared pintada en un hermoso gris cálido, un blanco roto cuidadosamente elegido, un verde oscuro en una librería — esto dice algo del habitante. Dice: alguien que presta atención. Alguien con gusto. Y de forma inconsciente, el comprador transfiere esta calidad percibida a toda la propiedad.</p>
+      <p>Un piso enteramente en blanco de obra dice lo contrario: nadie ha vivido realmente aquí. Es un espacio de tránsito, no un lugar de vida.</p>
+      <h3>Lo que observo en el campo</h3>
+      <p>En las propiedades que acompaño, he verificado la hipótesis varias veces. Un piso en el 6.º, 85 m², estimado en 1,1 M€: tres meses sin oferta. Repintamos dos habitaciones, movemos dos muebles. Se vende en diez días al precio pedido. La cocina era la misma. El parquet era el mismo. La luz era la misma. Lo que había cambiado era la señal que el apartamento enviaba desde el momento en que se cruzaba la puerta.</p>
+      <h3>Cómo elegir un color para vender</h3>
+      <p>Olvide sus preferencias personales. Busque el color que maximiza la luz natural, respeta las proporciones y no divide opiniones. Tonos piedra cálidos, blancos rotos ligeramente cálidos, verdes salvia discretos — estos son los colores que generan consenso y evocan cuidado, habitabilidad, calma.</p>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY MOBILE -->
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">cerrar ×</button>
+  <a href="vendre.html">vender</a>
+  <a href="acheter.html">comprar</a>
+  <a href="le-journal.html">el <em>journal</em></a>
+  <a href="a-propos.html">sobre mí</a>
+  <a href="contact.html">contacto</a>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('nav-ham');
+  var ov  = document.getElementById('nav-overlay');
+  if(btn && ov) btn.addEventListener('click', function(){ ov.classList.toggle('open'); });
+})();
+
+function switchTab(tab){
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('panel-'+tab).classList.add('active');
+}
+
+function openArticle(id){ window.location.hash = id; }
+function closeArticle(){ history.back(); }
+function handleHash(){
+  document.querySelectorAll('.article-overlay').forEach(function(el){ el.classList.remove('open'); });
+  document.body.style.overflow = '';
+  var id = window.location.hash.slice(1);
+  if(id){
+    var el = document.getElementById(id);
+    if(el){ el.classList.add('open'); document.body.style.overflow='hidden'; window.scrollTo(0,0); }
+  }
+}
+window.addEventListener('hashchange', handleHash);
+window.addEventListener('load', handleHash);
+</script>
+</body>
+</html>
