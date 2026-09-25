@@ -64,6 +64,22 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 .nav-overlay a em{font-style:italic;}.nav-overlay a:hover{color:var(--accent);}
 .nav-overlay-close{position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);background:none;border:none;cursor:pointer;text-transform:lowercase;}
 @media(max-width:768px){.nav-hamburger{display:flex;}.hero{grid-template-columns:1fr;padding:76px 24px 40px;gap:32px;}.services{grid-template-columns:1fr;}.service{border-right:none;border-bottom:1px solid var(--rule);}.service:last-child{border-bottom:none;}.portfolio-header{padding:40px 24px 24px;flex-direction:column;gap:8px;}.insta-band{padding:20px 24px;}.insta-band-grid{grid-template-columns:repeat(3,1fr);gap:8px;}.insta-thumb{border-radius:10px;}footer{padding:36px 24px 16px;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}nav{padding:0 20px;}.nav-links{display:none;}.nav-hamburger{display:flex;order:-1;}.nav-logo{order:0;}}
+
+/* PROYECTO FORMACIÓN */
+.formation-section{display:grid;grid-template-columns:1fr 1.6fr;border-bottom:1px solid var(--rule);}
+.formation-lhs{padding:52px 48px;border-right:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;}
+.formation-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.formation-title{font-family:var(--display);font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:.95;letter-spacing:-.025em;font-variation-settings:'opsz' 144;margin-bottom:20px;}
+.formation-title em{font-style:italic;}
+.formation-body{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:28px;}
+.formation-meta{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);line-height:1.8;}
+.formation-rhs{padding:52px 48px;display:flex;flex-direction:column;gap:0;}
+.calameo-wrap{position:relative;width:100%;padding-top:56.25%;background:var(--rule);}
+.calameo-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.calameo-note{margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:lowercase;color:var(--muted);}
+.calameo-note a{color:var(--muted);text-decoration:underline;text-underline-offset:3px;transition:color .2s;}
+.calameo-note a:hover{color:var(--ink);}
+@media(max-width:768px){.formation-section{grid-template-columns:1fr;}.formation-lhs{border-right:none;border-bottom:1px solid var(--rule);padding:40px 24px;}.formation-rhs{padding:32px 24px 40px;}}
 </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "09d4f63b02d9400f8ca01582107b370d"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -72,7 +88,8 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
   <a href="../index.html" class="nav-logo">the <em>interior</em> by caroline</a>
   <ul class="nav-links">
     <li><a href="vendre.html">vender</a></li>
-    <li><a href="acheter.html">comprar</a></li>
+    <li><a href="acheter.html">comprar</a>
+  <a href="conception.html">interior design</a></li><li><a href="conception.html">interior design</a></li>
     <li><a href="le-journal.html">journal</a></li>
     <li><a href="a-propos.html">sobre mí</a></li>
     <li><a href="contact.html">contacto</a></li>
@@ -123,6 +140,25 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
 </div>
 
 <!-- BANDEAU INSTAGRAM -->
+
+<!-- PROYECTO DE FORMACIÓN -->
+<div class="formation-section">
+  <div class="formation-lhs">
+    <div>
+      <p class="formation-eyebrow">— proyecto de fin de formación —</p>
+      <h2 class="formation-title">en el bosque —<br/><em>un claro habitado</em></h2>
+      <p class="formation-body">proyecto de diploma en arquitectura de interiores en LISAA — diseñar una casa familiar en Verrières-le-Buisson para la familia Vassili-Sevada. una arquitectura enraizada en la naturaleza, construida en madera, abierta a la luz, estructurada en torno a un salón-claro en el corazón de la planta.</p>
+      <p class="formation-body">madera, materiales en bruto, verticalidad — un lenguaje arquitectónico que traduce a la vez el calor doméstico y el vínculo con lo vivo.</p>
+    </div>
+    <p class="formation-meta">lisaa parís · 2025<br/>vivienda unifamiliar · verrières-le-buisson<br/>programa familiar · 220 000 € sin iva obras</p>
+  </div>
+  <div class="formation-rhs">
+    <div class="calameo-wrap">
+      <iframe src="https://www.calameo.com/read/008306504113874b4069b" allowfullscreen loading="lazy" title="Proyecto de fin de formación — En el bosque, un claro habitado"></iframe>
+    </div>
+    <p class="calameo-note">hojear el cuaderno · <a href="https://www.calameo.com/read/008306504113874b4069b" target="_blank" rel="noopener">abrir a pantalla completa →</a></p>
+  </div>
+</div>
 <div class="insta-band">
   <p class="insta-band-label">— inspiraciones &amp; perspectivas —</p>
   <div class="insta-band-grid">
@@ -145,7 +181,8 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
     </div>
     <div class="f-col"><h4>el sitio</h4><ul>
       <li><a href="vendre.html">vender</a></li>
-      <li><a href="acheter.html">comprar</a></li>
+      <li><a href="acheter.html">comprar</a>
+  <a href="conception.html">interior design</a></li><li><a href="conception.html">interior design</a></li>
       <li><a href="le-journal.html">journal</a></li>
       <li><a href="a-propos.html">sobre mí</a></li>
       <li><a href="contact.html">contacto</a></li>
@@ -173,6 +210,7 @@ footer{padding:44px 48px 20px;border-top:1px solid var(--rule);}
   <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">cerrar ×</button>
   <a href="vendre.html">vender</a>
   <a href="acheter.html">comprar</a>
+  <a href="conception.html">interior design</a>
   <a href="le-journal.html">journal</a>
   <a href="a-propos.html">sobre mí</a>
   <a href="contact.html">contacto</a>
