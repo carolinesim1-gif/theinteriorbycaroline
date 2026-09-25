@@ -78,63 +78,6 @@
   color: var(--muted); margin-top: 16px; line-height: 1.7;
 }
 
-/* PROJET FORMATION */
-.formation-section {
-  display: grid; grid-template-columns: 1fr 1.6fr;
-  border-bottom: 1px solid var(--rule);
-}
-.formation-lhs {
-  padding: 52px 48px; border-right: 1px solid var(--rule);
-  display: flex; flex-direction: column; justify-content: space-between;
-}
-.formation-eyebrow {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
-}
-.formation-title {
-  font-family: var(--display); font-weight: 300;
-  font-size: clamp(28px, 3.2vw, 44px); line-height: .95;
-  letter-spacing: -.025em; font-variation-settings: 'opsz' 144;
-  margin-bottom: 20px;
-}
-.formation-title em { font-style: italic; }
-.formation-body {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14.5px; color: var(--ink-soft); line-height: 1.7;
-  margin-bottom: 28px;
-}
-.formation-meta {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--muted); line-height: 1.8;
-}
-.formation-rhs {
-  padding: 52px 48px;
-  display: flex; flex-direction: column; gap: 0;
-}
-.calameo-wrap {
-  position: relative; width: 100%; padding-top: 56.25%;
-  background: var(--rule);
-}
-.calameo-wrap iframe {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  border: none;
-}
-.calameo-note {
-  margin-top: 14px;
-  font-family: var(--mono); font-size: 10px; letter-spacing: .14em;
-  text-transform: lowercase; color: var(--muted);
-}
-.calameo-note a {
-  color: var(--muted); text-decoration: underline;
-  text-underline-offset: 3px; transition: color .2s;
-}
-.calameo-note a:hover { color: var(--ink); }
-@media (max-width: 768px) {
-  .formation-section { grid-template-columns: 1fr; }
-  .formation-lhs { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 24px; }
-  .formation-rhs { padding: 32px 24px 40px; }
-}
-
 /* PORTFOLIO */
 .portfolio-header {
   padding: 52px 48px 32px;
@@ -372,6 +315,7 @@
   <ul class="nav-links">
     <li><a href="vendre.html">vendre</a></li>
     <li><a href="acheter.html">acheter</a></li>
+    <li><a href="conception.html">design d'intérieur</a></li>
     <li><a href="le-journal.html">le journal</a></li>
     <li><a href="a-propos.html">à propos</a></li>
     <li><a href="contact.html">contact</a></li>
@@ -381,6 +325,7 @@
       <option value="" selected>fr</option>
       <option value="en/conception.html">en</option>
       <option value="it/conception.html">it</option>
+      <option value="es/conception.html">es</option>
     </select>
   </div>
   <button class="nav-hamburger" id="nav-ham" aria-label="menu"><span></span><span></span><span></span></button>
@@ -417,25 +362,6 @@
   </div>
 </div>
 
-<!-- PROJET DE FORMATION -->
-<div class="formation-section">
-  <div class="formation-lhs">
-    <div>
-      <p class="formation-eyebrow">— mémoire de fin de formation —</p>
-      <h2 class="formation-title">dans les bois —<br/><em>une clairière habitée</em></h2>
-      <p class="formation-body">projet de fin de formation en architecture d'intérieur à LISAA — concevoir une maison familiale à Verrières-le-Buisson pour la famille Vassili-Sevada. une architecture ancrée dans la nature, construite en bois, ouverte à la lumière, structurée autour d'un salon-clairière au cœur du plan.</p>
-      <p class="formation-body">bois, brut, verticalité — un langage architectural qui traduit à la fois la chaleur domestique et le lien au vivant.</p>
-    </div>
-    <p class="formation-meta">lisaa paris · 2025<br/>maison individuelle · verrières-le-buisson<br/>programme famille · 220 000 € ttc travaux</p>
-  </div>
-  <div class="formation-rhs">
-    <div class="calameo-wrap">
-      <iframe src="https://www.calameo.com/read/008306504113874b4069b" allowfullscreen loading="lazy" title="Mémoire de fin de formation — Dans les bois, une clairière habitée"></iframe>
-    </div>
-    <p class="calameo-note">feuilleter le livret · <a href="https://www.calameo.com/read/008306504113874b4069b" target="_blank" rel="noopener">ouvrir en plein écran →</a></p>
-  </div>
-</div>
-
 <!-- PORTFOLIO -->
 <div class="portfolio-header">
   <h2 class="portfolio-title">portfolio <em>sur demande</em></h2>
@@ -469,6 +395,7 @@
         <li><a href="index.html">accueil</a></li>
         <li><a href="vendre.html">vendre</a></li>
         <li><a href="acheter.html">acheter</a></li>
+    <li><a href="conception.html">design d'intérieur</a></li>
         <li><a href="le-journal.html">le journal</a></li>
         <li><a href="a-propos.html">à propos</a></li>
         <li><a href="contact.html">contact</a></li>
@@ -501,6 +428,7 @@
   <button class="nav-overlay-close" onclick="document.getElementById('nav-overlay').classList.remove('open')">fermer ×</button>
   <a href="vendre.html">vendre</a>
   <a href="acheter.html">acheter</a>
+  <a href="conception.html">design d'intérieur</a>
   <a href="le-journal.html">le <em>journal</em></a>
   <a href="a-propos.html">à propos</a>
   <a href="contact.html">contact</a>
